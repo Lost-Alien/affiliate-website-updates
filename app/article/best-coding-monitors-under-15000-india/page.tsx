@@ -47,6 +47,7 @@ const products = [
     name: 'Vivo Premium Smartphone (2025)',
     tagline: 'Best Screen & Battery Combo',
     rating: 8.5,
+    image: '/products/vivo-smartphone.png',
     bestFor: 'Android users who want a stunning media display and rapid charging speed.',
     features: ['High-refresh-rate AMOLED curved display', 'Super-fast charging capability (charger in box)', 'Vibrant multi-lens rear camera system', 'Sleek glass back design with premium finishes'],
     pros: ['Vibrant screen colors with deep ink-blacks', 'Superb battery life easily lasting a full work day', 'Fast charging cuts down desk cord time significantly', 'Includes protective phone cover in the retail box'],

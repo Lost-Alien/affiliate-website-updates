@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Star, Check, X, ExternalLink } from 'lucide-react'
 import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
@@ -12,6 +13,7 @@ interface ProductSectionProps {
   cons: string[]
   verdict: string
   amazonUrl?: string
+  image?: string
 }
 
 export function ProductSection({
@@ -25,6 +27,7 @@ export function ProductSection({
   cons,
   verdict,
   amazonUrl,
+  image,
 }: ProductSectionProps) {
   const targetUrl = amazonUrl && amazonUrl !== 'https://www.amazon.in'
     ? getAmazonAffiliateUrl(amazonUrl)
@@ -53,9 +56,21 @@ export function ProductSection({
           </div>
         </div>
 
-        {/* Product Image Placeholder */}
-        <div className="aspect-[3/2] bg-muted flex items-center justify-center">
-          <div className="w-1/2 h-1/2 bg-gradient-to-br from-secondary to-muted rounded-xl" />
+        {/* Product Image */}
+        <div className="relative aspect-[16/9] bg-muted w-full border-b border-border overflow-hidden">
+          {image ? (
+            <Image
+              src={image}
+              alt={name}
+              fill
+              className="object-contain p-6"
+              sizes="(max-width: 1024px) 100vw, 800px"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-1/2 h-1/2 bg-gradient-to-br from-secondary to-muted rounded-xl" />
+            </div>
+          )}
         </div>
 
         {/* Content */}

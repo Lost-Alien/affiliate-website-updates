@@ -47,6 +47,7 @@ const products = [
     name: 'ECOVACS DEEBOT T50 PRO',
     tagline: 'Best Suction & Zero Hair Wrap',
     rating: 8.8,
+    image: '/products/ecovacs-t50-pro.png',
     bestFor: 'Pet owners and busy homeowners who want fully autonomous floor cleaning.',
     features: ['12,800 Pa extreme suction performance', 'ZeroTangle anti-hair wrap roller system', 'Ultra-thin 8.3cm compact body height', 'Vibrating mopping pad with auto-lift feature'],
     pros: ['Incredibly strong suction picks up even fine flour dust', 'ZeroTangle system actually works — no hair wraps around the brush', 'Flawless LiDAR navigation mapping within minutes', 'Quiet operation during normal cleaning runs'],
