@@ -15,7 +15,7 @@ import { ReferencesSection } from '@/components/article/references-section'
 
 export const metadata: Metadata = {
   title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review | TechSelect',
-  description: 'An honest, biased review of the ECOVACS DEEBOT T50 PRO. We evaluated the suction power, ZeroTangle anti-hair technology, and obstacle avoidance in Indian homes.',
+  description: 'An honest, definitive review of the ECOVACS DEEBOT T50 PRO. We evaluated the suction power, ZeroTangle anti-hair technology, and obstacle avoidance in Indian homes.',
   openGraph: {
     title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review',
     description: 'ECOVACS DEEBOT T50 PRO review — is this the best smart home vacuum cleaner?',
@@ -99,7 +99,7 @@ export default function ArticlePage() {
                     Sweeping and mopping every day is a waste of your time. If you have pets or long hair in your household, standard robot vacuums get clogged within three runs.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    We tested the new ECOVACS DEEBOT T50 PRO on marble, tile, and carpets. We scattered hair, dust, and food crumbs to see if its ZeroTangle brush and 12,800 Pa suction could deliver on their premium claims. Here is our biased verdict.
+                    We tested the new ECOVACS DEEBOT T50 PRO on marble, tile, and carpets. We scattered hair, dust, and food crumbs to see if its ZeroTangle brush and 12,800 Pa suction could deliver on their premium claims. Here is our unfiltered verdict.
                   </p>
                 </div>
 

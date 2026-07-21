@@ -15,7 +15,7 @@ import { ReferencesSection } from '@/components/article/references-section'
 
 export const metadata: Metadata = {
   title: 'Best Premium Noise Cancelling Headphones in India (2026) | TechSelect',
-  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, biased verdict on which ANC king is worth your money.',
+  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, definitive verdict on which ANC king is worth your money.',
   openGraph: {
     title: 'Best Premium Noise Cancelling Headphones in India',
     description: 'Bose QuietComfort vs Sennheiser Momentum 4 — which one should you buy?',
@@ -118,7 +118,7 @@ export default function ArticlePage() {
                     Let’s cut through the marketing noise: Premium noise cancellation is not a luxury anymore. If you work in a loud open office or commute on the Delhi Metro or Mumbai locals, it is a survival tool.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    We spent two weeks testing the Bose QuietComfort and the Sennheiser Momentum 4 side-by-side. We wore them on flights, local trains, and in noisy cafes to see which one delivers the best combination of silence, sound, and comfort. Here is our biased, honest verdict.
+                    We spent two weeks testing the Bose QuietComfort and the Sennheiser Momentum 4 side-by-side. We wore them on flights, local trains, and in noisy cafes to see which one delivers the best combination of silence, sound, and comfort. Here is our honest, unfiltered verdict.
                   </p>
                 </div>
 

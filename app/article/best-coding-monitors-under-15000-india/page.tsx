@@ -15,7 +15,7 @@ import { ReferencesSection } from '@/components/article/references-section'
 
 export const metadata: Metadata = {
   title: 'Vivo Flagship Smartphone (2025) Review | TechSelect',
-  description: 'An honest, biased review of the Vivo Flagship Smartphone. We evaluated the AMOLED display, gaming limits, and camera capabilities in real Indian conditions.',
+  description: 'An honest, definitive review of the Vivo Flagship Smartphone. We evaluated the AMOLED display, gaming limits, and camera capabilities in real Indian conditions.',
   openGraph: {
     title: 'Vivo Flagship Smartphone (2025) Review',
     description: 'Vivo Flagship Smartphone review — is it the best premium Android alternative?',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const articleData = {
   title: 'Vivo Flagship (2025): A Premium Android Challenger',
-  subtitle: 'AMOLED display, massive battery, and a versatile camera setup — here is the biased truth about Vivo’s latest.',
+  subtitle: 'AMOLED display, massive battery, and a versatile camera setup — here is the unfiltered truth about Vivo’s latest.',
   author: 'Karan Malhotra',
   authorRole: 'Mobile Editor',
   publishDate: 'July 20, 2026',
@@ -99,7 +99,7 @@ export default function ArticlePage() {
                     Let’s face it: Most smartphone buyers care about two things: Is the screen gorgeous, and does it charge fast enough?
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    We tested the latest Vivo flagship smartphone in real-world Indian conditions. We ran GPS navigation, streamed high-definition videos over 5G networks, and recorded outdoor samples. Here is our biased review of how it performs.
+                    We tested the latest Vivo flagship smartphone in real-world Indian conditions. We ran GPS navigation, streamed high-definition videos over 5G networks, and recorded outdoor samples. Here is our unfiltered review of how it performs.
                   </p>
                 </div>
 
