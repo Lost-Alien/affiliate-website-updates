@@ -17,10 +17,10 @@ export function HeroSection() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/article/best-wireless-earbuds-budget"
+              href="/category/audio"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground text-primary font-medium rounded-lg hover:bg-primary-foreground/90 transition-colors"
             >
-              Browse Buying Guides
+              Browse Categories
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
