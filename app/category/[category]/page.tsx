@@ -48,6 +48,8 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
 
   // Check if category or products exist
   const hasContent = cat && (cat.subcategories.some((s) => s.active) || activeProducts.length > 0)
+  const activeCategories = CATEGORIES.filter((c) => c.active && c.slug !== categorySlug)
+  const recommendedGuides = SAMPLE_PRODUCTS.slice(0, 3)
 
   if (!cat || !hasContent) {
     const formattedTitle = categorySlug
@@ -58,10 +60,11 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
     return (
       <>
         <Header />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1">
           <Breadcrumb items={[{ label: 'Categories', href: '/' }, { label: formattedTitle }]} />
 
-          <div className="mt-8 max-w-xl mx-auto text-center bg-card border border-border rounded-xl p-8 sm:p-12 shadow-sm">
+          {/* Empty State Hero Card */}
+          <div className="mt-8 max-w-xl mx-auto text-center bg-card border border-border rounded-xl p-8 sm:p-12 shadow-sm mb-16">
             <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-6 text-muted-foreground">
               <PackageSearch className="h-8 w-8 text-primary" />
             </div>
@@ -73,12 +76,49 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
             </p>
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors text-sm"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
           </div>
+
+          {/* Related Categories */}
+          {activeCategories.length > 0 && (
+            <section className="mb-16">
+              <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-6">
+                Explore Other Active Categories
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                {activeCategories.map((aCat) => (
+                  <Link
+                    key={aCat.slug}
+                    href={`/category/${aCat.slug}`}
+                    className="bg-card border border-border rounded-xl p-5 hover:border-primary transition-all text-center group shadow-sm hover:shadow-md"
+                  >
+                    <span className="font-serif text-base font-semibold text-foreground block group-hover:text-primary transition-colors mb-1">
+                      {aCat.name}
+                    </span>
+                    <span className="text-xs text-muted-foreground block line-clamp-2">
+                      {aCat.description}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Recommended Buying Guides */}
+          <section className="mb-12">
+            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-6">
+              Popular Buying Guides You Might Like
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {recommendedGuides.map((guide) => (
+                <ArticleCard key={guide.title} {...guide} excerpt={guide.description} />
+              ))}
+            </div>
+          </section>
         </main>
         <Footer />
       </>
