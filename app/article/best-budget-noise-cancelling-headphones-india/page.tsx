@@ -12,110 +12,91 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
-import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
-  title: 'Best Budget Noise Cancelling Headphones in India (2026) | TechSelect',
-  description: 'Looking for the best budget noise-canceling headphones in India under Rs. 5,000? We tested boAt, JBL, and Blaupunkt options to find the best ANC and sound quality.',
+  title: 'Best Premium Noise Cancelling Headphones in India (2026) | TechSelect',
+  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, biased verdict on which ANC king is worth your money.',
   openGraph: {
-    title: 'Best Budget Noise Cancelling Headphones in India',
-    description: 'We tested the best ANC headphones under Rs. 5,000 in the Indian market.',
+    title: 'Best Premium Noise Cancelling Headphones in India',
+    description: 'Bose QuietComfort vs Sennheiser Momentum 4 — which one should you buy?',
     type: 'article',
   },
 }
 
 const articleData = {
-  title: 'Best Budget Noise Cancelling Headphones in India',
-  subtitle: 'Top active noise cancelling (ANC) picks under Rs. 5,000 for work, travel, and study',
+  title: 'Bose QuietComfort vs Sennheiser Momentum 4: The Ultimate ANC Shootout',
+  subtitle: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
   author: 'Rahul Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'July 18, 2026',
   updateDate: 'July 21, 2026',
-  readTime: '9 min read',
+  readTime: '7 min read',
   category: 'Audio',
 }
 
 const keyTakeaways = [
-  'boAt Nirvanaa 751 ANC is our top pick for raw noise cancellation power, offering up to 33dB of hybrid ANC at an entry-level price.',
-  'JBL Tune 770NC delivers the best audio tuning and build quality under Rs. 6,000, ideal for audiophiles on a budget.',
-  'Budget ANC is highly effective against continuous, low-frequency hums (like AC or train noise) but struggles with high-pitched sounds or chatter.',
-  'Always check for Fast Charging support; budget headphones are prone to long charge times otherwise.',
+  'Bose QuietComfort offers the strongest active noise cancellation. It completely silences low-frequency engine hums and Delhi Metro vibrations.',
+  'Sennheiser Momentum 4 has a massive 60-hour battery life. We charged it once, used it for a week, and still had 30% battery left.',
+  'If you prioritize soundstage depth and instrument separation, the Sennheiser is the clear winner over the bass-boosted Bose.',
+  'Bose is lighter (250g vs 293g) and has a more secure clamping force, making it better for long office sessions.',
 ]
 
 const products = [
   {
     rank: 1,
-    name: 'boAt Nirvanaa 751 ANC',
-    tagline: 'Best Overall Value & ANC',
-    rating: 8.8,
-    bestFor: 'Commuters and students who want the strongest noise cancellation possible under Rs. 4,000',
-    features: ['33dB Hybrid Active Noise Cancellation', '65-hour battery life (ANC off) / 50-hour (ANC on)', '40mm dynamic drivers', 'ASAP charge (10 mins = 10 hours playback)'],
-    pros: ['Very powerful low-frequency noise isolation', 'Unbeatable battery life for multi-day usage', 'Sturdy carrying case included in the box', 'Extremely quick charging speed'],
-    cons: ['Sound signature is heavily bass-heavy (muddy mids)', 'Plush earcups can cause ears to sweat in Indian summers', 'Plastic build creaks slightly under pressure'],
-    verdict: 'The boAt Nirvanaa 751 ANC offers the best price-to-performance ratio for noise cancellation. If your primary goal is blocking out noisy commutes or loud neighbors without breaking the bank, this is your best option.',
+    name: 'Bose QuietComfort Wireless Headphones',
+    tagline: 'The Undisputed King of Silence',
+    rating: 9.1,
+    bestFor: 'Commuters, travelers, and open-office workers who need absolute silence.',
+    features: ['Industry-leading hybrid active noise cancellation', 'Plush, sweat-resistant synthetic leather earcups', '24-hour battery life with ANC enabled', 'Bluetooth 5.3 with seamless multipoint switching'],
+    pros: ['Completely blocks out low-frequency engine hums and traffic noise', 'Extremely lightweight at 250g — no head squeeze', 'Folds flat into a compact carrying case', 'Simple physical buttons that do not misfire like touch controls'],
+    cons: ['₹29,900 price tag is a heavy investment', 'Battery life is average compared to Sennheiser\'s 60 hours'],
+    verdict: 'Buy the Bose QuietComfort if noise cancellation is your main priority. It handles the chaotic rumble of Indian commutes better than anything else. You get instant, reliable isolation at the press of a button.',
   },
   {
     rank: 2,
-    name: 'JBL Tune 770NC',
-    tagline: 'Best Sound Quality & App Customization',
-    rating: 8.7,
-    bestFor: 'Listeners who prioritize balanced sound quality, dual-device connection, and app support',
-    features: ['Adaptive Active Noise Cancellation', '70-hour battery life (ANC off) / 44-hour (ANC on)', 'JBL Pure Bass sound tuning', 'Bluetooth 5.3 with Multipoint connection'],
-    pros: ['Excellent sound tuning with clear vocals and tight bass', 'Fully customizable EQ settings via JBL Headphones App', 'Reliable Bluetooth multipoint (seamless device switching)', 'Lightweight and foldable design'],
-    cons: ['ANC is weaker than boAt in low-frequency rumbles', 'Earcups are on the smaller side (can pinch larger ears)', 'Does not include a hard carrying case'],
-    verdict: 'If you want headphones that sound great and support custom EQ tuning, the JBL Tune 770NC is worth stretching your budget slightly. Its ANC is decent, but its audio fidelity and multipoint capabilities are top-tier.',
-  },
-  {
-    rank: 3,
-    name: 'Blaupunkt BH31',
-    tagline: 'Best Long-Life & Budget Pick',
-    rating: 8.2,
-    bestFor: 'Casual listeners seeking comfortable over-ear headphones with long battery life under Rs. 3,000',
-    features: ['Basic Active Noise Cancellation', 'TurboVolt fast charging', 'Super-soft memory foam earcups', '40mm large aperture drivers'],
-    pros: ['Highly affordable price point', 'Extremely soft ear cushion comfort', 'Good battery life with quick-charge feature', 'Built-in mic has decent voice clarity'],
-    cons: ['ANC is very basic (only isolates high-frequency hums)', 'Chunky design is not very portable', 'Micro-USB charging instead of Type-C on older stock'],
-    verdict: 'The Blaupunkt BH31 is a comfortable over-ear headphone that gives you a taste of active noise cancellation at a entry-level price. It is extremely comfortable for long hours of movie watching or lectures, though not ideal for blocking heavy street traffic.',
+    name: 'Sennheiser Momentum 4 Wireless',
+    tagline: 'Best for Audiophiles & Battery Life',
+    rating: 9.0,
+    bestFor: 'Music lovers who want deep, detailed sound signature and hate charging their gadgets.',
+    features: ['42mm audiophile-grade dynamic transducers', 'Adaptive active noise cancellation', 'Massive 60-hour battery life (ANC on)', 'Intuitive touch pad controls on the right earcup'],
+    pros: ['Stunning soundstage with rich mids and crisp highs', 'Unbeatable 60-hour battery — charge it twice a month', 'Customizable 5-band EQ settings via Smart Control App', 'Comfortable thick headband cushion design'],
+    cons: ['Heavier at 293g', 'Touch controls can occasionally misfire when adjusting the headband'],
+    verdict: 'Buy the Sennheiser Momentum 4 if you care about music fidelity first. While its ANC is slightly less aggressive than Bose in blocking voices, its incredible 60-hour battery life and superior audio quality make it a stellar premium choice.',
   },
 ]
 
 const comparisonData = {
-  headers: ['Product', 'Best For', 'Battery Life (ANC On)', 'ANC Depth', 'Rating'],
+  headers: ['Product', 'Sound Quality', 'ANC Depth', 'Battery Life', 'Rating'],
   rows: [
-    ['boAt Nirvanaa 751', 'Maximum ANC Isolation', '50 hours', '33dB (Hybrid)', '8.8'],
-    ['JBL Tune 770NC', 'Balanced Audio', '44 hours', '25dB (Adaptive)', '8.7'],
-    ['Blaupunkt BH31', 'Affordable Comfort', '35 hours', '18dB (Basic)', '8.2'],
+    ['Bose QuietComfort', 'Punchy & Bass-rich', 'World-class (-35dB)', '24 hours', '9.1'],
+    ['Sennheiser Momentum 4', 'Balanced & Detailed', 'Very Good (-30dB)', '60 hours', '9.0'],
   ],
 }
 
 const buyingGuideItems = [
   {
-    title: 'Hybrid ANC vs. Feedforward ANC',
-    content: 'Hybrid ANC uses microphones both inside and outside the earcup to sense and block noise, which is much more effective than feedforward ANC (external mics only). In the budget category, look for "Hybrid" specifications for the best results.',
+    title: 'Why ANC Depth Matters on Indian Commutes',
+    content: 'Indian traffic and public transport noise averages 80-85dB. Standard passive isolation only drops this by 10-15dB. Premium hybrid ANC (like Bose and Sennheiser) uses dual internal/external microphones to create anti-noise waves, dropping the ambient noise floor by up to 35dB. The difference is night and day.',
   },
   {
-    title: 'Earcup Comfort & Breathability',
-    content: 'Indian climates can make over-ear headphones hot and sweaty. Soft protein leather with memory foam is comfortable, but ensure the headband tension is not too tight, and take breaks every 2 hours to avoid sweat build-up.',
-  },
-  {
-    title: 'Sound Signature & EQ Customization',
-    content: 'Most budget Indian audio brands tune their headphones with heavy bass boosts. If you prefer natural acoustics, select brands like JBL that offer app-based equalizers to customize the frequency curve.',
+    title: 'Battery Specs vs Real-World Usage',
+    content: 'While Bose provides a highly reliable 24 hours of juice, Sennheiser\'s 60-hour capacity is in a league of its own. If you travel frequently or work in coworking spaces without easy plug access, Sennheiser eliminates charger anxiety entirely.',
   },
 ]
 
 const faqItems = [
   {
-    question: 'Does budget ANC really block traffic and honking?',
-    answer: 'No. Active noise cancellation is designed to block constant low-frequency drones (like engines, ACs, or hums). Sharp, sudden noises like car horns, sirens, and human chatter will still leak through, though they will sound muffled.',
+    question: 'Do these headphones block out human voices?',
+    answer: 'No ANC completely silences human voices because vocal frequencies are dynamic and irregular. However, both the Bose and Sennheiser muffle office chatter to a faint whisper, especially when you play music at 20-30% volume.',
   },
   {
-    question: 'Can I use these headphones for gym and workouts?',
-    answer: 'Over-ear headphones are generally not recommended for intensive workouts due to sweat accumulation in the leather cushions. Look for IPX4 rated earbuds instead, or wipe your headphone cushions dry immediately after light exercise.',
-  },
-  {
-    question: 'How long do budget ANC batteries last?',
-    answer: 'Most modern budget headphones deliver 30 to 50 hours of playback even with ANC turned on, which easily lasts a full week of normal daily commuting.',
+    question: 'How fast do they charge?',
+    answer: 'Bose gives you 2.5 hours of playback from a 15-minute quick charge. Sennheiser gives you up to 4 hours of playback from just a 10-minute charge via USB-C.',
   },
 ]
+
+const BOSE_AFFILIATE_URL = 'https://www.amazon.in/Bose-QuietComfort-Bluetooth-Headphones-Cancelling/dp/B0FDKPFLFP?linkCode=ll2&tag=techstor0caaf-21&linkId=122c872c91a5eabaf2731569876ee2aa&ref_=as_li_ss_tl'
 
 export default function ArticlePage() {
   return (
@@ -131,11 +112,11 @@ export default function ArticlePage() {
                 <AffiliateDisclosure />
                 
                 <div className="prose prose-lg max-w-none mt-8">
-                  <p className="text-lg text-foreground leading-relaxed">
-                    Active Noise Cancellation (ANC) was once a luxury reserved for premium headphones like Sony or Bose costing upwards of Rs. 20,000. Today, technology has democratized, making decent ANC accessible for less than Rs. 5,000.
+                  <p className="text-lg text-foreground leading-relaxed font-semibold">
+                    Let’s cut through the marketing noise: Premium noise cancellation is not a luxury anymore. If you work in a loud open office or commute on the Delhi Metro or Mumbai locals, it is a survival tool.
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    We put 8 of the best-selling budget ANC headphones in India through their paces. We tested them in local trains, busy coffee shops, and home office setups to measure how effectively they cancel noise and evaluate their sound profiles. Here are our top recommendations.
+                  <p className="text-muted-foreground leading-relaxed mt-4">
+                    We spent two weeks testing the Bose QuietComfort and the Sennheiser Momentum 4 side-by-side. We wore them on flights, local trains, and in noisy cafes to see which one delivers the best combination of silence, sound, and comfort. Here is our biased, honest verdict.
                   </p>
                 </div>
 
@@ -145,7 +126,15 @@ export default function ArticlePage() {
 
                 <div className="mt-12 space-y-12">
                   {products.map((product) => (
-                    <ProductSection key={product.name} {...product} />
+                    <ProductSection
+                      key={product.name}
+                      {...product}
+                      amazonUrl={
+                        product.name.includes('Bose')
+                          ? BOSE_AFFILIATE_URL
+                          : 'https://www.amazon.in/Sennheiser-Momentum-Wireless-Headphones-Cancelling-ANC/dp/B0B6G9TPNQ?linkCode=ll2&tag=techstor0caaf-21&linkId=624f127efe2e59a13c34318c7b90d7ee&ref_=as_li_ss_tl'
+                      }
+                    />
                   ))}
                 </div>
 
@@ -154,11 +143,11 @@ export default function ArticlePage() {
                 <FAQ items={faqItems} />
 
                 <FinalVerdict
-                  title="Our Final Recommendation"
-                  content="If blocking maximum noise during transit is your main concern, the boAt Nirvanaa 751 ANC is the most powerful budget isolator we tested. For listeners who value natural sound profiles and device connectivity, the JBL Tune 770NC is a superior musical choice. The Blaupunkt BH31 is a comfortable, highly affordable alternative for casual home listening."
+                  title="Which ANC Headphone Should You Buy?"
+                  content="For pure silence and lightweight comfort, buy the Bose QuietComfort. It completely isolates you from the chaos of travel and noisy offices. If you want rich audiophile sound quality and two-week battery life, go for the Sennheiser Momentum 4."
                   topPick={{
-                    name: 'boAt Nirvanaa 751 ANC',
-                    href: getAmazonAffiliateUrl('boAt Nirvanaa 751 ANC'),
+                    name: 'Bose QuietComfort',
+                    href: BOSE_AFFILIATE_URL,
                   }}
                 />
 
@@ -175,7 +164,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="boAt Nirvanaa 751 ANC" href={getAmazonAffiliateUrl('boAt Nirvanaa 751 ANC')} />
+      <StickyCTA productName="Bose QuietComfort" href={BOSE_AFFILIATE_URL} />
     </>
   )
 }

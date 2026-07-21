@@ -5,50 +5,36 @@ import Link from 'next/link'
 import { ArticleCard } from '@/components/cards'
 import { ArrowRight } from 'lucide-react'
 
-const categories = ['All', 'Audio', 'Computers', 'Monitors', 'Wearables', 'Home Office']
+const categories = ['All', 'Audio', 'Computers', 'Mobiles', 'Smart Home']
 
 const articles = [
   {
-    title: 'Best Smartwatches for Fitness in India',
-    excerpt: 'Apple Watch Series 9 vs Garmin Forerunner 265 — track your workouts, monitor your health, and stay connected.',
-    category: 'Wearables',
-    href: '/article/best-smartwatches-fitness',
+    title: 'ASUS ROG Strix G16 vs Apple MacBook Pro M4',
+    excerpt: 'Windows gaming beast vs Apple M4 Silicon — we tested compile times, gaming frame rates, and battery limits.',
+    category: 'Computers',
+    href: '/article/best-wireless-earbuds-budget',
     readTime: '8 min read',
   },
   {
-    title: 'Best Desk Setup Accessories',
-    excerpt: 'Transform your workspace with ergonomic monitors, keyboards, and accessories for productivity and comfort.',
-    category: 'Home Office',
-    href: '/article/best-desk-setup-accessories',
+    title: 'Bose QuietComfort vs Sennheiser Momentum 4',
+    excerpt: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
+    category: 'Audio',
+    href: '/article/best-budget-noise-cancelling-headphones-india',
     readTime: '7 min read',
   },
   {
-    title: 'Sony WH-1000XM5 vs Bose QuietComfort Ultra',
-    excerpt: 'A detailed comparison of the two best ANC headphones for Indian buyers in 2024.',
-    category: 'Audio',
-    href: '/review/sony-wh-1000xm5',
-    readTime: '9 min read',
+    title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review',
+    excerpt: '12,800 Pa suction power, anti-tangle tech, and automated mopping — we put this vacuum through real home dust tests.',
+    category: 'Smart Home',
+    href: '/article/best-mechanical-keyboards-coding-india',
+    readTime: '7 min read',
   },
   {
-    title: 'Best Budget Gaming Monitors in India',
-    excerpt: 'Get smooth, responsive gameplay without breaking the bank with these affordable gaming monitors.',
-    category: 'Monitors',
-    href: '/article/best-budget-gaming-monitors',
-    readTime: '11 min read',
-  },
-  {
-    title: 'Best Laptops for College Students',
-    excerpt: 'Portable, powerful, and affordable laptops perfect for lectures, research, and everything in between.',
-    category: 'Computers',
-    href: '/article/best-laptops-college-students',
-    readTime: '14 min read',
-  },
-  {
-    title: 'Best Wireless Earbuds in India',
-    excerpt: 'Apple AirPods Pro vs Sony WF-1000XM5 vs Samsung Galaxy Buds2 Pro — find your perfect pair.',
-    category: 'Audio',
-    href: '/article/best-wireless-earbuds-budget',
-    readTime: '12 min read',
+    title: 'Vivo Premium Smartphone (2025) Review',
+    excerpt: 'AMOLED display, massive battery, and a versatile camera setup — here is the biased truth about Vivo’s latest.',
+    category: 'Mobiles',
+    href: '/article/best-coding-monitors-under-15000-india',
+    readTime: '6 min read',
   },
 ]
 

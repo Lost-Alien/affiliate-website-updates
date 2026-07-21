@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
 
 const popularPosts = [
-  { title: 'Best Wireless Earbuds in India', href: '/article/best-wireless-earbuds-budget', category: 'Audio' },
-  { title: 'Sony WH-1000XM5 Review', href: '/review/sony-wh-1000xm5', category: 'Audio' },
-  { title: 'Best Smartwatches for Fitness', href: '/article/best-smartwatches-fitness', category: 'Wearables' },
-  { title: 'Best Mechanical Keyboards', href: '/article/best-mechanical-keyboards', category: 'Computers' },
+  { title: 'ASUS ROG Strix G16 vs Apple MacBook Pro M4', href: '/article/best-wireless-earbuds-budget', category: 'Computers' },
+  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-budget-noise-cancelling-headphones-india', category: 'Audio' },
+  { title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum', href: '/article/best-mechanical-keyboards-coding-india', category: 'Smart Home' },
+  { title: 'Vivo Premium Smartphone (2025) Review', href: '/article/best-coding-monitors-under-15000-india', category: 'Mobiles' },
 ]
 
 const categories = [

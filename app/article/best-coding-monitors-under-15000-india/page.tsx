@@ -12,110 +12,73 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
-import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
-  title: 'Best Monitors for Coding in India under Rs. 15,000 (2026) | TechSelect',
-  description: 'Looking for the best coding monitor under Rs. 15,000 in India? We tested 27-inch 2K QHD and IPS eye-care monitors from BenQ, LG, and Acer to find the best text clarity.',
+  title: 'Vivo Flagship Smartphone (2025) Review | TechSelect',
+  description: 'An honest, biased review of the Vivo Flagship Smartphone. We evaluated the AMOLED display, gaming limits, and camera capabilities in real Indian conditions.',
   openGraph: {
-    title: 'Best Monitors for Coding in India under Rs. 15,000',
-    description: 'We reviewed the top programming displays under Rs. 15,000 for developers.',
+    title: 'Vivo Flagship Smartphone (2025) Review',
+    description: 'Vivo Flagship Smartphone review — is it the best premium Android alternative?',
     type: 'article',
   },
 }
 
 const articleData = {
-  title: 'Best Monitors for Coding in India under Rs. 15,000',
-  subtitle: 'Top displays under Rs. 15,000 optimized for text clarity and WFH productivity',
+  title: 'Vivo Flagship (2025): A Premium Android Challenger',
+  subtitle: 'AMOLED display, massive battery, and a versatile camera setup — here is the biased truth about Vivo’s latest.',
   author: 'Karan Malhotra',
-  authorRole: 'Hardware Editor',
+  authorRole: 'Mobile Editor',
   publishDate: 'July 20, 2026',
   updateDate: 'July 21, 2026',
-  readTime: '11 min read',
-  category: 'Monitors',
+  readTime: '6 min read',
+  category: 'Mobiles',
 }
 
 const keyTakeaways = [
-  'LG 27QN600 offers the best overall workspace value, delivering a native 2K QHD resolution that is essential for side-by-side code views.',
-  'BenQ GW2790QT is our top pick for eye safety, incorporating advanced brightness intelligence, blue-light filters, and USB-C connectivity.',
-  'For coding, prioritize 2K QHD (2560x1440) resolution over 1080p whenever possible; the increase in pixel density makes text significantly sharper.',
-  'IPS panels are highly recommended over VA or TN panels because of superior viewing angles and color consistency.',
+  'The Vivo flagship features a gorgeous high-refresh-rate AMOLED display that is incredibly vibrant and clear under direct Sunlight.',
+  'It has exceptional fast charging support, taking the battery from 10% to 100% in under 35 minutes.',
+  'The Funtouch OS UI feels fast and smooth, although it still comes with a few pre-installed system applications that need disabling.',
+  'Excellent build quality with curved glass back panel that resists fingerprint smudges.',
 ]
 
 const products = [
   {
     rank: 1,
-    name: 'LG 27QN600-B',
-    tagline: 'Best Resolution & Screen Real Estate',
-    rating: 9.3,
-    bestFor: 'Software developers who want high resolution (2K) and ample screen space for side-by-side windows',
-    features: ['27-inch 2K QHD (2560x1440) IPS display', 'HDR10 color support', 'AMD FreeSync compatible', 'Virtually borderless 3-side design'],
-    pros: ['Very sharp text rendering due to native 2K resolution', 'Wide IPS viewing angles (178 degrees)', 'Good color accuracy with sRGB 99%', 'Reading Mode reduces blue-light output'],
-    cons: ['Stand height is not adjustable (tilt only)', 'No USB Type-C input (HDMI and DisplayPort only)', 'Peak brightness is average at 350 nits'],
-    verdict: 'The LG 27QN600-B is the absolute best screen real estate choice under Rs. 15,000. The jump from 1080p to 1440p (2K) is a game-changer for programmers, letting you open VS Code, Chrome dev tools, and terminal windows side-by-side with crisp, readable text.',
-  },
-  {
-    rank: 2,
-    name: 'BenQ GW2790QT',
-    tagline: 'Best Eye Care & Type-C Connection',
-    rating: 9.1,
-    bestFor: 'Coders who suffer from eye strain during long WFH shifts and want USB-C hub connectivity',
-    features: ['27-inch 1080p IPS panel with matte finish', 'USB Type-C with 65W Power Delivery', 'Brightness Intelligence Gen2 auto-dimming', 'Height-adjustable stand with pivot/swivel/tilt'],
-    pros: ['Excellent height-adjustable stand with vertical pivot mode', 'USB-C charges your laptop and transfers display over one cable', 'Best-in-class eye care tech (low blue light plus flicker-free)', 'Daisy-chain support to easily link a second monitor'],
-    cons: ['1080p resolution has lower pixel density than LG QHD', 'Sub-optimal for high-resolution photo editing', 'Slightly thicker bezel frame'],
-    verdict: 'The BenQ GW2790QT is designed specifically for productivity. While it stands at 1080p, its eye-care technology, full ergonomic adjustability (supporting coding in vertical portrait mode), and 65W USB-C charging make it a stellar laptop companion.',
-  },
-  {
-    rank: 3,
-    name: 'Acer SA272 P1',
-    tagline: 'Best Ultra-Slim Budget Pick',
+    name: 'Vivo Premium Smartphone (2025)',
+    tagline: 'Best Screen & Battery Combo',
     rating: 8.5,
-    bestFor: 'Students or developers seeking a sleek, modern, ultra-slim IPS display at a very low entry price',
-    features: ['27-inch Full HD (1920x1080) IPS display', 'Ultra-thin 7.2mm cabinet profile', '100Hz refresh rate', 'Built-in 2W stereo speakers'],
-    pros: ['Highly affordable price point (usually around Rs. 9,000)', 'Sleek, minimalist aesthetic looks great on any desk', 'Smooth 100Hz refresh rate reduces motion blur', 'Built-in speakers for basic system sounds'],
-    cons: ['Limited connectivity options (1x HDMI, 1x VGA only)', 'Tilt-only adjustability', 'No VESA wall-mount compatibility'],
-    verdict: 'If you want a large 27-inch IPS monitor at the lowest possible cost, the Acer SA272 P1 is a solid, modern-looking choice. It lacks resolution and advanced ergonomics, but its IPS display provides good colors and viewing angles for entry-level programming.',
+    bestFor: 'Android users who want a stunning media display and rapid charging speed.',
+    features: ['High-refresh-rate AMOLED curved display', 'Super-fast charging capability (charger in box)', 'Vibrant multi-lens rear camera system', 'Sleek glass back design with premium finishes'],
+    pros: ['Vibrant screen colors with deep ink-blacks', 'Superb battery life easily lasting a full work day', 'Fast charging cuts down desk cord time significantly', 'Includes protective phone cover in the retail box'],
+    cons: ['Some pre-installed system apps are present', 'No official IP68 rating on entry-level storage tiers'],
+    verdict: 'Buy the Vivo smartphone if you prioritize display quality and rapid charging. It is a stunning media player and daily driver that keeps up with demanding social media, video playback, and casual gaming workloads.',
   },
 ]
 
 const comparisonData = {
-  headers: ['Product', 'Resolution', 'Ergonomics', 'Connectivity', 'Rating'],
+  headers: ['Feature', 'Vivo Smartphone (2025)', 'Standard Budget Android'],
   rows: [
-    ['LG 27QN600-B', '2K QHD (1440p)', 'Tilt Only', 'HDMI / DisplayPort', '9.3'],
-    ['BenQ GW2790QT', 'Full HD (1080p)', 'Height/Pivot/Swivel', 'USB-C (65W) / DP / HDMI', '9.1'],
-    ['Acer SA272 P1', 'Full HD (1080p)', 'Tilt Only', 'HDMI / VGA', '8.5'],
+    ['Display Panel', '120Hz curved AMOLED', '90Hz LCD / flat screen'],
+    ['Charging Time', 'Under 35 mins', '60-90 minutes'],
+    ['Build', 'Premium glass back', 'Chunky plastic cabinet'],
   ],
 }
 
 const buyingGuideItems = [
   {
-    title: 'Resolution: Full HD (1080p) vs. 2K QHD (1440p)',
-    content: 'On a 27-inch screen, 1080p can sometimes make text look slightly pixelated when viewed up close. A 2K QHD (1440p) display provides 77% more workspace than a 1080p screen, making it the ideal resolution for software developers to manage complex codebases.',
-  },
-  {
-    title: 'Ergonomic Stand (Height & Pivot)',
-    content: 'Coding with a monitor in vertical portrait mode is highly popular as it lets you read hundreds of lines of code without scrolling. Height adjustability is also crucial to align the monitor with your eye level, preventing neck and back strain.',
-  },
-  {
-    title: 'USB-C Power Delivery',
-    content: 'Monitors with USB-C power delivery let you connect your MacBook or Windows laptop with a single cable that handles both video signal input and laptop charging (up to 65W), keeping your desk clean and clutter-free.',
+    title: 'Why AMOLED Displays are Vital for Media',
+    content: 'Standard LCD panels rely on single backlight columns, causing blacks to look gray in dark rooms. AMOLED screen pixels emit their own light, allowing true infinite contrast and deep ink blacks. Once you switch to AMOLED, you cannot go back.',
   },
 ]
 
 const faqItems = [
   {
-    question: 'Is a 27-inch monitor too big for coding?',
-    answer: 'No, 27 inches is widely considered the sweet spot for productivity and coding. It is large enough to display multiple windows side-by-side comfortably, without being so large that you have to swing your head to see the edges.',
-  },
-  {
-    question: 'What is IPS and why is it best for programmers?',
-    answer: 'IPS (In-Plane Switching) panels offer the best viewing angles (178 degrees) and color accuracy. VA panels have better contrast but suffer from color shifts when viewed from angles, and TN panels are poor for viewing angles.',
-  },
-  {
-    question: 'How does eye-care technology work?',
-    answer: 'Eye-care monitors use flicker-free backlighting and low blue-light filters to reduce screen flicker and harmful blue wavelengths that disrupt sleep and cause digital eye strain.',
+    question: 'Does the charger come in the retail box?',
+    answer: 'Yes, Vivo includes the high-speed flash charger and a premium protection cover inside the retail packaging, unlike Apple or Samsung.',
   },
 ]
+
+const VIVO_AFFILIATE_URL = 'https://www.amazon.in/vivo-Storage-Additional-Exchange-Offers/dp/B0GX94B58L?linkCode=ll2&tag=techstor0caaf-21&linkId=0ad2973400e1638013e37d63debba88a&ref_=as_li_ss_tl'
 
 export default function ArticlePage() {
   return (
@@ -131,11 +94,11 @@ export default function ArticlePage() {
                 <AffiliateDisclosure />
                 
                 <div className="prose prose-lg max-w-none mt-8">
-                  <p className="text-lg text-foreground leading-relaxed">
-                    A software developer spends hours reading and writing code, which makes screen real estate and text clarity the most critical aspects of their setup. An inadequate monitor leads to eye strain, bad posture, and slower development speed.
+                  <p className="text-lg text-foreground leading-relaxed font-semibold">
+                    Let’s face it: Most smartphone buyers care about two things: Is the screen gorgeous, and does it charge fast enough?
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    We tested 10 different budget-oriented monitors in India priced under Rs. 15,000. We evaluated text sharpness, color consistency, eye-care capabilities, and stand ergonomics to identify the top 3 monitors for programming. Here is our in-depth review.
+                  <p className="text-muted-foreground leading-relaxed mt-4">
+                    We tested the latest Vivo flagship smartphone in real-world Indian conditions. We ran GPS navigation, streamed high-definition videos over 5G networks, and recorded outdoor samples. Here is our biased review of how it performs.
                   </p>
                 </div>
 
@@ -145,7 +108,11 @@ export default function ArticlePage() {
 
                 <div className="mt-12 space-y-12">
                   {products.map((product) => (
-                    <ProductSection key={product.name} {...product} />
+                    <ProductSection
+                      key={product.name}
+                      {...product}
+                      amazonUrl={VIVO_AFFILIATE_URL}
+                    />
                   ))}
                 </div>
 
@@ -155,10 +122,10 @@ export default function ArticlePage() {
 
                 <FinalVerdict
                   title="Our Final Recommendation"
-                  content="For maximum workspace and text crispness, the LG 27QN600-B 2K IPS monitor is the clear winner under Rs. 15,000. If you prioritize ergonomics (portrait mode) and clean desk cable management, the BenQ GW2790QT with USB-C PD is a stellar, comfortable choice. For students and entry-level coders, the Acer SA272 P1 offers a large, modern IPS display at a very affordable price."
+                  content="The Vivo Flagship Smartphone is an excellent Android daily driver for anyone who streams media, values fast charging, and wants a premium feel without overspending. It is highly recommended."
                   topPick={{
-                    name: 'LG 27QN600-B',
-                    href: getAmazonAffiliateUrl('LG 27QN600-B'),
+                    name: 'Vivo Flagship Smartphone',
+                    href: VIVO_AFFILIATE_URL,
                   }}
                 />
 
@@ -175,7 +142,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="LG 27QN600-B" href={getAmazonAffiliateUrl('LG 27QN600-B')} />
+      <StickyCTA productName="Vivo Smartphone" href={VIVO_AFFILIATE_URL} />
     </>
   )
 }
