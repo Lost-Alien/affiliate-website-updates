@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { ArticleCard, ReviewCard } from '@/components/cards'
+import { ArticleCard, ProductListingCard } from '@/components/cards'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CATEGORIES, SAMPLE_PRODUCTS } from '@/lib/categories'
@@ -74,7 +74,7 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
 
   const isSubcategoryActive = sub ? sub.active : false
   const hasProducts = matchingProducts.length > 0
-  const hasActiveContent = isSubcategoryActive && hasProducts
+  const hasActiveContent = (isSubcategoryActive || hasProducts) && hasProducts
 
   const parentCatName = cat
     ? cat.name
@@ -223,7 +223,17 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {reviews.map((review) => (
-                <ReviewCard key={review.title} {...review} rating={review.rating || 9.0} />
+                <ProductListingCard
+                  key={review.title}
+                  title={review.title}
+                  description={review.description}
+                  image={review.image}
+                  rating={review.rating}
+                  price={(review as { price?: string }).price}
+                  href={review.href}
+                  amazonUrl={review.amazonUrl}
+                  badge="Editor's Choice"
+                />
               ))}
             </div>
           </section>

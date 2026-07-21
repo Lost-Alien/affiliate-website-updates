@@ -34,7 +34,7 @@ export const CATEGORIES: Category[] = [
     description: 'Expert reviews, comparisons, and buying guides for laptops, desktops, components, and peripherals.',
     active: true,
     subcategories: [
-      { name: 'Laptops', slug: 'laptops', active: false, count: 0, description: 'Ultrabooks, gaming laptops, MacBooks, and budget laptops.' },
+      { name: 'Laptops', slug: 'laptops', active: true, count: 1, description: 'Ultrabooks, gaming laptops, MacBooks, and budget laptops.' },
       { name: 'Desktops', slug: 'desktops', active: false, count: 0, description: 'Prebuilt desktop PCs, mini PCs, and workstation builds.' },
       { name: 'Peripherals', slug: 'peripherals', active: false, count: 0, description: 'Mechanical keyboards, gaming mice, webcams, and accessories.' },
       { name: 'Storage', slug: 'storage', active: false, count: 0, description: 'NVMe SSDs, external hard drives, and flash storage.' },
@@ -90,8 +90,33 @@ export interface CategoryContentItem {
   href: string
   image: string
   rating?: number
+  price?: string
+  amazonUrl?: string
   type: 'article' | 'review' | 'comparison'
+  specs?: { label: string; value: string }[]
 }
 
-// All products and reviews removed as requested
-export const SAMPLE_PRODUCTS: CategoryContentItem[] = []
+export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
+  {
+    title: 'ASUS ROG Strix G16 (G615LR-S5190WS)',
+    description: 'The ultimate gaming powerhouse featuring Intel Core Ultra 9 275HX, RTX 5070 Ti 12GB, 32GB DDR5 RAM, and a stunning 2.5K 240Hz display. Built for gamers who demand the very best.',
+    category: 'Computers',
+    subcategorySlug: 'laptops',
+    href: '/products/asus-rog-strix-g16',
+    image: '/products/asus-rog-strix-g16.jpg',
+    rating: 9.4,
+    price: '₹2,75,990',
+    amazonUrl: 'https://www.amazon.in/ASUS-Gaming-Windows-Eclipse-G615LR-S5190WS/dp/B0F5BH7D1L?crid=38OIH0C33VG9Q&dib=eyJ2IjoiMSJ9.fhNj6crAx9P1CUwwwNxBXRO9aij3P0zV4POeWD-dPm4zDHbPozhGiOUZEi1AWOcP1rj8vIvChgB3FE8RkYVOo4CXa9DOyx159AQaT24WvahnxhrOQcthkfy_A3g9c9jQhtX05-7wmeUFC_HW7Xz0Nw8s23ZFzDrC7ZyaJKnFRig3A7v-WvkKPkfqI2pNV6MboPZxveHexz47N3kfvpuQyn2j8-UUrpwAqM9uyGZF0a8.Pn-RDc8LLBwgRuXSwlLhQARnE0K4TOEHMCQrWl3YyZc&dib_tag=se&keywords=rog%2Bstrix%2Bg16&qid=1784631896&sprefix=rog%2B%2Caps%2C295&sr=8-7&th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=aadd764dc4c6da405d29919bcab54154&ref_=as_li_ss_tl',
+    type: 'review',
+    specs: [
+      { label: 'Processor', value: 'Intel Core Ultra 9 275HX (up to 5.4GHz, 24 cores)' },
+      { label: 'GPU', value: 'NVIDIA RTX 5070 Ti 12GB GDDR7 (140W TGP)' },
+      { label: 'RAM', value: '32GB DDR5' },
+      { label: 'Storage', value: '1TB PCIe 4.0 NVMe SSD' },
+      { label: 'Display', value: '16" 2.5K QHD+ (2560×1600) 240Hz IPS' },
+      { label: 'Battery', value: '90Whr, up to 10 hours' },
+      { label: 'OS', value: 'Windows 11 Home' },
+      { label: 'Weight', value: '2.65 kg' },
+    ],
+  },
+]

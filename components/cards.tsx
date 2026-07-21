@@ -193,3 +193,82 @@ export function ReviewCard({ title, rating, category, href, image }: ReviewCardP
     </Link>
   )
 }
+
+interface ProductListingCardProps {
+  title: string
+  description: string
+  image?: string
+  rating?: number
+  price?: string
+  href: string
+  amazonUrl?: string
+  badge?: string
+}
+
+export function ProductListingCard({
+  title,
+  description,
+  image,
+  rating,
+  price,
+  href,
+  amazonUrl,
+  badge,
+}: ProductListingCardProps) {
+  return (
+    <article className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all hover:shadow-md group">
+      <Link href={href} className="block">
+        <div className="relative aspect-[4/3] bg-muted overflow-hidden">
+          {badge && (
+            <span className="absolute top-3 left-3 z-10 px-2.5 py-1 text-xs font-semibold bg-primary text-primary-foreground rounded-full">
+              {badge}
+            </span>
+          )}
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-3/4 h-3/4 bg-gradient-to-br from-secondary to-muted rounded-lg" />
+            </div>
+          )}
+        </div>
+      </Link>
+
+      <div className="p-4">
+        <Link href={href}>
+          <h3 className="font-serif font-semibold text-foreground group-hover:text-accent transition-colors line-clamp-2 leading-snug mb-1">
+            {title}
+          </h3>
+        </Link>
+        <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed mb-3">{description}</p>
+
+        <div className="flex items-center justify-between mb-3">
+          {rating && (
+            <div className="flex items-center gap-1">
+              <Star className="h-4 w-4 fill-accent text-accent" />
+              <span className="text-sm font-semibold text-foreground">{rating.toFixed(1)}</span>
+              <span className="text-xs text-muted-foreground">/ 10</span>
+            </div>
+          )}
+          {price && <span className="text-sm font-bold text-foreground">{price}</span>}
+        </div>
+
+        {amazonUrl && (
+          <a
+            href={amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex items-center justify-center gap-1.5 w-full py-2.5 px-4 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+          >
+            View on Amazon.in
+            <ArrowRight className="h-3.5 w-3.5" />
+          </a>
+        )}
+      </div>
+    </article>
+  )
+}
