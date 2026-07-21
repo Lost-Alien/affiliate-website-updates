@@ -1,0 +1,57 @@
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google'
+import './globals.css'
+
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+const sourceSerif = Source_Serif_4({
+  variable: '--font-source-serif',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
+
+export const metadata: Metadata = {
+  title: 'TechSelect India | Premium Tech Reviews & Buying Guides',
+  description: 'Expert, hands-on product reviews and buying guides tailored for Indian buyers. Discover deep-dive tests of the latest headphones, keyboards, and consumer tech.',
+  keywords: ['tech reviews India', 'best earbuds India', 'Sony WH-1000XM5 review', 'Apple AirPods Pro India', 'buying guide'],
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'TechSelect India | Expert Product Reviews & Buying Guides',
+    description: 'Honest, expert product reviews and buying guides for Indian tech buyers.',
+    type: 'website',
+    locale: 'en_IN',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} bg-background`}>
+      <body className="font-sans antialiased min-h-screen flex flex-col">
+        {children}
+      </body>
+    </html>
+  )
+}
