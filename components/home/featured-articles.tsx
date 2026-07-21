@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ArrowRight, Star, ExternalLink } from 'lucide-react'
 
 const ASUS_ROG_URL =
-  'https://www.amazon.in/ASUS-Gaming-Windows-Eclipse-G615LR-S5190WS/dp/B0F5BH7D1L?crid=38OIH0C33VG9Q&dib=eyJ2IjoiMSJ9.fhNj6crAx9P1CUwwwNxBXRO9aij3P0zV4POeWD-dPm4zDHbPozhGiOUZEi1AWOcP1rj8vIvChgB3FE8RkYVOo4CXa9DOyx159AQaT24WvahnxhrOQcthkfy_A3g9c9jQhtX05-7wmeUFC_HW7Xz0Nw8s23ZFzDrC7ZyaJKnFRig3A7v-WvkKPkfqI2pNV6MboPZxveHexz47N3kfvpuQyn2j8-UUrpwAqM9uyGZF0a8.Pn-RDc8LLBwgRuXSwlLhQARnE0K4TOEHMCQrWl3YyZc&dib_tag=se&keywords=rog%2Bstrix%2Bg16&qid=1784631896&sprefix=rog%2B%2Caps%2C295&sr=8-7&th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=aadd764dc4c6da405d29919bcab54154&ref_=as_li_ss_tl'
+  'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=5d528a812b0131c07a2021e4fa256922&ref_=as_li_ss_tl'
 
 export function FeaturedArticles() {
   return (
