@@ -2,20 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, Menu, X, Moon, Sun } from 'lucide-react'
-
-const categories = [
-  { name: 'Audio', href: '/category/audio' },
-  { name: 'Computers', href: '/category/computers' },
-  { name: 'Monitors', href: '/category/monitors' },
-  { name: 'Wearables', href: '/category/wearables' },
-  { name: 'Home Office', href: '/category/home-office' },
-]
+import { Search, Menu, X, Moon, Sun, ChevronDown } from 'lucide-react'
+import { CATEGORIES } from '@/lib/categories'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [expandedMobileCategory, setExpandedMobileCategory] = useState<string | null>(null)
 
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains('dark')
@@ -26,6 +21,12 @@ export function Header() {
     document.documentElement.classList.toggle('dark')
     setIsDark(!isDark)
   }
+
+  // Filter only active categories and active subcategories
+  const navCategories = CATEGORIES.filter((cat) => cat.active).map((cat) => ({
+    ...cat,
+    subcategories: cat.subcategories.filter((sub) => sub.active),
+  }))
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
@@ -38,16 +39,45 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          {/* Desktop Navigation with Dropdowns */}
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+            {navCategories.map((category) => (
+              <div
+                key={category.slug}
+                className="relative group"
+                onMouseEnter={() => setActiveDropdown(category.slug)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
-                {category.name}
-              </Link>
+                <Link
+                  href={`/category/${category.slug}`}
+                  className="flex items-center gap-1.5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {category.name}
+                  {category.subcategories.length > 0 && (
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70 group-hover:rotate-180 transition-transform duration-200" />
+                  )}
+                </Link>
+
+                {/* Dropdown Menu */}
+                {category.subcategories.length > 0 && activeDropdown === category.slug && (
+                  <div className="absolute left-0 top-full pt-1 w-56 animate-in fade-in slide-in-from-top-1 duration-150 z-50">
+                    <div className="bg-popover border border-border rounded-lg shadow-lg p-2 space-y-0.5">
+                      <div className="px-3 py-1.5 text-xs font-semibold text-muted-foreground uppercase tracking-wider border-b border-border/50 mb-1">
+                        {category.name} Categories
+                      </div>
+                      {category.subcategories.map((sub) => (
+                        <Link
+                          key={sub.slug}
+                          href={`/category/${category.slug}/${sub.slug}`}
+                          className="block px-3 py-2 text-sm font-medium text-popover-foreground hover:bg-muted hover:text-primary rounded-md transition-colors"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -101,18 +131,53 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <nav className="md:hidden border-t border-border bg-background" aria-label="Mobile navigation">
-          <div className="px-4 py-4 space-y-1">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.href}
-                className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {category.name}
-              </Link>
-            ))}
+        <nav className="md:hidden border-t border-border bg-background max-h-[calc(100vh-4rem)] overflow-y-auto" aria-label="Mobile navigation">
+          <div className="px-4 py-4 space-y-2">
+            {navCategories.map((category) => {
+              const isExpanded = expandedMobileCategory === category.slug
+              return (
+                <div key={category.slug} className="border-b border-border/40 pb-2">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={`/category/${category.slug}`}
+                      className="px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                    {category.subcategories.length > 0 && (
+                      <button
+                        onClick={() =>
+                          setExpandedMobileCategory(isExpanded ? null : category.slug)
+                        }
+                        className="p-2 text-muted-foreground hover:text-foreground"
+                        aria-label={`Toggle ${category.name} subcategories`}
+                      >
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform duration-200 ${
+                            isExpanded ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                    )}
+                  </div>
+                  {isExpanded && category.subcategories.length > 0 && (
+                    <div className="pl-6 space-y-1 mt-1 border-l-2 border-border ml-3">
+                      {category.subcategories.map((sub) => (
+                        <Link
+                          key={sub.slug}
+                          href={`/category/${category.slug}/${sub.slug}`}
+                          className="block px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </nav>
       )}
