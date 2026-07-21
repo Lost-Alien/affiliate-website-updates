@@ -19,6 +19,13 @@ const subcategories = [
 
 const featuredGuides = [
   {
+    title: 'Best Monitors for Coding in India under Rs. 15,000',
+    description: 'We evaluated 27-inch 2K QHD and eye-care IPS displays from BenQ, LG, and Acer for developers.',
+    category: 'Budget',
+    href: '/article/best-coding-monitors-under-15000-india',
+    image: '/placeholder-monitor.jpg',
+  },
+  {
     title: 'Best Gaming Monitors 2026',
     description: 'Our top picks for competitive gaming, from budget-friendly to premium displays.',
     category: 'Gaming',

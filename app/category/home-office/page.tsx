@@ -19,6 +19,20 @@ const subcategories = [
 
 const featuredGuides = [
   {
+    title: 'Best Mechanical Keyboards for Coding in India (Under Rs. 10,000)',
+    description: 'Compare tactile and linear hot-swappable keyboards like Keychron, Aula, and Kreo for developers.',
+    category: 'Accessories',
+    href: '/article/best-mechanical-keyboards-coding-india',
+    image: '/placeholder-office.jpg',
+  },
+  {
+    title: 'Best Monitors for Coding in India under Rs. 15,000',
+    description: 'We evaluated 27-inch 2K QHD and eye-care IPS displays from BenQ, LG, and Acer for developers.',
+    category: 'Accessories',
+    href: '/article/best-coding-monitors-under-15000-india',
+    image: '/placeholder-office.jpg',
+  },
+  {
     title: 'Best Standing Desks 2026',
     description: 'Sit-stand desks that help you stay healthy and productive while working from home.',
     category: 'Desks',
@@ -30,13 +44,6 @@ const featuredGuides = [
     description: 'Support your back through long work sessions with our top chair recommendations.',
     category: 'Chairs',
     href: '/article/best-office-chairs',
-    image: '/placeholder-office.jpg',
-  },
-  {
-    title: 'Best Webcams for Video Calls',
-    description: 'Look your best in meetings with these high-quality webcams at every price point.',
-    category: 'Webcams',
-    href: '/article/best-webcams',
     image: '/placeholder-office.jpg',
   },
 ]

@@ -19,6 +19,13 @@ const subcategories = [
 
 const featuredGuides = [
   {
+    title: 'Best Budget Noise Cancelling Headphones in India (Under Rs. 5,000)',
+    description: 'We tested boAt, JBL, and Blaupunkt to find the best noise-canceling performance under Rs. 5,000.',
+    category: 'Headphones',
+    href: '/article/best-budget-noise-cancelling-headphones-india',
+    image: '/placeholder-audio.jpg',
+  },
+  {
     title: 'Best Wireless Earbuds Under $100',
     description: 'Top picks for budget-conscious listeners who want great sound without breaking the bank.',
     category: 'Earbuds',

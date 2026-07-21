@@ -19,6 +19,13 @@ const subcategories = [
 
 const featuredGuides = [
   {
+    title: 'Best Mechanical Keyboards for Coding in India (Under Rs. 10,000)',
+    description: 'Compare tactile and linear hot-swappable keyboards like Keychron, Aula, and Kreo for developers.',
+    category: 'Peripherals',
+    href: '/article/best-mechanical-keyboards-coding-india',
+    image: '/placeholder-computer.jpg',
+  },
+  {
     title: 'Best Laptops for Students 2026',
     description: 'Our top picks for college students balancing portability, performance, and price.',
     category: 'Laptops',
