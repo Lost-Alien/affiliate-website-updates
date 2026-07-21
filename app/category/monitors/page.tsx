@@ -25,56 +25,14 @@ const featuredGuides = [
     href: '/article/best-coding-monitors-under-15000-india',
     image: '/placeholder-monitor.jpg',
   },
-  {
-    title: 'Best Gaming Monitors 2026',
-    description: 'Our top picks for competitive gaming, from budget-friendly to premium displays.',
-    category: 'Gaming',
-    href: '/article/best-gaming-monitors',
-    image: '/placeholder-monitor.jpg',
-  },
-  {
-    title: 'Best 4K Monitors for Productivity',
-    description: 'High-resolution displays that make multitasking and content creation a breeze.',
-    category: '4K & 5K',
-    href: '/article/best-4k-monitors',
-    image: '/placeholder-monitor.jpg',
-  },
-  {
-    title: 'Best Ultrawide Monitors',
-    description: 'Immersive curved displays that transform your workspace and gaming experience.',
-    category: 'Ultrawide',
-    href: '/article/best-ultrawide-monitors',
-    image: '/placeholder-monitor.jpg',
-  },
 ]
 
 const latestReviews = [
   {
-    title: 'LG 27GP950-B Review',
+    title: 'Best Monitors for Coding in India under Rs. 15,000',
     rating: 9.1,
-    category: 'Gaming',
-    href: '/review/lg-27gp950-b',
-    image: '/placeholder-monitor.jpg',
-  },
-  {
-    title: 'Samsung Odyssey G9 (2026) Review',
-    rating: 8.9,
-    category: 'Ultrawide',
-    href: '/review/samsung-odyssey-g9-2026',
-    image: '/placeholder-monitor.jpg',
-  },
-  {
-    title: 'ASUS ProArt PA32UCG Review',
-    rating: 9.3,
-    category: 'Professional',
-    href: '/review/asus-proart-pa32ucg',
-    image: '/placeholder-monitor.jpg',
-  },
-  {
-    title: 'Dell S2722QC Review',
-    rating: 8.5,
-    category: '4K & 5K',
-    href: '/review/dell-s2722qc',
+    category: 'Budget',
+    href: '/article/best-coding-monitors-under-15000-india',
     image: '/placeholder-monitor.jpg',
   },
 ]

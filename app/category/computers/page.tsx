@@ -10,11 +10,10 @@ export const metadata: Metadata = {
 }
 
 const subcategories = [
+  { name: 'Peripherals', icon: Keyboard, count: 34 },
   { name: 'Laptops', icon: Laptop, count: 42 },
   { name: 'Desktops', icon: Monitor, count: 18 },
-  { name: 'Processors', icon: Cpu, count: 15 },
   { name: 'Storage', icon: HardDrive, count: 21 },
-  { name: 'Peripherals', icon: Keyboard, count: 34 },
 ]
 
 const featuredGuides = [
@@ -25,56 +24,14 @@ const featuredGuides = [
     href: '/article/best-mechanical-keyboards-coding-india',
     image: '/placeholder-computer.jpg',
   },
-  {
-    title: 'Best Laptops for Students 2026',
-    description: 'Our top picks for college students balancing portability, performance, and price.',
-    category: 'Laptops',
-    href: '/article/best-student-laptops',
-    image: '/placeholder-computer.jpg',
-  },
-  {
-    title: 'Best Gaming Laptops Under $1500',
-    description: 'Powerful gaming laptops that deliver excellent performance without premium prices.',
-    category: 'Laptops',
-    href: '/article/best-gaming-laptops',
-    image: '/placeholder-computer.jpg',
-  },
-  {
-    title: 'Best SSDs for Every Budget',
-    description: 'Speed up your system with our recommended solid-state drives at every price point.',
-    category: 'Storage',
-    href: '/article/best-ssds',
-    image: '/placeholder-computer.jpg',
-  },
 ]
 
 const latestReviews = [
   {
-    title: 'MacBook Pro M4 Review',
-    rating: 9.4,
-    category: 'Laptops',
-    href: '/review/macbook-pro-m4',
-    image: '/placeholder-computer.jpg',
-  },
-  {
-    title: 'Dell XPS 15 (2026) Review',
-    rating: 8.8,
-    category: 'Laptops',
-    href: '/review/dell-xps-15-2026',
-    image: '/placeholder-computer.jpg',
-  },
-  {
-    title: 'Samsung 990 Pro 2TB Review',
-    rating: 9.1,
-    category: 'Storage',
-    href: '/review/samsung-990-pro',
-    image: '/placeholder-computer.jpg',
-  },
-  {
-    title: 'AMD Ryzen 9 9950X Review',
-    rating: 9.0,
-    category: 'Processors',
-    href: '/review/amd-ryzen-9-9950x',
+    title: 'Best Mechanical Keyboards for Developers',
+    rating: 9.2,
+    category: 'Peripherals',
+    href: '/article/best-mechanical-keyboards-coding-india',
     image: '/placeholder-computer.jpg',
   },
 ]

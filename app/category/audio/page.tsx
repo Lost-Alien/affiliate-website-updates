@@ -14,7 +14,6 @@ const subcategories = [
   { name: 'Earbuds', icon: Headphones, count: 31 },
   { name: 'Speakers', icon: Speaker, count: 18 },
   { name: 'Microphones', icon: Mic, count: 12 },
-  { name: 'DACs & Amps', icon: Radio, count: 8 },
 ]
 
 const featuredGuides = [
@@ -33,48 +32,20 @@ const featuredGuides = [
     image: '/placeholder-audio.jpg',
   },
   {
-    title: 'Best Noise-Canceling Headphones 2026',
-    description: 'Our top recommendations for blocking out the world and focusing on your music.',
-    category: 'Headphones',
-    href: '/article/best-noise-canceling-headphones',
-    image: '/placeholder-audio.jpg',
-  },
-  {
-    title: 'Best Portable Bluetooth Speakers',
-    description: 'Take your music anywhere with these rugged, great-sounding portable speakers.',
-    category: 'Speakers',
-    href: '/article/best-portable-speakers',
+    title: 'Best Wireless Earbuds Comparison: AirPods vs Sony',
+    description: 'A comprehensive comparison of leading wireless earbuds platforms.',
+    category: 'Earbuds',
+    href: '/compare/wireless-earbuds',
     image: '/placeholder-audio.jpg',
   },
 ]
 
 const latestReviews = [
   {
-    title: 'Soundcore Pro X Review',
-    rating: 8.7,
-    category: 'Earbuds',
-    href: '/review/soundcore-pro-x',
-    image: '/placeholder-audio.jpg',
-  },
-  {
-    title: 'Sony WH-1000XM6 Review',
-    rating: 9.2,
+    title: 'Sony WH-1000XM5 Deep Review & ANC Test',
+    rating: 9.3,
     category: 'Headphones',
-    href: '/review/sony-wh-1000xm6',
-    image: '/placeholder-audio.jpg',
-  },
-  {
-    title: 'Bose SoundLink Flex Review',
-    rating: 8.4,
-    category: 'Speakers',
-    href: '/review/bose-soundlink-flex',
-    image: '/placeholder-audio.jpg',
-  },
-  {
-    title: 'Shure MV7+ Review',
-    rating: 8.9,
-    category: 'Microphones',
-    href: '/review/shure-mv7-plus',
+    href: '/review/sony-wh-1000xm5',
     image: '/placeholder-audio.jpg',
   },
 ]

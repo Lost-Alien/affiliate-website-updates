@@ -12,62 +12,26 @@ export const metadata: Metadata = {
 const subcategories = [
   { name: 'Smartwatches', icon: Watch, count: 26 },
   { name: 'Fitness Trackers', icon: Activity, count: 18 },
-  { name: 'Smart Glasses', icon: Glasses, count: 8 },
   { name: 'Hearables', icon: Headphones, count: 22 },
   { name: 'Smart Rings', icon: Smartphone, count: 6 },
 ]
 
 const featuredGuides = [
   {
-    title: 'Best Smartwatches 2026',
-    description: 'From Apple to Samsung to Garmin, we test the top smartwatches for every platform.',
-    category: 'Smartwatches',
-    href: '/article/best-smartwatches',
-    image: '/placeholder-wearable.jpg',
-  },
-  {
-    title: 'Best Fitness Trackers for Running',
-    description: 'Dedicated fitness bands with GPS, heart rate, and advanced training features.',
-    category: 'Fitness Trackers',
-    href: '/article/best-running-trackers',
-    image: '/placeholder-wearable.jpg',
-  },
-  {
-    title: 'Apple Watch vs Galaxy Watch',
-    description: 'A comprehensive comparison of the two leading smartwatch platforms.',
-    category: 'Smartwatches',
-    href: '/compare/apple-watch-galaxy-watch',
+    title: 'Best Budget Noise Cancelling Headphones in India',
+    description: 'We tested boAt, JBL, and Blaupunkt for top audio performance.',
+    category: 'Hearables',
+    href: '/article/best-budget-noise-cancelling-headphones-india',
     image: '/placeholder-wearable.jpg',
   },
 ]
 
 const latestReviews = [
   {
-    title: 'Apple Watch Series 11 Review',
+    title: 'Sony WH-1000XM5 Deep Review & ANC Test',
     rating: 9.2,
-    category: 'Smartwatches',
-    href: '/review/apple-watch-series-11',
-    image: '/placeholder-wearable.jpg',
-  },
-  {
-    title: 'Garmin Fenix 9 Review',
-    rating: 9.0,
-    category: 'Smartwatches',
-    href: '/review/garmin-fenix-9',
-    image: '/placeholder-wearable.jpg',
-  },
-  {
-    title: 'Fitbit Charge 7 Review',
-    rating: 8.3,
-    category: 'Fitness Trackers',
-    href: '/review/fitbit-charge-7',
-    image: '/placeholder-wearable.jpg',
-  },
-  {
-    title: 'Oura Ring Gen 4 Review',
-    rating: 8.6,
-    category: 'Smart Rings',
-    href: '/review/oura-ring-gen-4',
+    category: 'Hearables',
+    href: '/review/sony-wh-1000xm5',
     image: '/placeholder-wearable.jpg',
   },
 ]

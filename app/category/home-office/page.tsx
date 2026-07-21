@@ -10,11 +10,10 @@ export const metadata: Metadata = {
 }
 
 const subcategories = [
+  { name: 'Accessories', icon: Keyboard, count: 28 },
   { name: 'Desks', icon: Monitor, count: 15 },
   { name: 'Chairs', icon: Armchair, count: 22 },
   { name: 'Webcams', icon: Webcam, count: 14 },
-  { name: 'Lighting', icon: Lamp, count: 11 },
-  { name: 'Accessories', icon: Keyboard, count: 28 },
 ]
 
 const featuredGuides = [
@@ -32,49 +31,14 @@ const featuredGuides = [
     href: '/article/best-coding-monitors-under-15000-india',
     image: '/placeholder-office.jpg',
   },
-  {
-    title: 'Best Standing Desks 2026',
-    description: 'Sit-stand desks that help you stay healthy and productive while working from home.',
-    category: 'Desks',
-    href: '/article/best-standing-desks',
-    image: '/placeholder-office.jpg',
-  },
-  {
-    title: 'Best Ergonomic Office Chairs',
-    description: 'Support your back through long work sessions with our top chair recommendations.',
-    category: 'Chairs',
-    href: '/article/best-office-chairs',
-    image: '/placeholder-office.jpg',
-  },
 ]
 
 const latestReviews = [
   {
-    title: 'Secretlab Titan Evo Review',
+    title: 'Best Mechanical Keyboards for Developers',
     rating: 9.0,
-    category: 'Chairs',
-    href: '/review/secretlab-titan-evo',
-    image: '/placeholder-office.jpg',
-  },
-  {
-    title: 'Uplift V2 Standing Desk Review',
-    rating: 8.8,
-    category: 'Desks',
-    href: '/review/uplift-v2-standing-desk',
-    image: '/placeholder-office.jpg',
-  },
-  {
-    title: 'Elgato Facecam Pro Review',
-    rating: 8.7,
-    category: 'Webcams',
-    href: '/review/elgato-facecam-pro',
-    image: '/placeholder-office.jpg',
-  },
-  {
-    title: 'BenQ ScreenBar Halo Review',
-    rating: 8.9,
-    category: 'Lighting',
-    href: '/review/benq-screenbar-halo',
+    category: 'Accessories',
+    href: '/article/best-mechanical-keyboards-coding-india',
     image: '/placeholder-office.jpg',
   },
 ]
