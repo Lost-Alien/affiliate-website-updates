@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Star, ExternalLink } from 'lucide-react'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 interface Product {
   id: string
@@ -60,7 +61,7 @@ export function ComparisonOverview({ products }: ComparisonOverviewProps) {
                 Full Review
               </Link>
               <a
-                href="https://www.amazon.in"
+                href={getAmazonAffiliateUrl(product.name)}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="flex items-center justify-center gap-1 flex-1 text-sm font-medium py-2 px-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors"

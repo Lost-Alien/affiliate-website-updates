@@ -12,6 +12,7 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
   title: 'Best Wireless Earbuds in India (2024) | TechSelect',
@@ -176,7 +177,7 @@ export default function ArticlePage() {
                   content="For iPhone users, the Apple AirPods Pro (2nd Gen) offers the best overall experience with excellent ANC and seamless ecosystem integration. Android users should consider the Sony WF-1000XM5 for superior sound quality, or the Samsung Galaxy Buds2 Pro for great value and Samsung ecosystem benefits."
                   topPick={{
                     name: 'Apple AirPods Pro (2nd Gen)',
-                    href: 'https://www.amazon.in',
+                    href: getAmazonAffiliateUrl('Apple AirPods Pro (2nd Gen)'),
                   }}
                 />
 
@@ -194,7 +195,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="Apple AirPods Pro (2nd Gen)" href="https://www.amazon.in" />
+      <StickyCTA productName="Apple AirPods Pro (2nd Gen)" href={getAmazonAffiliateUrl('Apple AirPods Pro (2nd Gen)')} />
     </>
   )
 }

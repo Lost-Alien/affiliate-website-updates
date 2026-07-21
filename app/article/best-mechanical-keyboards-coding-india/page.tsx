@@ -12,6 +12,7 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
   title: 'Best Mechanical Keyboards for Coding in India (2026) | TechSelect',
@@ -157,7 +158,7 @@ export default function ArticlePage() {
                   content="For most developers, the Keychron K8 Max offers the best layout compatibility, wireless performance, and tactile feedback. If you seek absolute comfort and a quiet typing sound, the Aula F87 Pro is an exceptional gasket-mount alternative. Students and budget coders will find the Kreo Hive 65% to be a fantastic, reliable entry point."
                   topPick={{
                     name: 'Keychron K8 Max',
-                    href: 'https://keychron.in',
+                    href: getAmazonAffiliateUrl('Keychron K8 Max'),
                   }}
                 />
 
@@ -174,7 +175,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="Keychron K8 Max" href="https://keychron.in" />
+      <StickyCTA productName="Keychron K8 Max" href={getAmazonAffiliateUrl('Keychron K8 Max')} />
     </>
   )
 }

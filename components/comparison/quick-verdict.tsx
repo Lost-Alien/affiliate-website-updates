@@ -1,4 +1,5 @@
 import { Award, ExternalLink } from 'lucide-react'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 interface QuickVerdictProps {
   winner: {
@@ -27,7 +28,7 @@ export function QuickVerdict({ winner, summary }: QuickVerdictProps) {
             <p className="font-semibold text-lg">{winner.name}</p>
           </div>
           <a
-            href="https://www.amazon.in"
+            href={getAmazonAffiliateUrl(winner.name)}
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition-colors whitespace-nowrap"

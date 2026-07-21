@@ -12,6 +12,7 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
   title: 'Best Monitors for Coding in India under Rs. 15,000 (2026) | TechSelect',
@@ -157,7 +158,7 @@ export default function ArticlePage() {
                   content="For maximum workspace and text crispness, the LG 27QN600-B 2K IPS monitor is the clear winner under Rs. 15,000. If you prioritize ergonomics (portrait mode) and clean desk cable management, the BenQ GW2790QT with USB-C PD is a stellar, comfortable choice. For students and entry-level coders, the Acer SA272 P1 offers a large, modern IPS display at a very affordable price."
                   topPick={{
                     name: 'LG 27QN600-B',
-                    href: 'https://www.amazon.in',
+                    href: getAmazonAffiliateUrl('LG 27QN600-B'),
                   }}
                 />
 
@@ -174,7 +175,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="LG 27QN600-B" href="https://www.amazon.in" />
+      <StickyCTA productName="LG 27QN600-B" href={getAmazonAffiliateUrl('LG 27QN600-B')} />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { Star, Check, X, ExternalLink } from 'lucide-react'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 interface ProductSummaryCardProps {
   productName: string
@@ -19,8 +20,11 @@ export function ProductSummaryCard({
   specs,
   pros,
   cons,
-  amazonUrl = 'https://www.amazon.in',
+  amazonUrl,
 }: ProductSummaryCardProps) {
+  const targetUrl = amazonUrl && amazonUrl !== 'https://www.amazon.in'
+    ? getAmazonAffiliateUrl(amazonUrl)
+    : getAmazonAffiliateUrl(productName)
   return (
     <div className="bg-card rounded-xl border border-border overflow-hidden">
       {/* Product Image */}
@@ -117,7 +121,7 @@ export function ProductSummaryCard({
 
         {/* CTA */}
         <a
-          href={amazonUrl}
+          href={targetUrl}
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition-colors"

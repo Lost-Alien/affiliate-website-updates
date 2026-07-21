@@ -12,6 +12,7 @@ import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 import { ReferencesSection } from '@/components/article/references-section'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 export const metadata: Metadata = {
   title: 'Best Budget Noise Cancelling Headphones in India (2026) | TechSelect',
@@ -157,7 +158,7 @@ export default function ArticlePage() {
                   content="If blocking maximum noise during transit is your main concern, the boAt Nirvanaa 751 ANC is the most powerful budget isolator we tested. For listeners who value natural sound profiles and device connectivity, the JBL Tune 770NC is a superior musical choice. The Blaupunkt BH31 is a comfortable, highly affordable alternative for casual home listening."
                   topPick={{
                     name: 'boAt Nirvanaa 751 ANC',
-                    href: 'https://www.amazon.in',
+                    href: getAmazonAffiliateUrl('boAt Nirvanaa 751 ANC'),
                   }}
                 />
 
@@ -174,7 +175,7 @@ export default function ArticlePage() {
         </article>
       </main>
       <Footer />
-      <StickyCTA productName="boAt Nirvanaa 751 ANC" href="https://www.amazon.in" />
+      <StickyCTA productName="boAt Nirvanaa 751 ANC" href={getAmazonAffiliateUrl('boAt Nirvanaa 751 ANC')} />
     </>
   )
 }

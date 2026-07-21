@@ -1,4 +1,5 @@
 import { Award, Star, ExternalLink } from 'lucide-react'
+import { getAmazonAffiliateUrl } from '@/lib/affiliate'
 
 interface ReviewVerdictProps {
   rating: number
@@ -13,6 +14,8 @@ export function ReviewVerdict({
   recommendation,
   productName,
 }: ReviewVerdictProps) {
+  const targetUrl = getAmazonAffiliateUrl(productName)
+
   const getVerdictLabel = (rating: number) => {
     if (rating >= 9) return 'Excellent'
     if (rating >= 8) return 'Great'
@@ -72,7 +75,7 @@ export function ReviewVerdict({
               <p className="font-semibold text-lg">{productName}</p>
             </div>
             <a
-              href="https://www.amazon.in"
+              href={targetUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition-colors whitespace-nowrap"
