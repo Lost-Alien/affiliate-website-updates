@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Search, Menu, X, Moon, Sun, ChevronDown } from 'lucide-react'
 import { CATEGORIES } from '@/lib/categories'
 
@@ -34,9 +35,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl font-semibold tracking-tight text-foreground">
-              TechSelect
-            </span>
+            <Image
+              src="/logo.png"
+              alt="TechSelect"
+              width={160}
+              height={40}
+              className="h-9 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation with Dropdowns */}

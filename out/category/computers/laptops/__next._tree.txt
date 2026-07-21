@@ -1,6 +1,7 @@
-:HL["/_next/static/chunks/0ja-r0-1ssxs-.css","style"]
+:HL["/_next/static/chunks/15l~h8js1n~bd.css","style"]
 :HL["/_next/static/media/68d403cf9f2c68c5-s.p.0nhx~dwif.9~q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/797e433ab948586e-s.p.08e28id.o-okb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/products/asus-rog-strix-g16.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"category","param":null,"prefetchHints":0,"slots":{"children":{"name":"category","param":{"type":"d","key":"computers","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"subcategory","param":{"type":"d","key":"laptops","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"HgRHwIJlpLoetICtx2fzH"}
+:HL["/products/apple-macbook-pro-m4.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"category","param":null,"prefetchHints":0,"slots":{"children":{"name":"category","param":{"type":"d","key":"computers","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"subcategory","param":{"type":"d","key":"laptops","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"-2JS80GzFdJ0L7xZv0JyM"}
