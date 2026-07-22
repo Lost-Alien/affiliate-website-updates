@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Search, Menu, X, Moon, Sun, ChevronDown } from 'lucide-react'
 import { CATEGORIES } from '@/lib/categories'
 
@@ -33,16 +32,61 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="TechSelect"
-              width={160}
-              height={40}
-              className="h-9 w-auto object-contain"
-              priority
-            />
+          {/* Logo — inline SVG uses CSS tokens, works on any bg */}
+          <Link href="/" className="flex items-center gap-2.5 select-none">
+            {/* Shield icon mark */}
+            <svg
+              width="32"
+              height="36"
+              viewBox="0 0 32 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M16 1L2 7v10c0 9.4 5.96 18.18 14 20.93C24.04 35.18 30 26.4 30 17V7L16 1Z"
+                fill="var(--primary)"
+              />
+              <path
+                d="M16 1L2 7v10c0 9.4 5.96 18.18 14 20.93C24.04 35.18 30 26.4 30 17V7L16 1Z"
+                fill="url(#shield-grad)"
+              />
+              {/* TS letterform */}
+              <text
+                x="16"
+                y="22"
+                textAnchor="middle"
+                fontSize="13"
+                fontWeight="700"
+                fontFamily="system-ui, sans-serif"
+                fill="var(--primary-foreground)"
+                letterSpacing="-0.5"
+              >
+                TS
+              </text>
+              <defs>
+                <linearGradient id="shield-grad" x1="2" y1="1" x2="30" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="var(--primary)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="var(--accent)" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {/* Wordmark */}
+            <span className="flex items-baseline gap-0" aria-label="TechSelect">
+              <span
+                className="font-serif font-bold text-xl leading-none"
+                style={{ color: 'var(--foreground)' }}
+              >
+                Tech
+              </span>
+              <span
+                className="font-serif font-bold text-xl leading-none"
+                style={{ color: 'var(--accent)' }}
+              >
+                Select
+              </span>
+            </span>
           </Link>
 
           {/* Desktop Navigation with Dropdowns */}
