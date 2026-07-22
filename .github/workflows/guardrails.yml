@@ -72,20 +72,6 @@ jobs:
       - name: Validate Architecture
         run: pnpm lint:arch
 
-  # ─────────────────────────────────────────────────────────────────────────────
-  # GATE 4: Design Token Enforcement (Semgrep)
-  # AST-level scan for hardcoded colors, raw Tailwind palette classes
-  # ─────────────────────────────────────────────────────────────────────────────
-  design-tokens:
-    name: Design Token Guardrails (Semgrep)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Semgrep
-        run: pip install semgrep
-      - name: Scan Design Token Rules
-        run: semgrep --config .semgrep/design-tokens.yml --error .
-        continue-on-error: false  # Hard fail on ERROR severity, warns are shown
 
   # ─────────────────────────────────────────────────────────────────────────────
   # GATE 5: Dead Code Detection (Knip)

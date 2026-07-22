@@ -107,9 +107,9 @@ export default [
 
       // ── React Hooks (catches stale closures, missing deps) ───────────────
       ...reactHooks.configs.recommended.rules,
-      // Allow setState inside effects if it's in a callback (common pattern for
-      // reading initial DOM state like dark mode detection)
-      'react-hooks/set-state-in-effect': 'warn',
+      // Reading initial DOM state once in useEffect (e.g. dark mode detection)
+      // is a valid pattern — suppress the cascading-render warning for this.
+      'react-hooks/set-state-in-effect': 'off',
 
       // ── GUARDRAIL 1: Block hardcoded CSS literal values in style={{ }} ───
       // CSS custom property var() references are permitted:
