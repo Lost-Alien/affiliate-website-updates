@@ -262,7 +262,17 @@ export function ProductListingCard({
             href={amazonUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="flex items-center justify-center gap-1.5 w-full py-2.5 px-4 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+            className="flex items-center justify-center gap-1.5 w-full py-2.5 px-4 text-sm font-semibold rounded-lg transition-colors"
+            style={{
+              backgroundColor: 'var(--color-amazon)',
+              color: 'var(--color-amazon-foreground)',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--color-amazon-hover)'
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'var(--color-amazon)'
+            }}
           >
             View on Amazon.in
             <ArrowRight className="h-3.5 w-3.5" />

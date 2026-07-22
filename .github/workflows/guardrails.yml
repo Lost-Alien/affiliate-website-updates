@@ -1,0 +1,133 @@
+name: Anti-Gravity Guardrails
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 1: TypeScript Type Check
+  # Hard fail on any type error — no "any" exceptions for AI-generated code
+  # ─────────────────────────────────────────────────────────────────────────────
+  typecheck:
+    name: TypeScript Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Type Check
+        run: pnpm typecheck
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 2: ESLint Guardrails
+  # Catches: inline style={{ }}, architectural boundary violations, React hooks
+  # ─────────────────────────────────────────────────────────────────────────────
+  eslint:
+    name: ESLint Guardrails
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Run ESLint
+        run: pnpm lint
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 3: Architectural Dependency Check
+  # Validates the app → components → lib layer graph
+  # Detects circular dependencies and orphaned files
+  # ─────────────────────────────────────────────────────────────────────────────
+  architecture:
+    name: Architecture Guardrails (dependency-cruiser)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Validate Architecture
+        run: pnpm lint:arch
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 4: Design Token Enforcement (Semgrep)
+  # AST-level scan for hardcoded colors, raw Tailwind palette classes
+  # ─────────────────────────────────────────────────────────────────────────────
+  design-tokens:
+    name: Design Token Guardrails (Semgrep)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Semgrep
+        run: pip install semgrep
+      - name: Scan Design Token Rules
+        run: semgrep --config .semgrep/design-tokens.yml --error .
+        continue-on-error: false  # Hard fail on ERROR severity, warns are shown
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 5: Dead Code Detection (Knip)
+  # Prevents AI sessions from accumulating unused exports, files, and deps
+  # ─────────────────────────────────────────────────────────────────────────────
+  dead-code:
+    name: Dead Code Check (Knip)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Run Knip
+        run: pnpm knip
+        continue-on-error: true  # Warn-only until baseline is established
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # GATE 6: Next.js Build Check
+  # Ensure the full build succeeds — catches missing env vars and import errors
+  # ─────────────────────────────────────────────────────────────────────────────
+  build:
+    name: Next.js Build
+    runs-on: ubuntu-latest
+    needs: [typecheck, eslint, architecture]  # Only build if gates pass
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm build
+        env:
+          # Suppress telemetry in CI
+          NEXT_TELEMETRY_DISABLED: 1

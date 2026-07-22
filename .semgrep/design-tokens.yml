@@ -1,0 +1,103 @@
+rules:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ANTI-GRAVITY GUARDRAIL — Semgrep Design Token Rules
+  # Catches patterns that bypass the OKLCH CSS custom property token system
+  # defined in app/globals.css.
+  #
+  # Run: npx semgrep --config .semgrep/design-tokens.yml .
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  # ── RULE 1: Ban raw hex colors in className strings ──────────────────────────
+  - id: no-hardcoded-hex-in-classname
+    patterns:
+      - pattern-regex: 'className\s*=\s*["\`][^"\`]*(#[0-9a-fA-F]{3,8})[^"\`]*["\`]'
+    message: >
+      [GUARDRAIL] Hardcoded hex color '$1' found in className.
+      Use a semantic Tailwind token like text-foreground, bg-card, or text-accent instead.
+    languages: [typescript, javascript]
+    severity: ERROR
+    metadata:
+      category: design-tokens
+      fix: Use CSS custom property tokens from globals.css
+
+  # ── RULE 2: Ban raw hex colors in inline style props ─────────────────────────
+  - id: no-hardcoded-hex-in-style-prop
+    patterns:
+      - pattern: |
+          style={{ ..., color: "$COLOR", ... }}
+      - pattern: |
+          style={{ ..., backgroundColor: "$COLOR", ... }}
+      - pattern: |
+          style={{ ..., borderColor: "$COLOR", ... }}
+    metavariable-regex:
+      metavariable: $COLOR
+      regex: '^#[0-9a-fA-F]{3,8}$'
+    message: >
+      [GUARDRAIL] Hardcoded color value '$COLOR' in style prop.
+      All colors must use CSS custom properties: var(--primary), var(--accent), etc.
+    languages: [typescript, javascript]
+    severity: ERROR
+    metadata:
+      category: design-tokens
+
+  # ── RULE 3: Ban raw Tailwind palette colors (bypasses token system) ───────────
+  - id: no-raw-tailwind-amber
+    pattern-regex: 'className\s*=\s*["\`][^"\`]*(bg-amber-|text-amber-|border-amber-|fill-amber-|ring-amber-)[^"\`]*["\`]'
+    message: >
+      [GUARDRAIL] Raw Tailwind amber color in className.
+      This bypasses the OKLCH design token system. Use bg-accent, text-accent, or a custom CSS variable instead.
+      See: app/globals.css for available tokens.
+    languages: [typescript, javascript]
+    severity: ERROR
+    metadata:
+      category: design-tokens
+      violated-in: components/cards.tsx
+
+  - id: no-raw-tailwind-white-black
+    pattern-regex: 'className\s*=\s*["\`][^"\`]*(text-white|text-black|bg-white|bg-black)\b[^"\`]*["\`]'
+    message: >
+      [GUARDRAIL] text-white / text-black / bg-white / bg-black bypass the token system.
+      Use text-foreground, text-background, bg-background, or bg-foreground from globals.css instead.
+    languages: [typescript, javascript]
+    severity: ERROR
+    metadata:
+      category: design-tokens
+
+  - id: no-raw-tailwind-red-green-blue
+    pattern-regex: 'className\s*=\s*["\`][^"\`]*(bg-red-|text-red-|bg-blue-|text-blue-|bg-green-|text-green-|bg-yellow-|text-yellow-)[^"\`]*["\`]'
+    message: >
+      [GUARDRAIL] Raw Tailwind palette color in className.
+      Use semantic tokens: bg-primary, bg-accent, bg-destructive, text-muted-foreground, etc.
+    languages: [typescript, javascript]
+    severity: WARNING
+    metadata:
+      category: design-tokens
+
+  # ── RULE 4: Ban hardcoded pixel values in style props ───────────────────────
+  - id: no-hardcoded-px-in-style
+    patterns:
+      - pattern: style={{ ..., padding: "$VAL", ... }}
+      - pattern: style={{ ..., margin: "$VAL", ... }}
+      - pattern: style={{ ..., fontSize: "$VAL", ... }}
+    metavariable-regex:
+      metavariable: $VAL
+      regex: '^\d+px$'
+    message: >
+      [GUARDRAIL] Hardcoded pixel value '$VAL' in style prop.
+      Use Tailwind spacing/typography classes or CSS custom properties instead.
+    languages: [typescript, javascript]
+    severity: WARNING
+    metadata:
+      category: design-tokens
+
+  # ── RULE 5: Enforce alt text on all img tags ─────────────────────────────────
+  - id: img-must-have-meaningful-alt
+    patterns:
+      - pattern: <img ... alt="" ... />
+    message: >
+      [GUARDRAIL] Empty alt="" found. Provide descriptive alt text for accessibility,
+      or use alt={undefined} only for purely decorative images with role="presentation".
+    languages: [typescript, javascript]
+    severity: WARNING
+    metadata:
+      category: accessibility
