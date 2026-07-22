@@ -115,8 +115,8 @@ export default function TermsPage() {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             For questions about these terms, contact us at{' '}
-            <a href="mailto:legal@techselect.com" className="text-primary hover:underline">
-              legal@techselect.com
+            <a href="mailto:shivangi2lost@gmail.com" className="text-primary hover:underline">
+              shivangi2lost@gmail.com
             </a>.
           </p>
         </section>

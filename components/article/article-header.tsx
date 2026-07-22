@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, Calendar, User } from 'lucide-react'
 
@@ -10,6 +11,8 @@ interface ArticleHeaderProps {
   updateDate?: string
   readTime: string
   category: string
+  bannerImage?: string
+  bannerAlt?: string
 }
 
 export function ArticleHeader({
@@ -21,6 +24,8 @@ export function ArticleHeader({
   updateDate,
   readTime,
   category,
+  bannerImage,
+  bannerAlt,
 }: ArticleHeaderProps) {
   return (
     <header className="bg-secondary border-b border-border">
@@ -71,6 +76,21 @@ export function ArticleHeader({
           </p>
         </div>
       </div>
+
+      {/* Banner Image */}
+      {bannerImage && (
+        <div className="relative w-full aspect-[21/9] max-h-[480px] overflow-hidden">
+          <Image
+            src={bannerImage}
+            alt={bannerAlt ?? title}
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+        </div>
+      )}
     </header>
   )
 }

@@ -106,7 +106,11 @@ export default function ArticlePage() {
       <Header />
       <main className="flex-1">
         <article>
-          <ArticleHeader {...articleData} />
+          <ArticleHeader
+            {...articleData}
+            bannerImage="/articles/macbook-vs-rog-banner.jpg"
+            bannerAlt="Apple MacBook Pro M4 vs ASUS ROG Strix G16 — side by side on a dark desk"
+          />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="lg:grid lg:grid-cols-3 lg:gap-12">

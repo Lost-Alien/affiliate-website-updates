@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-syntax -- ImageResponse runs in edge runtime; CSS custom properties are not supported here */
 import { ImageResponse } from 'next/og'
 
+export const dynamic = 'force-static'
 export const size = { width: 32, height: 32 }
 export const contentType = 'image/png'
 
