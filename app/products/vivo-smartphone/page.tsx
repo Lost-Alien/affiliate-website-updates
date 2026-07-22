@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Smartphone, Cpu, Camera, Battery, Monitor } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -17,6 +18,32 @@ export const metadata: Metadata = {
     title: 'Vivo Smartphone (2025) Review — Premium Android Performance',
     description: 'Full review of Vivo Premium Smartphone featuring MediaTek Dimensity 9300+, 50MP Sony IMX OIS camera, and 120W fast charging.',
     images: [{ url: '/products/vivo-smartphone.png' }],
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Vivo Premium Smartphone (2025)',
+  image: 'https://lostdev.tech/products/vivo-smartphone.png',
+  description: 'Vivo Premium Smartphone featuring 6.78-inch 120Hz 1.5K AMOLED display, MediaTek Dimensity 9300+ processor, and 50MP Sony IMX camera.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Vivo',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '44999',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '8.5',
+    bestRating: '10',
+    reviewCount: '1',
   },
 }
 
@@ -52,6 +79,7 @@ const ratingBreakdown = [
 export default function VivoSmartphonePage() {
   return (
     <>
+      <JsonLd data={productSchema} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

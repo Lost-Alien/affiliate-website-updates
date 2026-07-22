@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
+import { JsonLd } from '@/components/json-ld'
 import { AffiliateDisclosure } from '@/components/article/affiliate-disclosure'
 import { ArticleHeader } from '@/components/article/article-header'
 import { KeyTakeaways } from '@/components/article/key-takeaways'
@@ -21,6 +22,27 @@ export const metadata: Metadata = {
     description: 'Bose QuietComfort vs Sennheiser Momentum 4 — which one should you buy?',
     type: 'article',
   },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Bose QuietComfort vs Sennheiser Momentum 4: The Ultimate ANC Shootout',
+  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions.',
+  author: {
+    '@type': 'Person',
+    name: 'Rahul Sharma',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechSelect India',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://lostdev.tech/icon.svg',
+    },
+  },
+  datePublished: '2026-01-15',
+  dateModified: '2026-07-22',
 }
 
 const articleData = {
@@ -103,6 +125,7 @@ const BOSE_AFFILIATE_URL = 'https://www.amazon.in/Bose-QuietComfort-Bluetooth-He
 export default function ArticlePage() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <Header />
       <main className="flex-1">
         <article>

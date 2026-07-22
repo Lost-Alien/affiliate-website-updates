@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Headphones, Battery, Bluetooth, Weight, ShieldCheck } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -18,6 +19,55 @@ export const metadata: Metadata = {
     description: 'Full review of Bose QuietComfort Wireless Headphones featuring 24h battery life, plush comfort, and industry-leading ANC.',
     images: [{ url: '/products/bose-quietcomfort.png' }],
   },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Bose QuietComfort Wireless Headphones',
+  image: 'https://lostdev.tech/products/bose-quietcomfort.png',
+  description: 'Bose QuietComfort Wireless Headphones featuring world-class active noise cancellation, plush ear cushions, and up to 24 hours battery life.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Bose',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '29900',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '9.1',
+    bestRating: '10',
+    reviewCount: '1',
+  },
+}
+
+const FAQSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does Bose QuietComfort support multipoint pairing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, the Bose QuietComfort features Bluetooth 5.3 with multipoint pairing, allowing you to connect to two devices simultaneously.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the battery life of the Bose QuietComfort headphones?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The headphones offer up to 24 hours of playback on a single charge and support USB-C quick charging.',
+      },
+    },
+  ],
 }
 
 const specs = [
@@ -53,6 +103,7 @@ const ratingBreakdown = [
 export default function BoseQuietComfortPage() {
   return (
     <>
+      <JsonLd data={[productSchema, FAQSchema]} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Zap, Compass, ShieldCheck, Sparkles, Sliders } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -17,6 +18,32 @@ export const metadata: Metadata = {
     title: 'ECOVACS DEEBOT T50 PRO Review — Ultra-Thin Robot Vacuum & Mop',
     description: 'Full review of ECOVACS DEEBOT T50 PRO featuring 12,800 Pa suction, ZeroTangle anti-hair wrap technology, and AI obstacle avoidance.',
     images: [{ url: '/products/ecovacs-t50-pro.png' }],
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Cleaner',
+  image: 'https://lostdev.tech/products/ecovacs-t50-pro.png',
+  description: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Cleaner featuring 12,800 Pa suction power, ZeroTangle anti-hair wrap technology, and AI obstacle avoidance.',
+  brand: {
+    '@type': 'Brand',
+    name: 'ECOVACS',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '49900',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '8.8',
+    bestRating: '10',
+    reviewCount: '1',
   },
 }
 
@@ -52,6 +79,7 @@ const ratingBreakdown = [
 export default function EcovacsT50ProPage() {
   return (
     <>
+      <JsonLd data={productSchema} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

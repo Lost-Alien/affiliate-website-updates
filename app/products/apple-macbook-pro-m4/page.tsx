@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Cpu, Monitor, HardDrive, MemoryStick, Battery, Weight } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -17,6 +18,32 @@ export const metadata: Metadata = {
     title: 'Apple MacBook Pro M4 (2024) Review — Best Laptop for Developers?',
     description: 'Full review of Apple MacBook Pro M4 with 10-core CPU, 16GB unified memory, 22-hour battery. Is it worth ₹1,69,900 for Indian buyers?',
     images: [{ url: '/products/apple-macbook-pro-m4.png' }],
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Apple MacBook Pro 14-inch (M4 Chip)',
+  image: 'https://lostdev.tech/products/apple-macbook-pro-m4.png',
+  description: 'Apple MacBook Pro 14-inch powered by Apple M4 chip with 10-core CPU and 10-core GPU, 16GB unified memory, and up to 22 hours of battery life.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Apple',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '169900',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '9.2',
+    bestRating: '10',
+    reviewCount: '1',
   },
 }
 
@@ -56,6 +83,7 @@ const ratingBreakdown = [
 export default function MacBookProM4Page() {
   return (
     <>
+      <JsonLd data={productSchema} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

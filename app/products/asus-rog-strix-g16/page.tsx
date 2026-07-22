@@ -4,11 +4,11 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Cpu, Monitor, HardDrive, MemoryStick, Battery, Weight } from 'lucide-react'
 
 const AFFILIATE_URL =
   'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=5d528a812b0131c07a2021e4fa256922&ref_=as_li_ss_tl'
-
 
 export const metadata: Metadata = {
   title: 'ASUS ROG Strix G16 (G615LR-S5190WS) Review | TechSelect',
@@ -18,6 +18,32 @@ export const metadata: Metadata = {
     title: 'ASUS ROG Strix G16 Review — RTX 5070 Ti Gaming Laptop',
     description: 'Full review of ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX, 32GB DDR5, and a blazing 2.5K 240Hz display.',
     images: [{ url: '/products/asus-rog-strix-g16.jpg' }],
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'ASUS ROG Strix G16 (G615LR-S5190WS)',
+  image: 'https://lostdev.tech/products/asus-rog-strix-g16.jpg',
+  description: 'ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX processor, NVIDIA GeForce RTX 5070 Ti 12GB GPU, 32GB DDR5 RAM, and 16-inch 2.5K 240Hz display.',
+  brand: {
+    '@type': 'Brand',
+    name: 'ASUS',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '275990',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '9.4',
+    bestRating: '10',
+    reviewCount: '1',
   },
 }
 
@@ -57,6 +83,7 @@ const ratingBreakdown = [
 export default function AsusRogStrixG16Page() {
   return (
     <>
+      <JsonLd data={productSchema} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
+import { JsonLd } from '@/components/json-ld'
 import { AffiliateDisclosure } from '@/components/article/affiliate-disclosure'
 import { ArticleHeader } from '@/components/article/article-header'
 import { KeyTakeaways } from '@/components/article/key-takeaways'
@@ -21,6 +22,27 @@ export const metadata: Metadata = {
     description: 'We compared the top developer and gaming laptops in India to find the real winner.',
     type: 'article',
   },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'ASUS ROG Strix G16 vs Apple MacBook Pro M4: The Developer Shootout',
+  description: 'Can a Windows gaming powerhouse beat Apple’s M4 silicon for developers and creators?',
+  author: {
+    '@type': 'Person',
+    name: 'Karan Malhotra',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechSelect India',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://lostdev.tech/icon.svg',
+    },
+  },
+  datePublished: '2026-01-15',
+  dateModified: '2026-07-22',
 }
 
 const articleData = {
@@ -103,6 +125,7 @@ const ASUS_AFFILIATE_URL = 'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll
 export default function ArticlePage() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <Header />
       <main className="flex-1">
         <article>

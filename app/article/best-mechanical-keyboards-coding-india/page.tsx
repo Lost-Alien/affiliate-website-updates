@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
+import { JsonLd } from '@/components/json-ld'
 import { AffiliateDisclosure } from '@/components/article/affiliate-disclosure'
 import { ArticleHeader } from '@/components/article/article-header'
 import { KeyTakeaways } from '@/components/article/key-takeaways'
@@ -21,6 +22,27 @@ export const metadata: Metadata = {
     description: 'ECOVACS DEEBOT T50 PRO review — is this the best smart home vacuum cleaner?',
     type: 'article',
   },
+}
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'ECOVACS DEEBOT T50 PRO: The Smart Home Game Changer',
+  description: '12,800 Pa suction power, anti-tangle tech, and automated mopping — we put this vacuum through real home dust tests.',
+  author: {
+    '@type': 'Person',
+    name: 'Karan Malhotra',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechSelect India',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://lostdev.tech/icon.svg',
+    },
+  },
+  datePublished: '2026-01-15',
+  dateModified: '2026-07-22',
 }
 
 const articleData = {
@@ -84,6 +106,7 @@ const ECOVACS_AFFILIATE_URL = 'https://www.amazon.in/ECOVACS-T50-PRO-Ultra-Thin-
 export default function ArticlePage() {
   return (
     <>
+      <JsonLd data={articleSchema} />
       <Header />
       <main className="flex-1">
         <article>

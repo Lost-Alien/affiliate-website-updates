@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
+import { JsonLd } from '@/components/json-ld'
 import { Star, Check, ExternalLink, Headphones, Battery, Bluetooth, Weight, Music } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -17,6 +18,32 @@ export const metadata: Metadata = {
     title: 'Sennheiser Momentum 4 Wireless Review — Best Audiophile Wireless Headphones',
     description: 'Full review of Sennheiser Momentum 4 featuring 60-hour battery life, 42mm audiophile transducers, and adaptive ANC.',
     images: [{ url: '/products/sennheiser-momentum-4.png' }],
+  },
+}
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Sennheiser Momentum 4 Wireless Headphones',
+  image: 'https://lostdev.tech/products/sennheiser-momentum-4.png',
+  description: 'Sennheiser Momentum 4 Wireless Headphones featuring 60-hour battery life, 42mm dynamic audiophile transducers, and Adaptive Active Noise Cancellation.',
+  brand: {
+    '@type': 'Brand',
+    name: 'Sennheiser',
+  },
+  offers: {
+    '@type': 'Offer',
+    url: AFFILIATE_URL,
+    priceCurrency: 'INR',
+    price: '26990',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '9.0',
+    bestRating: '10',
+    reviewCount: '1',
   },
 }
 
@@ -52,6 +79,7 @@ const ratingBreakdown = [
 export default function SennheiserMomentum4Page() {
   return (
     <>
+      <JsonLd data={productSchema} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb
