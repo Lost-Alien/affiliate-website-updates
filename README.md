@@ -113,6 +113,14 @@ We welcome contributions! To keep the codebase clean, this project uses automate
 
 ---
 
+## Contributors
+
+Thank you to everyone who helps make TechSelect better!
+
+- [@abs6187](https://github.com/abs6187)
+
+---
+
 ## License & Disclosure
 
 This project contains Amazon Associate affiliate links. TechSelect earns a commission from qualifying purchases at no extra cost to the buyer.
