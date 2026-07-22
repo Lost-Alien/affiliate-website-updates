@@ -1,26 +1,42 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
-    }
-  </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Square rounded background -->
+  <rect width="512" height="512" rx="96" fill="#3D1A00"/>
+  <rect width="512" height="512" rx="96" fill="url(#bg-grad)" opacity="0.6"/>
+
+  <!-- Shield shape -->
+  <path
+    d="M256 80 L136 130 L136 260 C136 345 190 420 256 448 C322 420 376 345 376 260 L376 130 Z"
+    fill="url(#shield-grad)"
+  />
+  <!-- Shield inner highlight -->
+  <path
+    d="M256 100 L152 146 L152 260 C152 336 200 404 256 430 C312 404 360 336 360 260 L360 146 Z"
+    fill="url(#shield-inner)"
+    opacity="0.3"
+  />
+
+  <!-- TS Lettermark -->
+  <!-- T -->
+  <rect x="168" y="196" width="100" height="22" rx="5" fill="white"/>
+  <rect x="208" y="196" width="22" height="110" rx="5" fill="white"/>
+  <!-- S -->
+  <path
+    d="M290 196 L358 196 C363 196 367 200 367 205 L367 220 C367 225 363 229 358 229 L302 229 C297 229 293 233 293 238 L293 248 C293 253 297 257 302 257 L358 257 C363 257 367 261 367 266 L367 300 C367 305 363 309 358 309 L290 309 C285 309 281 305 281 300 L281 285 C281 280 285 276 290 276 L346 276 C351 276 355 272 355 267 L355 257 C355 252 351 248 346 248 L290 248 C285 248 281 244 281 239 L281 205 C281 200 285 196 290 196 Z"
+    fill="white"
+  />
+
   <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5C2800"/>
+      <stop offset="100%" stop-color="#1A0800"/>
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="136" y1="80" x2="376" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C47B1A"/>
+      <stop offset="100%" stop-color="#7A3D00"/>
+    </linearGradient>
+    <linearGradient id="shield-inner" x1="152" y1="100" x2="360" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 </svg>

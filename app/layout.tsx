@@ -19,21 +19,7 @@ export const metadata: Metadata = {
   description: 'Expert, hands-on product reviews and buying guides tailored for Indian buyers. Discover deep-dive tests of the latest headphones, keyboards, and consumer tech.',
   keywords: ['tech reviews India', 'best earbuds India', 'Sony WH-1000XM5 review', 'Apple AirPods Pro India', 'buying guide'],
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.svg',
   },
   openGraph: {
     title: 'TechSelect India | Expert Product Reviews & Buying Guides',
