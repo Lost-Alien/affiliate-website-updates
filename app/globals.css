@@ -133,3 +133,12 @@
     @apply font-sans scroll-smooth;
   }
 }
+
+/* Amazon CTA button — uses design tokens, no JS event handlers (SSR-safe) */
+.amazon-btn {
+  background-color: var(--color-amazon);
+  color: var(--color-amazon-foreground);
+}
+.amazon-btn:hover {
+  background-color: var(--color-amazon-hover);
+}
