@@ -1,5 +1,7 @@
+<h1 align="center">TechSelect</h1>
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=3B82F6&center=true&vCenter=true&width=800&lines=TechSelect+%E2%80%94+Tech+Review+%26+Affiliate+Platform;Next.js+16+%2B+React+19+%2B+Tailwind+v4;Honest+Reviews%2C+Specs+%26+Buying+Guides;Maintained+by+abs6187+and+Lost-Alien" alt="TechSelect Animated Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=3B82F6&center=true&vCenter=true&width=800&lines=Tech+Review+%26+Affiliate+Platform;Next.js+16+%2B+React+19+%2B+Tailwind+v4;Honest+Reviews%2C+Specs+%26+Buying+Guides;Maintained+by+abs6187+and+Lost-Alien" alt="TechSelect Animated Header" />
 </p>
 
 <p align="center">
@@ -137,35 +139,6 @@ pnpm knip
 ├── .github/                   # GitHub Actions CI/CD workflows
 └── .husky/                    # Pre-commit hooks for automated guardrails
 ```
-
----
-
-## How to Add & Edit Content
-
-### Adding a New Product Review
-
-1. **Update Data Registry**: Open [`lib/categories.ts`](file:///c:/Users/conne/Downloads/affiliate-website-updates/lib/categories.ts) and append a new product item to `SAMPLE_PRODUCTS`:
-   ```ts
-   {
-     title: 'Product Title',
-     description: 'Honest summary of performance.',
-     category: 'Audio',
-     subcategorySlug: 'earbuds',
-     href: '/products/your-product-slug',
-     image: '/products/your-product-slug.jpg',
-     rating: 9.2,
-     price: '₹14,999',
-     amazonUrl: 'https://www.amazon.in/dp/YOUR_ASIN?tag=techstor0caaf-21',
-     type: 'review',
-     badge: 'Editor\'s Choice',
-     specs: [
-       { label: 'Battery', value: '30 hours' },
-       { label: 'ANC', value: 'Active Noise Cancellation' }
-     ]
-   }
-   ```
-2. **Add Image**: Place product image in [`public/products/`](file:///c:/Users/conne/Downloads/affiliate-website-updates/public/products/).
-3. **Create Product Page**: Add page component under `app/products/[product-slug]/page.tsx`.
 
 ---
 
