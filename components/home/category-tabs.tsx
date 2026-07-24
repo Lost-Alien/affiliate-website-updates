@@ -25,20 +25,20 @@ const articles = [
     imageUrl: '/products/bose-quietcomfort.png',
   },
   {
+    title: 'Soft-Closing Kitchen Baskets vs Fixed Cabinet Shelves',
+    excerpt: 'We tested accessibility, weight limits, and soft-closing mechanisms to see if modular pull-out baskets are worth upgrading.',
+    category: 'Smart Home',
+    href: '/article/kitchen-soft-closing-baskets-vs-traditional-shelves',
+    readTime: '6 min read',
+    imageUrl: '/articles/kitchen-baskets-vs-shelves-banner.jpg',
+  },
+  {
     title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review',
     excerpt: '12,800 Pa suction power, anti-tangle tech, and automated mopping — we put this vacuum through real home dust tests.',
     category: 'Smart Home',
     href: '/products/ecovacs-t50-pro',
     readTime: '7 min read',
     imageUrl: '/products/ecovacs-t50-pro.png',
-  },
-  {
-    title: 'Modular Kitchen Soft-Closing Storage Basket Review',
-    excerpt: 'Grade 304 stainless steel build, soft-closing hydraulic slides, and 35kg load capacity for modern kitchen cabinets.',
-    category: 'Smart Home',
-    href: '/products/kitchen-storage-soft-closing-baskets',
-    readTime: '5 min read',
-    imageUrl: '/products/kitchen-storage-soft-closing-baskets.png',
   },
   {
     title: 'Vivo Premium Smartphone (2025) Review',
