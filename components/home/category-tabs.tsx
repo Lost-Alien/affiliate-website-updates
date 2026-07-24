@@ -33,6 +33,14 @@ const articles = [
     imageUrl: '/products/ecovacs-t50-pro.png',
   },
   {
+    title: 'Modular Kitchen Soft-Closing Storage Basket Review',
+    excerpt: 'Grade 304 stainless steel build, soft-closing hydraulic slides, and 35kg load capacity for modern kitchen cabinets.',
+    category: 'Smart Home',
+    href: '/products/kitchen-storage-soft-closing-baskets',
+    readTime: '5 min read',
+    imageUrl: '/products/kitchen-storage-soft-closing-baskets.png',
+  },
+  {
     title: 'Vivo Premium Smartphone (2025) Review',
     excerpt: 'AMOLED display, massive battery, and a versatile camera setup — here is the biased truth about Vivo’s latest.',
     category: 'Mobiles',
