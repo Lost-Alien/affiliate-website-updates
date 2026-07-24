@@ -59,6 +59,7 @@ export const CATEGORIES: Category[] = [
     active: true,
     subcategories: [
       { name: 'Robot Vacuums', slug: 'robot-vacuums', active: true, count: 1, description: 'Self-emptying and mopping robot vacuum cleaners.' },
+      { name: 'Kitchen Storage', slug: 'kitchen-storage', active: true, count: 1, description: 'Modular soft-closing pull-out baskets and cabinet storage organizers.' },
       { name: 'Smart Displays', slug: 'smart-displays', active: false, count: 0, description: 'Echo Show, Nest Hub, and smart home display screens.' },
       { name: 'Smart Plugs', slug: 'smart-plugs', active: false, count: 0, description: 'Wi-Fi smart plugs for home automation.' },
     ],
@@ -237,6 +238,25 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
       { label: 'Height', value: 'Ultra-thin 8.3cm' },
       { label: 'Special', value: 'ZeroTangle anti-hair wrap technology' },
       { label: 'Mopping', value: 'Vibrating mop with auto-lift' },
+    ],
+  },
+  {
+    title: 'Modular Kitchen Soft-Closing Storage Basket',
+    description: 'Stainless Steel Soft-Closing Modular Kitchen Pull-Out Basket & Cabinet Storage Organizer with heavy-duty Grade 304 construction and 35kg load capacity.',
+    category: 'Smart Home',
+    subcategorySlug: 'kitchen-storage',
+    href: '/products/kitchen-storage-soft-closing-baskets',
+    image: '/products/kitchen-storage-soft-closing-baskets.png',
+    rating: 8.9,
+    price: '₹3,499',
+    amazonUrl: 'https://www.amazon.in/Kitchen-Storage-Closing-Baskets-Cabinet/dp/B0FHFWDJ4B?pd_rd_w=zoMaQ&content-id=amzn1.sym.41279fa1-dd23-4c70-9745-af6d0ebf3670%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=41279fa1-dd23-4c70-9745-af6d0ebf3670&pf_rd_r=TCJH5YE5ND2W6PHGFHX9&pd_rd_wg=Hug6N&pd_rd_r=4b359838-131f-439e-8da7-078484df97fc&pd_rd_i=B0FHFWDJ4B&th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=bb6d99085b60fdced704b2167990c220&ref_=as_li_ss_tl',
+    type: 'review',
+    badge: 'Top Pick',
+    specs: [
+      { label: 'Material', value: 'Grade 304 Stainless Steel' },
+      { label: 'Mechanism', value: 'Soft-Closing Hydraulic Telescopic Slides' },
+      { label: 'Load Capacity', value: '35 kg' },
+      { label: 'Mounting', value: 'Universal Side/Bottom Mount' },
     ],
   },
 ]
