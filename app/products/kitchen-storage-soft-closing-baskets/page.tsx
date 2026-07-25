@@ -31,7 +31,7 @@ const productSchema = {
     '@type': 'Offer',
     url: AFFILIATE_URL,
     priceCurrency: 'INR',
-    price: '3499',
+    price: '12990',
     availability: 'https://schema.org/InStock',
     itemCondition: 'https://schema.org/NewCondition',
   },
@@ -128,7 +128,13 @@ export default function KitchenStorageBasketsPage() {
             {/* Price */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
               <p className="text-xs text-muted-foreground mb-1">Current Price on Amazon India</p>
-              <p className="text-3xl font-bold text-foreground">₹3,499</p>
+              <div className="flex items-baseline gap-2">
+                <p className="text-3xl font-bold text-foreground">₹12,990</p>
+                <p className="text-sm text-muted-foreground line-through">₹34,500</p>
+                <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
+                  62% OFF
+                </span>
+              </div>
               <p className="text-xs text-muted-foreground mt-1">Includes soft-closing slides, mounting brackets & installation kit</p>
             </div>
 

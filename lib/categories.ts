@@ -248,7 +248,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     href: '/products/kitchen-storage-soft-closing-baskets',
     image: '/products/kitchen-storage-soft-closing-baskets.png',
     rating: 8.9,
-    price: '₹3,499',
+    price: '₹12,990',
     amazonUrl: 'https://www.amazon.in/Kitchen-Storage-Closing-Baskets-Cabinet/dp/B0FHFWDJ4B?pd_rd_w=zoMaQ&content-id=amzn1.sym.41279fa1-dd23-4c70-9745-af6d0ebf3670%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=41279fa1-dd23-4c70-9745-af6d0ebf3670&pf_rd_r=TCJH5YE5ND2W6PHGFHX9&pd_rd_wg=Hug6N&pd_rd_r=4b359838-131f-439e-8da7-078484df97fc&pd_rd_i=B0FHFWDJ4B&th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=bb6d99085b60fdced704b2167990c220&ref_=as_li_ss_tl',
     type: 'review',
     badge: 'Top Pick',
