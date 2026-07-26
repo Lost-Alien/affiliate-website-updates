@@ -9,18 +9,42 @@ const categories = ['All', 'Audio', 'Computers', 'Mobiles', 'Smart Home']
 
 const articles = [
   {
-    title: 'ASUS ROG Strix G16 vs Apple MacBook Pro M4',
-    excerpt: 'Windows gaming beast vs Apple M4 Silicon — we tested compile times, gaming frame rates, and battery limits.',
-    category: 'Computers',
-    href: '/article/best-wireless-earbuds-budget',
-    readTime: '8 min read',
-    imageUrl: '/articles/macbook-vs-rog-banner.jpg',
+    title: 'Best 5G Smartphones in India (2026): Flagship Cameras & Displays',
+    excerpt: 'Comparing Samsung Galaxy 5G, Vivo V70 Elite 5G, 120Hz Dynamic AMOLED displays, and 90W fast charging.',
+    category: 'Mobiles',
+    href: '/article/best-5g-smartphones-under-30000-india',
+    readTime: '7 min read',
+    imageUrl: '/products/samsung-galaxy-s25.png',
   },
   {
-    title: 'Bose QuietComfort vs Sennheiser Momentum 4',
+    title: 'Best Smart Home Appliances & QLED TVs in India (2026)',
+    excerpt: 'Hands-on testing of VW 32-inch QLED Smart TV, Lloyd 1.5 Ton 5-in-1 AC, and Dreame self-emptying robot vacuum.',
+    category: 'Smart Home',
+    href: '/article/best-smart-tvs-and-appliances-india',
+    readTime: '8 min read',
+    imageUrl: '/products/vw-32-inch-qled-smart-tv.png',
+  },
+  {
+    title: 'Best Tablets for Students, Note-Taking & Digital Art (2026)',
+    excerpt: 'Comparing tablets in India with included stylus S-Pen support, WQXGA AMOLED displays, and Samsung DeX multitasking.',
+    category: 'Computers',
+    href: '/article/best-tablets-for-students-and-creatives-india',
+    readTime: '6 min read',
+    imageUrl: '/products/samsung-galaxy-tab.png',
+  },
+  {
+    title: 'ASUS ROG Strix G16 Review & Gaming Benchmarks',
+    excerpt: 'Windows gaming beast tested: Intel Core i9, RTX 4070 GPU, 240Hz Nebula display frame rates.',
+    category: 'Computers',
+    href: '/article/asus-rog-strix-g16-review',
+    readTime: '8 min read',
+    imageUrl: '/products/asus-rog-strix-g16.png',
+  },
+  {
+    title: 'Bose QuietComfort Ultra vs Sennheiser Momentum 4',
     excerpt: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
     category: 'Audio',
-    href: '/products/bose-quietcomfort',
+    href: '/article/bose-quietcomfort-ultra-review',
     readTime: '7 min read',
     imageUrl: '/products/bose-quietcomfort.png',
   },
@@ -33,20 +57,20 @@ const articles = [
     imageUrl: '/products/tp-link-tapo-smart-plug.png',
   },
   {
-    title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review',
-    excerpt: '12,800 Pa suction power, anti-tangle tech, and automated mopping — we put this vacuum through real home dust tests.',
-    category: 'Smart Home',
-    href: '/products/ecovacs-t50-pro',
-    readTime: '7 min read',
-    imageUrl: '/products/ecovacs-t50-pro.png',
+    title: 'Best Budget Noise Cancelling Headphones in India',
+    excerpt: 'Top over-ear headphones with active noise cancellation, long battery life, and comfortable ear cushions under budget.',
+    category: 'Audio',
+    href: '/article/best-budget-noise-cancelling-headphones-india',
+    readTime: '6 min read',
+    imageUrl: '/products/sennheiser-momentum-4.png',
   },
   {
-    title: 'Vivo Premium Smartphone (2025) Review',
-    excerpt: 'AMOLED display, massive battery, and a versatile camera setup — here is the biased truth about Vivo’s latest.',
-    category: 'Mobiles',
-    href: '/products/vivo-smartphone',
-    readTime: '6 min read',
-    imageUrl: '/products/vivo-smartphone.png',
+    title: 'Best Wireless Earbuds on a Budget in India',
+    excerpt: 'Testing TWS earbuds for sound quality, dual mic call clarity, ANC depth, and IPX battery stamina.',
+    category: 'Audio',
+    href: '/article/best-wireless-earbuds-budget',
+    readTime: '5 min read',
+    imageUrl: '/products/bose-quietcomfort.png',
   },
 ]
 
@@ -57,12 +81,16 @@ export function CategoryTabs() {
     ? articles
     : articles.filter(article => article.category === activeCategory)
 
+  const viewAllHref = activeCategory === 'All'
+    ? '/category/audio'
+    : `/category/${activeCategory.toLowerCase().replace(/\s+/g, '-')}`
+
   return (
     <section>
       <div className="flex items-center justify-between mb-6">
         <h2 className="font-serif text-2xl font-semibold text-foreground">Latest Articles</h2>
         <Link
-          href="/category/audio"
+          href={viewAllHref}
           className="text-sm font-medium text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1"
         >
           View all
