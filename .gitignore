@@ -22,4 +22,7 @@ out/
 # Local writing guide
 hostinger.exe
 completions/
+techselect-search-console-*.json
+service-account*.json
+
 
