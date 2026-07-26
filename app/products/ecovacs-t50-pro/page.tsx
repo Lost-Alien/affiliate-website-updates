@@ -25,7 +25,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Cleaner',
-  image: 'https://lostdev.tech/products/ecovacs-t50-pro.png',
+  image: 'https://techselect.blog/products/ecovacs-t50-pro.png',
   description: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Cleaner featuring 12,800 Pa suction power, ZeroTangle anti-hair wrap technology, and AI obstacle avoidance.',
   brand: {
     '@type': 'Brand',
@@ -64,7 +64,7 @@ const pros = [
 ]
 
 const cons = [
-  '₹49,900 is an investment',
+  'Premium price tag compared to basic robotic vacuums',
   'Base station requires dedicated floor space',
 ]
 
@@ -73,7 +73,6 @@ const ratingBreakdown = [
   { label: 'Obstacle Avoidance', score: 9.2 },
   { label: 'Mopping Performance', score: 9.0 },
   { label: 'App & Features', score: 8.8 },
-  { label: 'Value for Money', score: 8.5 },
 ]
 
 export default function EcovacsT50ProPage() {
@@ -91,13 +90,18 @@ export default function EcovacsT50ProPage() {
           ]}
         />
 
+        {/* Top Disclosure Banner */}
+        <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+        </div>
+
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
           {/* Product Image */}
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
               src="/products/ecovacs-t50-pro.png"
-              alt="ECOVACS DEEBOT T50 PRO Ultra-Thin Robot Vacuum Cleaner"
+              alt="ECOVACS DEEBOT T50 PRO Robot Vacuum"
               fill
               className="object-contain p-6"
               priority
@@ -113,7 +117,7 @@ export default function EcovacsT50ProPage() {
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground leading-tight">
                 ECOVACS DEEBOT T50 PRO
-                <span className="block text-base font-normal text-muted-foreground mt-1">12,800 Pa · Ultra-Thin 8.3cm · ZeroTangle Anti-Hair Wrap</span>
+                <span className="block text-base font-normal text-muted-foreground mt-1">Ultra-Thin Robot Vacuum & Mop with ZeroTangle Tech</span>
               </h1>
             </div>
 
@@ -124,15 +128,15 @@ export default function EcovacsT50ProPage() {
                 <span className="text-2xl font-bold">8.8</span>
               </div>
               <div>
-                <p className="font-semibold text-foreground text-sm">Excellent</p>
+                <p className="font-semibold text-foreground text-sm">Great Choice</p>
                 <p className="text-xs text-muted-foreground">TechSelect Score</p>
               </div>
             </div>
 
             {/* Price */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Current Price on Amazon India</p>
-              <p className="text-3xl font-bold text-foreground">₹49,900</p>
+              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
+              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
               <p className="text-xs text-muted-foreground mt-1">Includes All-in-One OMNI Station, dust bag & dual mop pads</p>
             </div>
 
@@ -143,7 +147,7 @@ export default function EcovacsT50ProPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 w-full py-4 px-6 font-semibold rounded-xl transition-colors text-base shadow-sm"
             >
-              Check Price on Amazon.in
+              Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
 
@@ -229,7 +233,7 @@ export default function EcovacsT50ProPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-colors whitespace-nowrap"
             >
-              Buy on Amazon.in
+              Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>

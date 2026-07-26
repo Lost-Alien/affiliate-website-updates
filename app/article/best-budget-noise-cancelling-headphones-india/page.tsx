@@ -38,7 +38,7 @@ const articleSchema = {
     name: 'TechSelect India',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://lostdev.tech/icon.svg',
+      url: 'https://techselect.blog/icon.svg',
     },
   },
   datePublished: '2026-01-15',
@@ -73,7 +73,7 @@ const products = [
     bestFor: 'Commuters, travelers, and open-office workers who need absolute silence.',
     features: ['Industry-leading hybrid active noise cancellation', 'Plush, sweat-resistant synthetic leather earcups', '24-hour battery life with ANC enabled', 'Bluetooth 5.3 with seamless multipoint switching'],
     pros: ['Completely blocks out low-frequency engine hums and traffic noise', 'Extremely lightweight at 250g — no head squeeze', 'Folds flat into a compact carrying case', 'Simple physical buttons that do not misfire like touch controls'],
-    cons: ['₹29,900 price tag is a heavy investment', 'Battery life is average compared to Sennheiser\'s 60 hours'],
+    cons: ['Premium price tag is a heavy investment', 'Battery life is average compared to Sennheiser\'s 60 hours'],
     verdict: 'Buy the Bose QuietComfort if noise cancellation is your main priority. It handles the chaotic rumble of Indian commutes better than anything else. You get instant, reliable isolation at the press of a button.',
   },
   {

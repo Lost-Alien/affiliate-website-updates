@@ -73,7 +73,7 @@ export function FeaturedArticles() {
                   rel="noopener noreferrer sponsored"
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
                 >
-                  Buy on Amazon.in <ExternalLink className="h-3.5 w-3.5" />
+                  Buy on Amazon.in (Earns Commission) <ExternalLink className="h-3.5 w-3.5" />
                 </a>
               )}
               <Link
@@ -138,7 +138,7 @@ export function FeaturedArticles() {
                   rel="noopener noreferrer sponsored"
                   className="mt-3 flex items-center justify-center gap-1.5 w-full py-2 px-3 bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold rounded-lg transition-colors"
                 >
-                  View on Amazon.in <ExternalLink className="h-3 w-3" />
+                  Check Price on Amazon.in (Earns Commission) <ExternalLink className="h-3 w-3" />
                 </a>
               )}
             </div>
@@ -147,7 +147,7 @@ export function FeaturedArticles() {
       </div>
 
       <p className="text-xs text-muted-foreground text-center mt-4">
-        * Prices are indicative. As an Amazon Associate, TechSelect earns from qualifying purchases.
+        * As an Amazon Associate, TechSelect earns from qualifying purchases.
       </p>
     </section>
   )

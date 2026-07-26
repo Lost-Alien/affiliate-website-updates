@@ -15,7 +15,7 @@ const sourceSerif = Source_Serif_4({
   weight: ['400', '500', '600', '700'],
 })
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lostdev.tech'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techselect.blog'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

@@ -97,8 +97,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             If you have questions about this privacy policy or our data practices, please contact us at{' '}
-            <a href="mailto:shivangi2lost@gmail.com" className="text-primary hover:underline">
-              shivangi2lost@gmail.com
+            <a href="mailto:support@techselect.blog" className="text-primary hover:underline">
+              support@techselect.blog
             </a>.
           </p>
         </section>

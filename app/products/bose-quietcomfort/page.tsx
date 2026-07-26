@@ -25,7 +25,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Bose QuietComfort Wireless Headphones',
-  image: 'https://lostdev.tech/products/bose-quietcomfort.png',
+  image: 'https://techselect.blog/products/bose-quietcomfort.png',
   description: 'Bose QuietComfort Wireless Headphones featuring world-class active noise cancellation, plush ear cushions, and up to 24 hours battery life.',
   brand: {
     '@type': 'Brand',
@@ -115,6 +115,11 @@ export default function BoseQuietComfortPage() {
           ]}
         />
 
+        {/* Top Disclosure Banner */}
+        <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+        </div>
+
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
           {/* Product Image */}
@@ -155,8 +160,8 @@ export default function BoseQuietComfortPage() {
 
             {/* Price */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Current Price on Amazon India</p>
-              <p className="text-3xl font-bold text-foreground">₹29,900</p>
+              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
+              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
               <p className="text-xs text-muted-foreground mt-1">Includes carrying case, 3.5mm audio cable & USB-C cable</p>
             </div>
 
@@ -167,7 +172,7 @@ export default function BoseQuietComfortPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 w-full py-4 px-6 font-semibold rounded-xl transition-colors text-base shadow-sm"
             >
-              Check Price on Amazon.in
+              Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
 
@@ -279,7 +284,7 @@ export default function BoseQuietComfortPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-colors whitespace-nowrap"
             >
-              Buy on Amazon.in
+              Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>

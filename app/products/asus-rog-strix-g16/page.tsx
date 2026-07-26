@@ -25,7 +25,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'ASUS ROG Strix G16 (G615LR-S5190WS)',
-  image: 'https://lostdev.tech/products/asus-rog-strix-g16.jpg',
+  image: 'https://techselect.blog/products/asus-rog-strix-g16.jpg',
   description: 'ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX processor, NVIDIA GeForce RTX 5070 Ti 12GB GPU, 32GB DDR5 RAM, and 16-inch 2.5K 240Hz display.',
   brand: {
     '@type': 'Brand',
@@ -95,6 +95,11 @@ export default function AsusRogStrixG16Page() {
           ]}
         />
 
+        {/* Top Disclosure Banner */}
+        <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+        </div>
+
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
           {/* Product Image */}
@@ -135,8 +140,8 @@ export default function AsusRogStrixG16Page() {
 
             {/* Price */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Current Price on Amazon India</p>
-              <p className="text-3xl font-bold text-foreground">₹2,75,990</p>
+              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
+              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
               <p className="text-xs text-muted-foreground mt-1">Includes Office Home 2024 + M365 Basic (1 Year)</p>
             </div>
 
@@ -147,7 +152,7 @@ export default function AsusRogStrixG16Page() {
               rel="noopener noreferrer sponsored"
               className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors text-base shadow-sm"
             >
-              Check Price on Amazon.in
+              Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
 
@@ -219,7 +224,7 @@ export default function AsusRogStrixG16Page() {
         <section className="mb-12 bg-primary text-primary-foreground rounded-2xl p-8 shadow-sm">
           <h2 className="font-serif text-2xl font-semibold mb-4">Our Verdict</h2>
           <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
-            The ASUS ROG Strix G16 G615LR-S5190WS is an absolute powerhouse — one of the most capable gaming laptops available in India right now. The RTX 5070 Ti at 140W TGP combined with Intel&apos;s Core Ultra 9 275HX delivers desktop-class gaming performance in a chassis that, while sizeable, is well-engineered and premium. The 2.5K 240Hz display is exceptional for fast-paced gaming. At ₹2,75,990, it is priced at a premium, but for gamers who want no compromise, it earns every rupee.
+            The ASUS ROG Strix G16 G615LR-S5190WS is an absolute powerhouse — one of the most capable gaming laptops available in India right now. The RTX 5070 Ti at 140W TGP combined with Intel&apos;s Core Ultra 9 275HX delivers desktop-class gaming performance in a chassis that, while sizeable, is well-engineered and premium. The 2.5K 240Hz display is exceptional for fast-paced gaming. It is priced at a premium, but for gamers who want no compromise, it earns every rupee.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
             <div className="flex-1">
@@ -232,7 +237,7 @@ export default function AsusRogStrixG16Page() {
               rel="noopener noreferrer sponsored"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-colors whitespace-nowrap"
             >
-              Buy on Amazon.in
+              Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>

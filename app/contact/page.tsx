@@ -29,10 +29,10 @@ export default function ContactPage() {
             General inquiries and feedback
           </p>
           <a
-            href="mailto:shivangi2lost@gmail.com"
+            href="mailto:support@techselect.blog"
             className="text-sm text-primary hover:underline"
           >
-            shivangi2lost@gmail.com
+            support@techselect.blog
           </a>
         </div>
 
@@ -43,10 +43,10 @@ export default function ContactPage() {
             Media and partnership requests
           </p>
           <a
-            href="mailto:shivangi2lost@gmail.com"
+            href="mailto:support@techselect.blog"
             className="text-sm text-primary hover:underline"
           >
-            shivangi2lost@gmail.com
+            support@techselect.blog
           </a>
         </div>
 

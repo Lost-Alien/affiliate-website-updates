@@ -254,7 +254,7 @@ export function ProductListingCard({
               <span className="text-xs text-muted-foreground">/ 10</span>
             </div>
           )}
-          {price && <span className="text-sm font-bold text-foreground">{price}</span>}
+          {price && <span className="text-xs font-semibold text-muted-foreground">Price Info</span>}
         </div>
 
         {amazonUrl && (
@@ -264,7 +264,7 @@ export function ProductListingCard({
             rel="noopener noreferrer sponsored"
             className="amazon-btn flex items-center justify-center gap-1.5 w-full py-2.5 px-4 text-sm font-semibold rounded-lg transition-colors"
           >
-            View on Amazon.in
+            Check Price on Amazon.in (Earns Commission)
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
         )}

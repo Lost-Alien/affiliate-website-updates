@@ -25,7 +25,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Apple MacBook Pro 14-inch (M4 Chip)',
-  image: 'https://lostdev.tech/products/apple-macbook-pro-m4.png',
+  image: 'https://techselect.blog/products/apple-macbook-pro-m4.png',
   description: 'Apple MacBook Pro 14-inch powered by Apple M4 chip with 10-core CPU and 10-core GPU, 16GB unified memory, and up to 22 hours of battery life.',
   brand: {
     '@type': 'Brand',
@@ -95,6 +95,11 @@ export default function MacBookProM4Page() {
           ]}
         />
 
+        {/* Top Disclosure Banner */}
+        <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+        </div>
+
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
           {/* Product Image */}
@@ -135,8 +140,8 @@ export default function MacBookProM4Page() {
 
             {/* Price */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Starting Price on Amazon India</p>
-              <p className="text-3xl font-bold text-foreground">₹1,69,900</p>
+              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
+              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
               <p className="text-xs text-muted-foreground mt-1">16GB RAM · 512GB SSD · M4 chip</p>
             </div>
 
@@ -147,7 +152,7 @@ export default function MacBookProM4Page() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 w-full py-4 px-6 font-semibold rounded-xl transition-colors text-base shadow-sm"
             >
-              Check Price on Amazon.in
+              Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
 
@@ -271,7 +276,7 @@ export default function MacBookProM4Page() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-colors whitespace-nowrap"
             >
-              Buy on Amazon.in
+              Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>

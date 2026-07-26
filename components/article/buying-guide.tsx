@@ -19,7 +19,7 @@ export function BuyingGuide({ items }: BuyingGuideProps) {
       
       <div className="bg-card rounded-xl border border-border p-6">
         <p className="text-muted-foreground mb-6 leading-relaxed">
-          Not sure which earbuds are right for you? Here is what to consider when making your decision.
+          Here are the key technical factors and features to consider when making your purchase decision.
         </p>
         
         <div className="space-y-6">

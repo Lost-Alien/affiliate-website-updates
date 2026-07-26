@@ -25,12 +25,12 @@ const articles = [
     imageUrl: '/products/bose-quietcomfort.png',
   },
   {
-    title: 'Soft-Closing Kitchen Baskets vs Fixed Cabinet Shelves',
-    excerpt: 'We tested accessibility, weight limits, and soft-closing mechanisms to see if modular pull-out baskets are worth upgrading.',
+    title: 'Best Smart Plugs with Energy Monitoring in India (2026)',
+    excerpt: 'Automate geysers, air conditioners, and water pumps while cutting monthly electricity bills with 16A smart plugs.',
     category: 'Smart Home',
-    href: '/article/kitchen-soft-closing-baskets-vs-traditional-shelves',
+    href: '/article/best-smart-plugs-india',
     readTime: '6 min read',
-    imageUrl: '/articles/kitchen-baskets-vs-shelves-banner.jpg',
+    imageUrl: '/products/tp-link-tapo-smart-plug.png',
   },
   {
     title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum Review',

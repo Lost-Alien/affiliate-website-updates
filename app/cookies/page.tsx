@@ -113,8 +113,8 @@ export default function CookiePolicyPage() {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             For questions about our use of cookies, please contact us at{' '}
-            <a href="mailto:privacy@techselect.com" className="text-primary hover:underline">
-              privacy@techselect.com
+            <a href="mailto:support@techselect.blog" className="text-primary hover:underline">
+              support@techselect.blog
             </a>.
           </p>
         </section>

@@ -1,78 +1,81 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
-import { Star, Check, ExternalLink, Box, Sliders, ShieldCheck, Sparkles, Wrench } from 'lucide-react'
+import { Star, Check, ExternalLink, Zap, Shield, Wifi, Smartphone, Timer, DollarSign } from 'lucide-react'
 
 const AFFILIATE_URL =
-  'https://www.amazon.in/Kitchen-Storage-Closing-Baskets-Cabinet/dp/B0FHFWDJ4B?pd_rd_w=zoMaQ&content-id=amzn1.sym.41279fa1-dd23-4c70-9745-af6d0ebf3670%3Aamzn1.symc.30e3dbb4-8dd8-4bad-b7a1-a45bcdbc49b8&pf_rd_p=41279fa1-dd23-4c70-9745-af6d0ebf3670&pf_rd_r=TCJH5YE5ND2W6PHGFHX9&pd_rd_wg=Hug6N&pd_rd_r=4b359838-131f-439e-8da7-078484df97fc&pd_rd_i=B0FHFWDJ4B&th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=bb6d99085b60fdced704b2167990c220&ref_=as_li_ss_tl'
+  'https://www.amazon.in/TP-Link-Tapo-P110-Energy-Monitoring/dp/B097XZ3X7H?tag=techstor0caaf-21'
 
 export const metadata: Metadata = {
-  title: 'Modular Kitchen Soft-Closing Pull-Out Storage Basket Review | TechSelect India',
+  title: 'TP-Link Tapo P110 Wi-Fi Smart Plug Review | TechSelect India',
   description:
-    'In-depth review of Stainless Steel Soft-Closing Modular Kitchen Pull-Out Basket & Cabinet Storage Organizer. Heavy-duty construction, smooth slides, and space-saving design.',
+    'Detailed review of TP-Link Tapo P110 16A smart plug with real-time energy monitoring, Alexa, Google Home, and app controls.',
   openGraph: {
-    title: 'Modular Kitchen Soft-Closing Pull-Out Storage Basket Review — Premium Cabinet Storage',
-    description: 'Full review of Soft-Closing Modular Kitchen Storage Baskets featuring heavy-duty stainless steel build, quiet hydraulic slides, and maximum space optimization.',
-    images: [{ url: '/products/kitchen-storage-soft-closing-baskets.png' }],
+    title: 'TP-Link Tapo P110 Wi-Fi Smart Plug Review — Best Smart Plug in India?',
+    description: 'Full review of TP-Link Tapo P110 with energy monitoring, 16A capacity, scheduling, and voice assistant integration.',
+    images: [{ url: '/products/tp-link-tapo-smart-plug.png' }],
   },
 }
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Modular Kitchen Soft-Closing Pull-Out Storage Basket Cabinet Organizer',
-  image: 'https://lostdev.tech/products/kitchen-storage-soft-closing-baskets.png',
-  description: 'Modular Kitchen Soft-Closing Pull-Out Storage Basket Cabinet Organizer with heavy-duty stainless steel wire design and soft-close hydraulic drawer slides.',
+  name: 'TP-Link Tapo P110 Wi-Fi Smart Plug (16A)',
+  image: 'https://techselect.blog/products/tp-link-tapo-smart-plug.png',
+  description: '16A Wi-Fi Smart Plug with Energy Monitoring, schedule timers, remote control, and voice assistant compatibility.',
+  brand: {
+    '@type': 'Brand',
+    name: 'TP-Link',
+  },
   offers: {
     '@type': 'Offer',
     url: AFFILIATE_URL,
     priceCurrency: 'INR',
-    price: '12990',
     availability: 'https://schema.org/InStock',
     itemCondition: 'https://schema.org/NewCondition',
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '8.9',
+    ratingValue: '9.1',
     bestRating: '10',
     reviewCount: '1',
   },
 }
 
 const specs = [
-  { icon: Box, label: 'Material', value: 'Grade 304 Stainless Steel (Anti-Rust Chrome Polish)' },
-  { icon: Sliders, label: 'Mechanism', value: 'Heavy-Duty Soft-Closing Hydraulic Telescopic Slides' },
-  { icon: ShieldCheck, label: 'Weight Capacity', value: 'Supports up to 35 kg load capacity' },
-  { icon: Wrench, label: 'Mounting', value: 'Side/Bottom cabinet mounting with template hardware included' },
-  { icon: Sparkles, label: 'Usage', value: 'Utensils, spice jars, cutlery, and pantry organizer' },
+  { icon: Zap, label: 'Power Rating', value: '16A / 3680W High Load Support' },
+  { icon: DollarSign, label: 'Energy Monitor', value: 'Real-time & Historical Power Consumption' },
+  { icon: Wifi, label: 'Connectivity', value: '2.4GHz Wi-Fi (No Hub Required)' },
+  { icon: Smartphone, label: 'App Support', value: 'Tapo App (iOS & Android)' },
+  { icon: Timer, label: 'Features', value: 'Schedules, Timers & Away Mode' },
+  { icon: Shield, label: 'Safety', value: 'Flame-Retardant ABS, Overload Protection' },
 ]
 
 const pros = [
-  'Smooth soft-closing hydraulic mechanism eliminates slam noises completely',
-  'Heavy-duty Grade 304 stainless steel construction prevents rust and corrosion in humid kitchens',
-  'Multi-tier modular compartments for organized cutlery, spices, and cookware storage',
-  '35 kg weight capacity easily handles heavy pressure cookers and glass jars',
-  'Easy installation hardware kit included with universal cabinet fitment',
+  'Real-time power consumption tracking helps monitor electricity bills',
+  'Supports 16A heavy appliances like geysers, ACs, and water heaters',
+  'Rock-solid Wi-Fi connection with fast response times',
+  'Seamless integration with Amazon Alexa and Google Assistant',
+  'Away mode randomly turns devices on/off for home security',
 ]
 
 const cons = [
-  'Requires precise cabinet depth measuring before installation',
-  'Professional cabinet installer recommended for perfect alignment',
+  'Requires 2.4GHz Wi-Fi band (does not work on 5GHz Wi-Fi)',
+  'App setup requires creating a TP-Link Tapo account',
 ]
 
 const ratingBreakdown = [
-  { label: 'Build & Durability', score: 9.5 },
-  { label: 'Soft-Close Mechanism', score: 9.3 },
-  { label: 'Storage Organization', score: 9.0 },
-  { label: 'Ease of Installation', score: 8.2 },
-  { label: 'Value for Money', score: 8.8 },
+  { label: 'Energy Tracking', score: 9.6 },
+  { label: 'Ease of Setup', score: 9.3 },
+  { label: 'Connectivity', score: 9.2 },
+  { label: 'Build Quality', score: 9.0 },
+  { label: 'Value for Money', score: 9.4 },
 ]
 
-export default function KitchenStorageBasketsPage() {
+export default function TapoSmartPlugPage() {
   return (
     <>
       <JsonLd data={productSchema} />
@@ -82,18 +85,23 @@ export default function KitchenStorageBasketsPage() {
           items={[
             { label: 'Categories', href: '/' },
             { label: 'Smart Home', href: '/category/smart-home' },
-            { label: 'Kitchen Storage', href: '/category/smart-home/kitchen-storage' },
-            { label: 'Kitchen Soft-Closing Baskets' },
+            { label: 'Smart Plugs', href: '/category/smart-home/smart-plugs' },
+            { label: 'TP-Link Tapo P110' },
           ]}
         />
 
+        {/* Top Disclosure Banner */}
+        <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+        </div>
+
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
-          {/* Product Image */}
+          {/* Image */}
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
-              src="/products/kitchen-storage-soft-closing-baskets.png"
-              alt="Modular Kitchen Soft-Closing Pull-Out Storage Basket Cabinet Organizer"
+              src="/products/tp-link-tapo-smart-plug.png"
+              alt="TP-Link Tapo P110 Smart Plug"
               fill
               className="object-contain p-6"
               priority
@@ -105,11 +113,11 @@ export default function KitchenStorageBasketsPage() {
           <div className="flex flex-col gap-5">
             <div>
               <span className="inline-block text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-3">
-                Top Pick — Kitchen Organization
+                Editor&apos;s Choice — Best Smart Plug India
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground leading-tight">
-                Modular Kitchen Soft-Closing Storage Basket
-                <span className="block text-base font-normal text-muted-foreground mt-1">Stainless Steel · Soft-Close Telescopic Slides · 35kg Load Capacity</span>
+                TP-Link Tapo P110 (16A)
+                <span className="block text-base font-normal text-muted-foreground mt-1">Wi-Fi Smart Plug with Energy Monitoring</span>
               </h1>
             </div>
 
@@ -117,7 +125,7 @@ export default function KitchenStorageBasketsPage() {
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-1 bg-primary text-primary-foreground px-4 py-2 rounded-xl">
                 <Star className="h-5 w-5 fill-current" />
-                <span className="text-2xl font-bold">8.9</span>
+                <span className="text-2xl font-bold">9.1</span>
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">Excellent</p>
@@ -125,17 +133,11 @@ export default function KitchenStorageBasketsPage() {
               </div>
             </div>
 
-            {/* Price */}
+            {/* Price Box */}
             <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Current Price on Amazon India</p>
-              <div className="flex items-baseline gap-2">
-                <p className="text-3xl font-bold text-foreground">₹12,990</p>
-                <p className="text-sm text-muted-foreground line-through">₹34,500</p>
-                <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                  62% OFF
-                </span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-1">Includes soft-closing slides, mounting brackets & installation kit</p>
+              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
+              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
+              <p className="text-xs text-muted-foreground mt-1">16A Rated · Energy Monitor · Flame Retardant</p>
             </div>
 
             {/* CTA */}
@@ -145,13 +147,9 @@ export default function KitchenStorageBasketsPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 w-full py-4 px-6 font-semibold rounded-xl transition-colors text-base shadow-sm"
             >
-              Check Price on Amazon.in
+              Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
-
-            <p className="text-xs text-muted-foreground text-center">
-              *As an Amazon Associate we earn from qualifying purchases at no extra cost to you.
-            </p>
 
             {/* Quick Specs */}
             <div className="grid grid-cols-2 gap-2">
@@ -213,17 +211,31 @@ export default function KitchenStorageBasketsPage() {
           </div>
         </section>
 
+        {/* Review Content */}
+        <section className="mb-12 bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+          <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">Full Review</h2>
+          <div className="prose prose-sm max-w-none space-y-4 text-muted-foreground leading-relaxed">
+            <h3 className="font-serif text-lg font-semibold text-foreground">Why Energy Monitoring Matters</h3>
+            <p>
+              The standout feature of the TP-Link Tapo P110 is its live energy monitoring. Through the Tapo app, you can view real-time wattage consumption, total daily usage in kWh, and estimated electricity cost. For heavy appliances like geysers or portable heaters, this feature pays for itself by revealing power spikes.
+            </p>
+            <h3 className="font-serif text-lg font-semibold text-foreground mt-6">Heavy Duty 16A Rating</h3>
+            <p>
+              Unlike 10A mini plugs meant only for lamps or phone chargers, the P110 supports up to 16 Amps (3680W max load). You can safely plug in heavy kitchen appliances, room heaters, water pumps, or heavy-duty power strips without thermal risks.
+            </p>
+          </div>
+        </section>
+
         {/* Verdict */}
         <section className="mb-12 bg-primary text-primary-foreground rounded-2xl p-8 shadow-sm">
           <h2 className="font-serif text-2xl font-semibold mb-4">Our Verdict</h2>
           <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
-            The Soft-Closing Modular Kitchen Pull-Out Basket is an essential upgrade for modern Indian kitchens.
-            It optimizes deep cabinet storage space, operates silently without drawer banging, and Grade 304 stainless steel ensures long-lasting rust-free durability.
+            The TP-Link Tapo P110 is the ultimate smart plug for Indian households. With 16A rating, reliable Wi-Fi, and precise energy tracking, it turns traditional appliances into smart, cost-efficient devices seamlessly.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
             <div className="flex-1">
-              <p className="text-sm text-primary-foreground/70">Best Modular Kitchen Organizer 2025</p>
-              <p className="font-bold text-lg">Kitchen Soft-Closing Storage Basket</p>
+              <p className="text-sm text-primary-foreground/70">Top Smart Home Pick</p>
+              <p className="font-bold text-lg">TP-Link Tapo P110 (16A)</p>
             </div>
             <a
               href={AFFILIATE_URL}
@@ -231,19 +243,11 @@ export default function KitchenStorageBasketsPage() {
               rel="noopener noreferrer sponsored"
               className="amazon-btn flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-colors whitespace-nowrap"
             >
-              Buy on Amazon.in
+              Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
         </section>
-
-        {/* Disclosure */}
-        <p className="text-xs text-muted-foreground text-center mb-8">
-          This page contains affiliate links. If you purchase through our links, TechSelect earns a commission at no extra cost to you.{' '}
-          <Link href="/affiliate-disclosure" className="underline hover:text-foreground transition-colors">
-            Read our affiliate disclosure.
-          </Link>
-        </p>
       </main>
       <Footer />
     </>

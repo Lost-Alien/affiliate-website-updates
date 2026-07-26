@@ -38,7 +38,7 @@ const articleSchema = {
     name: 'TechSelect India',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://lostdev.tech/icon.svg',
+      url: 'https://techselect.blog/icon.svg',
     },
   },
   datePublished: '2026-01-15',
@@ -73,7 +73,7 @@ const products = [
     bestFor: 'Pet owners and busy homeowners who want fully autonomous floor cleaning.',
     features: ['12,800 Pa extreme suction performance', 'ZeroTangle anti-hair wrap roller system', 'Ultra-thin 8.3cm compact body height', 'Vibrating mopping pad with auto-lift feature'],
     pros: ['Incredibly strong suction picks up even fine flour dust', 'ZeroTangle system actually works — no hair wraps around the brush', 'Flawless LiDAR navigation mapping within minutes', 'Quiet operation during normal cleaning runs'],
-    cons: ['₹49,900 is a significant smart home investment', 'Dustbin capacity requires periodic emptying if not using auto-empty station'],
+    cons: ['Premium price point for smart home automation', 'Dustbin capacity requires periodic emptying if not using auto-empty station'],
     verdict: 'Buy the ECOVACS DEEBOT T50 PRO if you are tired of sweeping daily. It handles hair, dust, and spills on marble and wood floors flawlessly, leaving your home spotless with zero manual effort.',
   },
 ]

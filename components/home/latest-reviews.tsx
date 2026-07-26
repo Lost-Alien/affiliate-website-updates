@@ -63,7 +63,7 @@ export function LatestReviews() {
                     rel="noopener noreferrer sponsored"
                     className="font-medium text-amber-600 dark:text-amber-400 hover:underline inline-flex items-center gap-0.5"
                   >
-                    Amazon <ExternalLink className="h-3 w-3" />
+                    Amazon (Earns Commission) <ExternalLink className="h-3 w-3" />
                   </a>
                 )}
               </div>

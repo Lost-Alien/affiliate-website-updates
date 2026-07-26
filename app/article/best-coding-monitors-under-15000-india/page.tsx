@@ -38,7 +38,7 @@ const articleSchema = {
     name: 'TechSelect India',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://lostdev.tech/icon.svg',
+      url: 'https://techselect.blog/icon.svg',
     },
   },
   datePublished: '2026-01-15',

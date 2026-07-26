@@ -4,7 +4,7 @@ import { CATEGORIES, SAMPLE_PRODUCTS } from '@/lib/categories'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lostdev.tech'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://techselect.blog'
   const currentDate = new Date().toISOString()
 
   // Base routes
@@ -82,12 +82,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Article buying guide routes
+  // Article buying guide & review routes
   const articles = [
     '/article/best-wireless-earbuds-budget',
     '/article/best-coding-monitors-under-15000-india',
     '/article/best-mechanical-keyboards-coding-india',
     '/article/best-budget-noise-cancelling-headphones-india',
+    '/article/best-smart-plugs-india',
+    '/article/best-gaming-laptops-under-1-lakh-india',
+    '/article/best-robot-vacuums-india',
+    '/article/bose-quietcomfort-ultra-review',
+    '/article/sennheiser-momentum-4-review',
+    '/article/asus-rog-strix-g16-review',
   ]
 
   articles.forEach((articleHref) => {
