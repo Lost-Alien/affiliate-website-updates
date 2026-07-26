@@ -12,7 +12,7 @@ export function FeaturedArticles() {
       <div className="flex items-center justify-between mb-6">
         <h2 className="font-serif text-2xl font-semibold text-foreground">Featured Guides</h2>
         <Link
-          href="/category/computers/laptops"
+          href="/article"
           className="text-sm font-medium text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1"
         >
           View all <ArrowRight className="h-3.5 w-3.5" />

@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
 
 const popularPosts = [
-  { title: 'ASUS ROG Strix G16 vs Apple MacBook Pro M4', href: '/article/best-wireless-earbuds-budget', category: 'Computers' },
-  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-budget-noise-cancelling-headphones-india', category: 'Audio' },
-  { title: 'ECOVACS DEEBOT T50 PRO Robot Vacuum', href: '/article/best-mechanical-keyboards-coding-india', category: 'Smart Home' },
-  { title: 'Vivo Premium Smartphone (2025) Review', href: '/article/best-coding-monitors-under-15000-india', category: 'Mobiles' },
+  { title: 'Best 5G Smartphones in India (2026)', href: '/article/best-5g-smartphones-under-30000-india', category: 'Mobiles' },
+  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/bose-quietcomfort-ultra-review', category: 'Audio' },
+  { title: 'Best Smart Home Appliances & QLED TVs', href: '/article/best-smart-tvs-and-appliances-india', category: 'Smart Home' },
+  { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]
 
 const categories = [

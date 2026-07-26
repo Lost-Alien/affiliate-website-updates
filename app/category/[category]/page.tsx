@@ -5,7 +5,6 @@ import { ArticleCard, ReviewCard } from '@/components/cards'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CATEGORIES, SAMPLE_PRODUCTS } from '@/lib/categories'
-import { PackageSearch, ArrowLeft } from 'lucide-react'
 
 interface CategoryPageProps {
   params: Promise<{
@@ -30,7 +29,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   return {
-    title: `${cat.name} Reviews & Buying Guides | TechSelect`,
+    title: `${cat.name} Reviews & Buying Guides | TechSelect India`,
     description: cat.description,
   }
 }
@@ -39,96 +38,32 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
   const { category: categorySlug } = await params
   const cat = CATEGORIES.find((c) => c.slug === categorySlug.toLowerCase())
 
-  // Find products / articles matching this category
-  const activeProducts = cat
-    ? SAMPLE_PRODUCTS.filter(
-        (p) => p.category.toLowerCase() === cat.name.toLowerCase()
-      )
-    : []
-
-  // Check if category or products exist
-  const hasContent = cat && (cat.subcategories.some((s) => s.active) || activeProducts.length > 0)
-  const activeCategories = CATEGORIES.filter((c) => c.active && c.slug !== categorySlug)
-  const recommendedGuides = SAMPLE_PRODUCTS.slice(0, 3)
-
-  if (!cat || !hasContent) {
-    const formattedTitle = categorySlug
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-
+  if (!cat) {
     return (
       <>
         <Header />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1">
-          <Breadcrumb items={[{ label: 'Categories', href: '/' }, { label: formattedTitle }]} />
-
-          {/* Empty State Hero Card */}
-          <div className="mt-8 max-w-xl mx-auto text-center bg-card border border-border rounded-xl p-8 sm:p-12 shadow-sm mb-16">
-            <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-6 text-muted-foreground">
-              <PackageSearch className="h-8 w-8 text-primary" />
-            </div>
-            <h1 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-3">
-              No products listed in this category yet
-            </h1>
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-8">
-              We haven&apos;t published any reviews or buying guides for &quot;{formattedTitle}&quot; yet. Check back soon as our team continuously tests and adds new gear!
-            </p>
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors text-sm"
-            >
-              <ArrowLeft className="h-4 w-4" />
+          <Breadcrumb items={[{ label: 'Categories', href: '/' }, { label: 'Not Found' }]} />
+          <div className="text-center py-16">
+            <h1 className="text-2xl font-bold mb-4">Category Not Found</h1>
+            <Link href="/" className="text-accent underline text-sm">
               Back to Home
             </Link>
           </div>
-
-          {/* Related Categories */}
-          {activeCategories.length > 0 && (
-            <section className="mb-16">
-              <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-6">
-                Explore Other Active Categories
-              </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {activeCategories.map((aCat) => (
-                  <Link
-                    key={aCat.slug}
-                    href={`/category/${aCat.slug}`}
-                    className="bg-card border border-border rounded-xl p-5 hover:border-primary transition-all text-center group shadow-sm hover:shadow-md"
-                  >
-                    <span className="font-serif text-base font-semibold text-foreground block group-hover:text-primary transition-colors mb-1">
-                      {aCat.name}
-                    </span>
-                    <span className="text-xs text-muted-foreground block line-clamp-2">
-                      {aCat.description}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Recommended Buying Guides */}
-          <section className="mb-12">
-            <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-6">
-              Popular Buying Guides You Might Like
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {recommendedGuides.map((guide) => (
-                <ArticleCard key={guide.title} {...guide} excerpt={guide.description} />
-              ))}
-            </div>
-          </section>
         </main>
         <Footer />
       </>
     )
   }
 
-  // Active subcategories
-  const activeSubcategories = cat.subcategories.filter((s) => s.active)
+  // Find products / reviews matching this category
+  const activeProducts = SAMPLE_PRODUCTS.filter(
+    (p) => p.category.toLowerCase() === cat.name.toLowerCase()
+  )
+
   const articles = activeProducts.filter((p) => p.type === 'article')
   const reviews = activeProducts.filter((p) => p.type === 'review')
+  const recommendedGuides = SAMPLE_PRODUCTS.slice(0, 4)
 
   return (
     <>
@@ -140,28 +75,29 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-4">
             {cat.name}
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl">
             {cat.description}
           </p>
         </header>
 
-        {activeSubcategories.length > 0 && (
+        {/* Subcategories Grid */}
+        {cat.subcategories.length > 0 && (
           <section className="mb-12">
             <h2 className="font-serif text-xl font-semibold text-foreground mb-6">
-              Browse by Subcategory
+              Browse Subcategories
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {activeSubcategories.map((sub) => (
+              {cat.subcategories.map((sub) => (
                 <Link
                   key={sub.slug}
                   href={`/category/${cat.slug}/${sub.slug}`}
-                  className="bg-card border border-border rounded-lg p-5 hover:border-primary transition-all text-center group shadow-sm hover:shadow-md"
+                  className="bg-card border border-border rounded-xl p-5 hover:border-accent transition-all text-center group shadow-sm hover:shadow-md"
                 >
-                  <span className="font-medium text-foreground block group-hover:text-primary transition-colors text-base mb-1">
+                  <span className="font-medium text-foreground block group-hover:text-accent transition-colors text-base mb-1">
                     {sub.name}
                   </span>
-                  <span className="text-xs text-muted-foreground block line-clamp-1">
-                    {sub.description || `${sub.count} items`}
+                  <span className="text-xs text-muted-foreground block line-clamp-2 leading-relaxed">
+                    {sub.description || `Reviews for ${sub.name}`}
                   </span>
                 </Link>
               ))}
@@ -169,6 +105,7 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
           </section>
         )}
 
+        {/* Category Articles */}
         {articles.length > 0 && (
           <section className="mb-12">
             <h2 className="font-serif text-xl font-semibold text-foreground mb-6">
@@ -182,10 +119,11 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
           </section>
         )}
 
+        {/* Category Product Reviews */}
         {reviews.length > 0 && (
           <section className="mb-12">
             <h2 className="font-serif text-xl font-semibold text-foreground mb-6">
-              Latest Reviews
+              Product Reviews
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {reviews.map((review) => (
@@ -199,10 +137,28 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
           </section>
         )}
 
+        {/* Fallback Guides if no products yet */}
+        {activeProducts.length === 0 && (
+          <section className="mb-12">
+            <h2 className="font-serif text-xl font-semibold text-foreground mb-6">
+              Recommended Buying Guides
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {recommendedGuides.map((guide) => (
+                <ReviewCard
+                  key={guide.title}
+                  {...guide}
+                  rating={guide.rating || 9.0}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="mt-8 pt-8 border-t border-border">
           <Link
             href="/"
-            className="text-sm text-primary hover:underline inline-flex items-center gap-1 font-medium"
+            className="text-sm text-accent hover:underline inline-flex items-center gap-1 font-medium"
           >
             &larr; Back to Home
           </Link>
