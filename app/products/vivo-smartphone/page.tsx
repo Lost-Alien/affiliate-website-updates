@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Header } from '@/components/header'
@@ -11,12 +11,12 @@ const AFFILIATE_URL =
   'https://www.amazon.in/vivo-Storage-Additional-Exchange-Offers/dp/B0GX94B58L?linkCode=ll2&tag=techstor0caaf-21&linkId=0ad2973400e1638013e37d63debba88a&ref_=as_li_ss_tl'
 
 export const metadata: Metadata = {
-  title: 'Vivo Premium Smartphone (2025) Review | TechSelect India',
+  title: 'Vivo X100 Pro 5G Review | TechSelect India',
   description:
-    'In-depth review of Vivo Premium Smartphone (2025). 120Hz 1.5K AMOLED display, Sony IMX camera, and 120W FlashCharge for Indian buyers.',
+    'In-depth review of Vivo X100 Pro 5G featuring Zeiss optics, 120Hz 1.5K AMOLED display, Dimensity 9300+, and 120W FlashCharge for Indian buyers.',
   openGraph: {
-    title: 'Vivo Smartphone (2025) Review — Premium Android Performance',
-    description: 'Full review of Vivo Premium Smartphone featuring MediaTek Dimensity 9300+, 50MP Sony IMX OIS camera, and 120W fast charging.',
+    title: 'Vivo X100 Pro 5G Review — Zeiss Camera & Flagship Power',
+    description: 'Full review of Vivo X100 Pro 5G featuring MediaTek Dimensity 9300+, 50MP Sony IMX OIS camera, and 120W fast charging.',
     images: [{ url: '/products/vivo-smartphone.png' }],
   },
 }
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Vivo Premium Smartphone (2025)',
+  name: 'Vivo X100 Pro 5G',
   image: 'https://techselect.blog/products/vivo-smartphone.png',
-  description: 'Vivo Premium Smartphone featuring 6.78-inch 120Hz 1.5K AMOLED display, MediaTek Dimensity 9300+ processor, and 50MP Sony IMX camera.',
+  description: 'Vivo X100 Pro 5G featuring 6.78-inch 120Hz 1.5K AMOLED display, MediaTek Dimensity 9300+ processor, and 50MP Sony IMX camera.',
   brand: {
     '@type': 'Brand',
     name: 'Vivo',
@@ -35,7 +35,7 @@ const productSchema = {
     '@type': 'Offer',
     url: AFFILIATE_URL,
     priceCurrency: 'INR',
-    price: '44999',
+    price: '39999',
     availability: 'https://schema.org/InStock',
     itemCondition: 'https://schema.org/NewCondition',
   },
@@ -48,32 +48,32 @@ const productSchema = {
 }
 
 const specs = [
-  { icon: Monitor, label: 'Display', value: '6.78" 1.5K 3D Curved AMOLED, 120Hz, 4500 nits peak' },
-  { icon: Cpu, label: 'Processor', value: 'MediaTek Dimensity 9300+ (4nm flagship chip)' },
-  { icon: Camera, label: 'Camera', value: '50MP Sony IMX920 OIS + 50MP Ultra-wide angle' },
-  { icon: Battery, label: 'Battery', value: '5,500 mAh battery with 120W FlashCharge' },
-  { icon: Smartphone, label: 'OS', value: 'Funtouch OS 15 (based on Android 15)' },
+  { icon: Cpu, label: 'Processor', value: 'MediaTek Dimensity 9300+ (4nm) — Octa-Core' },
+  { icon: Monitor, label: 'Display', value: '6.78" 1.5K 120Hz Curved AMOLED, HDR10+' },
+  { icon: Camera, label: 'Camera', value: '50MP Sony IMX989 OIS Main + 50MP Ultra-Wide' },
+  { icon: Battery, label: 'Battery', value: '5400mAh — 120W FlashCharge' },
+  { icon: Smartphone, label: 'OS', value: 'Funtouch OS 14 (Android 14)' },
 ]
 
 const pros = [
-  'Blazing fast 120W FlashCharge powers phone to 100% in under 20 minutes',
-  'Stunning 1.5K 120Hz curved AMOLED panel with incredible outdoor brightness',
-  'Flagship MediaTek Dimensity 9300+ chipset handles heavy 60fps gaming effortlessly',
-  'Sony IMX920 camera delivers fantastic low-light portrait shots',
-  'Sleek lightweight design with premium glass back finish',
+  'MediaTek Dimensity 9300+ handles heavy gaming and multitasking with zero lag',
+  '1.5K 120Hz AMOLED panel is bright and vivid even in outdoor Indian sunlight',
+  '120W FlashCharge gets you from 0 to 100% in under 25 minutes',
+  'Sony IMX 50MP camera takes brilliant low-light and portrait photos',
+  'Solid build quality with premium glass back finish',
 ]
 
 const cons = [
-  'Funtouch OS comes with pre-installed bloatware that needs manual uninstallation',
-  'No official IP68 rating on base configuration',
+  'Funtouch OS includes some pre-installed apps that need manual uninstalling',
+  'No 3.5mm headphone jack (requires USB-C adapter or TWS earbuds)',
 ]
 
 const ratingBreakdown = [
-  { label: 'Display', score: 9.2 },
   { label: 'Performance', score: 9.0 },
-  { label: 'Camera', score: 8.8 },
-  { label: 'Battery & Charging', score: 9.6 },
-  { label: 'Value for Money', score: 8.7 },
+  { label: 'Display', score: 8.8 },
+  { label: 'Camera', score: 8.6 },
+  { label: 'Battery Life', score: 8.5 },
+  { label: 'Value for Money', score: 7.8 },
 ]
 
 export default function VivoSmartphonePage() {
@@ -87,7 +87,7 @@ export default function VivoSmartphonePage() {
             { label: 'Categories', href: '/' },
             { label: 'Mobiles', href: '/category/mobiles' },
             { label: 'Android', href: '/category/mobiles/android' },
-            { label: 'Vivo Smartphone (2025)' },
+            { label: 'Vivo X100 Pro 5G' },
           ]}
         />
 
@@ -102,7 +102,7 @@ export default function VivoSmartphonePage() {
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
               src="/products/vivo-smartphone.png"
-              alt="Vivo Premium Smartphone (2025)"
+              alt="Vivo X100 Pro 5G Smartphone"
               fill
               className="object-contain p-6"
               priority
@@ -114,10 +114,10 @@ export default function VivoSmartphonePage() {
           <div className="flex flex-col gap-5">
             <div>
               <span className="inline-block text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-3">
-                Great Value — Premium Android
+                Flagship Performance
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground leading-tight">
-                Vivo Smartphone (2025)
+                Vivo X100 Pro 5G
                 <span className="block text-base font-normal text-muted-foreground mt-1">1.5K 120Hz Curved AMOLED · Dimensity 9300+ · 120W FlashCharge</span>
               </h1>
             </div>
@@ -228,12 +228,12 @@ export default function VivoSmartphonePage() {
           <h2 className="font-serif text-2xl font-semibold mb-4">Our Verdict</h2>
           <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
             With ultra-fast 120W charging, a vibrant 1.5K AMOLED display, and strong Dimensity 9300+ performance,
-            this Vivo smartphone offers fantastic value for buyers under ₹40,000 in India.
+            the Vivo X100 Pro 5G offers fantastic value for buyers under ₹40,000 in India.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
             <div className="flex-1">
               <p className="text-sm text-primary-foreground/70">Best Fast-Charging Smartphone</p>
-              <p className="font-bold text-lg">Vivo Smartphone (2025)</p>
+              <p className="font-bold text-lg">Vivo X100 Pro 5G</p>
             </div>
             <a
               href={AFFILIATE_URL}

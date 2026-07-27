@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -9,14 +9,14 @@ import { Star, Check, ExternalLink, Cpu, Smartphone, Battery, ShieldCheck, Thumb
 const AFFILIATE_URL = "https://www.amazon.in/Samsung-Storage-Creative-Wireless-Charging/dp/B0GL8J486T?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'Samsung Galaxy Tab Review: Creative S-Pen & Wireless Charging | TechSelect India',
-  description: 'Hands-on review of Samsung Galaxy Tablet featuring included S-Pen stylus, high-res display, fast wireless charging, and multi-window productivity.',
+  title: 'Samsung Galaxy Tab S9 FE Review: Creative S-Pen & Wireless Charging | TechSelect India',
+  description: 'Hands-on review of Samsung Galaxy Tab S9 FE featuring included S-Pen stylus, high-res display, fast wireless charging, and multi-window productivity.',
 }
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Samsung Galaxy Tablet (S-Pen & Wireless Charging)',
+  name: 'Samsung Galaxy Tab S9 FE (S-Pen & Wireless Charging)',
   image: 'https://techselect.blog/products/samsung-galaxy-tab.png',
   description: 'Samsung Galaxy Tablet with S-Pen stylus, slim aluminum unibody, fast wireless charging support, and DeX desktop productivity mode.',
   brand: {
@@ -46,7 +46,7 @@ export default function SamsungGalaxyTabPage() {
             { label: 'Categories', href: '/' },
             { label: 'Computers', href: '/category/computers' },
             { label: 'Tablets', href: '/category/computers/tablets' },
-            { label: 'Samsung Galaxy Tab' },
+            { label: 'Samsung Galaxy Tab S9 FE' },
           ]}
         />
 
@@ -60,7 +60,7 @@ export default function SamsungGalaxyTabPage() {
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
               src="/products/samsung-galaxy-tab.png"
-              alt="Samsung Galaxy Tablet"
+              alt="Samsung Galaxy Tab S9 FE"
               fill
               className="object-contain p-8"
               priority
@@ -70,11 +70,11 @@ export default function SamsungGalaxyTabPage() {
 
           <div>
             <span className="inline-block px-3 py-1 bg-accent/10 text-accent font-semibold text-xs rounded-full mb-3">
-              Best Tablet for Creativity & Productivity
+              Best Tablet for Creativity
             </span>
 
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              Samsung Galaxy Tablet
+              Samsung Galaxy Tab S9 FE
             </h1>
             <p className="text-muted-foreground text-sm mb-4">
               Included S-Pen Stylus · High-Res AMOLED Display · Wireless Charging &amp; DeX Mode
@@ -194,10 +194,14 @@ export default function SamsungGalaxyTabPage() {
         {/* Verdict CTA */}
         <section className="bg-primary text-primary-foreground rounded-2xl p-8 text-center">
           <h2 className="font-serif text-2xl font-bold mb-3">Final Verdict: 9.3 / 10</h2>
-          <p className="max-w-2xl mx-auto text-sm text-primary-foreground/80 mb-6 leading-relaxed">
-            Whether for digital drawing, college note-taking, or desktop-class productivity with Samsung DeX, this Samsung Galaxy Tablet offers unmatched value with its included S-Pen stylus.
+          <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
+            Whether for digital drawing, college note-taking, or desktop-class productivity with Samsung DeX, the Samsung Galaxy Tab S9 FE offers unmatched value with its included S-Pen stylus.
           </p>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
+            <div className="flex-1">
+              <p className="text-sm text-primary-foreground/70">Best Android Tablet 2026</p>
+              <p className="font-bold text-lg">Samsung Galaxy Tab S9 FE</p>
+            </div>
             <a
               href={AFFILIATE_URL}
               target="_blank"

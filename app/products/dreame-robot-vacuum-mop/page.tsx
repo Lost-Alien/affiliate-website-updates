@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -9,14 +9,14 @@ import { Star, Check, ExternalLink, Zap, ShieldCheck, Cpu, RefreshCw, ThumbsUp, 
 const AFFILIATE_URL = "https://www.amazon.in/Self-Emptying-Hands-Off-Collection-MopExtend-Anti-Tangle/dp/B0H2DD8Z5T?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'Dreame Self-Emptying Robot Vacuum & Mop Review | TechSelect India',
-  description: 'Hands-on review of Dreame Self-Emptying Robot Vacuum & Mop featuring MopExtend edge cleaning, Anti-Tangle roller brush, and hands-off dust collection dock.',
+  title: 'Dreame L10s Ultra Robot Vacuum & Mop Review | TechSelect India',
+  description: 'Hands-on review of Dreame L10s Ultra Robot Vacuum & Mop featuring MopExtend edge cleaning, Anti-Tangle roller brush, and hands-off dust collection dock.',
 }
 
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Dreame Self-Emptying Robot Vacuum & Mop (MopExtend)',
+  name: 'Dreame L10s Ultra Robot Vacuum & Mop (MopExtend)',
   image: 'https://techselect.blog/products/dreame-robot-vacuum-mop.png',
   description: 'Dreame Robot Vacuum Cleaner & Mop with self-emptying base station, MopExtend corner reach technology, anti-tangle hair cutting brush, and 7000Pa suction.',
   brand: {
@@ -46,7 +46,7 @@ export default function DreameRobotVacuumPage() {
             { label: 'Categories', href: '/' },
             { label: 'Smart Home', href: '/category/smart-home' },
             { label: 'Robot Vacuums', href: '/category/smart-home/robot-vacuums' },
-            { label: 'Dreame Self-Emptying Robot Vacuum' },
+            { label: 'Dreame L10s Ultra Robot Vacuum & Mop' },
           ]}
         />
 
@@ -57,10 +57,11 @@ export default function DreameRobotVacuumPage() {
 
         {/* Hero */}
         <div className="mt-8 grid lg:grid-cols-2 gap-10 items-start mb-12">
+          {/* Product Image */}
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
               src="/products/dreame-robot-vacuum-mop.png"
-              alt="Dreame Self-Emptying Robot Vacuum & Mop"
+              alt="Dreame L10s Ultra Robot Vacuum & Mop"
               fill
               className="object-contain p-8"
               priority
@@ -68,13 +69,14 @@ export default function DreameRobotVacuumPage() {
             />
           </div>
 
+          {/* Details */}
           <div>
             <span className="inline-block px-3 py-1 bg-accent/10 text-accent font-semibold text-xs rounded-full mb-3">
-              Best Hands-Off Robot Cleaner
+              Best Hands-Off Cleaning Robot
             </span>
 
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
-              Dreame Self-Emptying Robot Vacuum
+              Dreame L10s Ultra Robot Vacuum &amp; Mop
             </h1>
             <p className="text-muted-foreground text-sm mb-4">
               MopExtend Technology · Auto Dust Emptying Station · Anti-Tangle Brush · 7000Pa Suction
@@ -194,10 +196,14 @@ export default function DreameRobotVacuumPage() {
         {/* Verdict CTA */}
         <section className="bg-primary text-primary-foreground rounded-2xl p-8 text-center">
           <h2 className="font-serif text-2xl font-bold mb-3">Final Verdict: 9.4 / 10</h2>
-          <p className="max-w-2xl mx-auto text-sm text-primary-foreground/80 mb-6 leading-relaxed">
-            If you want true hands-off home cleaning with corner-reaching mop extension, anti-tangle hair cutting technology, and a 75-day dust collection dock, the Dreame Self-Emptying Robot Vacuum is outstanding.
+          <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
+            If you want true hands-off home cleaning with corner-reaching mop extension, anti-tangle hair cutting technology, and a 75-day dust collection dock, the Dreame L10s Ultra Robot Vacuum &amp; Mop is outstanding.
           </p>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
+            <div className="flex-1">
+              <p className="text-sm text-primary-foreground/70">Best Robot Vacuum &amp; Mop 2026</p>
+              <p className="font-bold text-lg">Dreame L10s Ultra Robot Vacuum</p>
+            </div>
             <a
               href={AFFILIATE_URL}
               target="_blank"

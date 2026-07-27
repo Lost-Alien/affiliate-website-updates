@@ -223,8 +223,8 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     ],
   },
   {
-    title: 'Vivo Smartphone (2025)',
-    description: 'Vivo\'s premium Android flagship with a stunning AMOLED display, flagship-class processor, and versatile camera system. A compelling alternative to Korean and Chinese rivals.',
+    title: 'Vivo X100 Pro 5G',
+    description: 'Vivo\'s premium Android flagship with Zeiss optics, Dimensity 9300+ processor, 120W FlashCharge, and 1.5K 120Hz curved AMOLED display.',
     category: 'Mobiles',
     subcategorySlug: 'android',
     href: '/products/vivo-smartphone',
@@ -278,7 +278,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     ],
   },
   {
-    title: 'Samsung Galaxy Tablet',
+    title: 'Samsung Galaxy Tab S9 FE',
     description: 'Samsung multi-tasking tablet with included S-Pen stylus, DeX desktop mode, WQXGA display, and fast wireless charging.',
     category: 'Computers',
     subcategorySlug: 'tablets',
@@ -336,7 +336,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     ],
   },
   {
-    title: 'VW 32-inch QLED Smart TV',
+    title: 'VW 32-inch VW32MAX QLED Smart TV',
     description: 'Visio World (VW) 32-inch Frameless QLED Smart TV with Quantum Dot color tech, 20W stereo speakers, and built-in Android Smart OS.',
     category: 'Smart Home',
     subcategorySlug: 'tvs',
@@ -372,7 +372,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     ],
   },
   {
-    title: 'Dreame Robot Vacuum & Mop',
+    title: 'Dreame L10s Ultra Robot Vacuum & Mop',
     description: 'Dreame self-emptying robot vacuum cleaner & mop featuring MopExtend corner reaching arm, anti-tangle hair cutting roller, and 7000Pa suction.',
     category: 'Smart Home',
     subcategorySlug: 'robot-vacuums',
