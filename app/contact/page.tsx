@@ -40,13 +40,13 @@ export default function ContactPage() {
           <MessageSquare className="h-8 w-8 text-primary mb-4" />
           <h2 className="font-semibold text-foreground mb-2">Press Inquiries</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Media and partnership requests
+            Media, brand partnerships, and review unit requests
           </p>
           <a
-            href="mailto:support@techselect.blog"
+            href="mailto:press@techselect.blog"
             className="text-sm text-primary hover:underline"
           >
-            support@techselect.blog
+            press@techselect.blog
           </a>
         </div>
 

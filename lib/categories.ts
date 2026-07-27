@@ -35,6 +35,7 @@ export const CATEGORIES: Category[] = [
     active: true,
     subcategories: [
       { name: 'Laptops', slug: 'laptops', active: true, count: 2, description: 'Ultrabooks, gaming laptops, MacBooks, and budget laptops.' },
+      { name: 'Tablets', slug: 'tablets', active: true, count: 1, description: 'Android and iOS tablets for students, artists, and professionals.' },
       { name: 'Desktops', slug: 'desktops', active: false, count: 0, description: 'Prebuilt desktop PCs, mini PCs, and workstation builds.' },
       { name: 'Peripherals', slug: 'peripherals', active: false, count: 0, description: 'Mechanical keyboards, gaming mice, webcams, and accessories.' },
       { name: 'Storage', slug: 'storage', active: false, count: 0, description: 'NVMe SSDs, external hard drives, and flash storage.' },
@@ -48,6 +49,7 @@ export const CATEGORIES: Category[] = [
     active: true,
     subcategories: [
       { name: 'Android', slug: 'android', active: true, count: 1, description: 'Android smartphones from Samsung, Vivo, OnePlus, and more.' },
+      { name: 'Smartphones', slug: 'smartphones', active: true, count: 2, description: 'Flagship and mid-range smartphones reviewed and compared.' },
       { name: 'iPhone', slug: 'iphone', active: false, count: 0, description: 'Apple iPhone lineup reviews and comparisons.' },
       { name: 'Budget Phones', slug: 'budget-phones', active: false, count: 0, description: 'Best smartphones under ₹20,000 in India.' },
     ],
@@ -60,6 +62,8 @@ export const CATEGORIES: Category[] = [
     subcategories: [
       { name: 'Robot Vacuums', slug: 'robot-vacuums', active: true, count: 2, description: 'Self-emptying and mopping robot vacuum cleaners.' },
       { name: 'Smart Plugs', slug: 'smart-plugs', active: true, count: 2, description: 'Wi-Fi smart plugs with energy monitoring and automation.' },
+      { name: 'Smart TVs', slug: 'tvs', active: true, count: 1, description: 'Budget and mid-range smart TVs reviewed for Indian buyers.' },
+      { name: 'Appliances', slug: 'appliances', active: true, count: 1, description: 'Air conditioners, washing machines, and home appliances.' },
       { name: 'Smart Displays', slug: 'smart-displays', active: false, count: 0, description: 'Echo Show, Nest Hub, and smart home display screens.' },
     ],
   },
@@ -67,7 +71,7 @@ export const CATEGORIES: Category[] = [
     name: 'Monitors',
     slug: 'monitors',
     description: 'Expert reviews, comparisons, and buying guides for gaming monitors, professional displays, and everyday screens.',
-    active: true,
+    active: false,
     subcategories: [
       { name: 'Budget', slug: 'budget', active: false, count: 0, description: 'Affordable high-value monitors for work and study.' },
       { name: 'Gaming', slug: 'gaming', active: false, count: 0, description: 'High refresh rate, low response time gaming monitors.' },
@@ -80,7 +84,7 @@ export const CATEGORIES: Category[] = [
     name: 'Wearables',
     slug: 'wearables',
     description: 'Expert reviews, comparisons, and buying guides for smartwatches, fitness trackers, and wearable technology.',
-    active: true,
+    active: false,
     subcategories: [
       { name: 'Smartwatches', slug: 'smartwatches', active: false, count: 0, description: 'Apple Watch, Galaxy Watch, Garmin, and feature smartwatches.' },
       { name: 'Fitness Trackers', slug: 'fitness-trackers', active: false, count: 0, description: 'Activity bands, GPS trackers, and sleep monitors.' },
@@ -91,7 +95,7 @@ export const CATEGORIES: Category[] = [
     name: 'Home Office',
     slug: 'home-office',
     description: 'Expert reviews, comparisons, and buying guides for home office furniture, ergonomics, and remote work equipment.',
-    active: true,
+    active: false,
     subcategories: [
       { name: 'Desks', slug: 'desks', active: false, count: 0, description: 'Standing desks, electric sit-stand desks, and compact tables.' },
       { name: 'Chairs', slug: 'chairs', active: false, count: 0, description: 'Ergonomic office chairs and mesh gaming chairs.' },

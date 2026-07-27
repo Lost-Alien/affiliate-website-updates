@@ -87,6 +87,38 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-12">
+          <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">
+            Our Team
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            TechSelect is based in Bengaluru, India. Our small team of specialist editors brings deep domain expertise to every review.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 not-prose">
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="font-semibold text-foreground text-base mb-1">Priya Sharma</h3>
+              <p className="text-sm text-primary font-medium mb-2">Hardware Editor</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Covers laptops, monitors, and PC hardware. Former hardware engineer with 7 years of industry experience.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="font-semibold text-foreground text-base mb-1">Rahul Sharma</h3>
+              <p className="text-sm text-primary font-medium mb-2">Audio Editor</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Specialises in headphones, earbuds, and speaker systems. Tests with calibrated studio equipment.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="font-semibold text-foreground text-base mb-1">Karan Malhotra</h3>
+              <p className="text-sm text-primary font-medium mb-2">Mobile &amp; Smart Home Editor</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Covers smartphones, tablets, smart appliances, and home automation products for Indian homes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
             Affiliate Relationships
           </h2>

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -52,7 +52,7 @@ export default function SamsungGalaxyTabPage() {
 
         {/* Top Disclosure Banner */}
         <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
-          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
         </div>
 
         {/* Hero */}
@@ -76,9 +76,16 @@ export default function SamsungGalaxyTabPage() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               Samsung Galaxy Tablet
             </h1>
-            <p className="text-muted-foreground text-sm mb-6">
-              Included S-Pen Stylus · High-Res AMOLED Display · Wireless Charging & DeX Mode
+            <p className="text-muted-foreground text-sm mb-4">
+              Included S-Pen Stylus · High-Res AMOLED Display · Wireless Charging &amp; DeX Mode
             </p>
+
+            {/* Byline & Dates */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground mb-6">
+              <span>Reviewed by <span className="font-medium text-foreground">Priya Sharma</span> · Hardware Editor</span>
+              <span>Published: <span className="font-medium text-foreground">July 12, 2026</span></span>
+              <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
+            </div>
 
             {/* Rating */}
             <div className="flex items-center gap-3 mb-6">

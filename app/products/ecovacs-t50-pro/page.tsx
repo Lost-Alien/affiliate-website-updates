@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Header } from '@/components/header'
@@ -92,7 +92,7 @@ export default function EcovacsT50ProPage() {
 
         {/* Top Disclosure Banner */}
         <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
-          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
         </div>
 
         {/* Hero */}
@@ -117,8 +117,15 @@ export default function EcovacsT50ProPage() {
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground leading-tight">
                 ECOVACS DEEBOT T50 PRO
-                <span className="block text-base font-normal text-muted-foreground mt-1">Ultra-Thin Robot Vacuum & Mop with ZeroTangle Tech</span>
+                <span className="block text-base font-normal text-muted-foreground mt-1">Ultra-Thin Robot Vacuum &amp; Mop with ZeroTangle Tech</span>
               </h1>
+            </div>
+
+            {/* Byline & Dates */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+              <span>Reviewed by <span className="font-medium text-foreground">Karan Malhotra</span> · Mobile Editor</span>
+              <span>Published: <span className="font-medium text-foreground">June 28, 2026</span></span>
+              <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
             </div>
 
             {/* Rating */}

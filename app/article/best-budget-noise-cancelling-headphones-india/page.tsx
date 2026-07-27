@@ -12,13 +12,12 @@ import { BuyingGuide } from '@/components/article/buying-guide'
 import { FAQ } from '@/components/article/faq'
 import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
-import { ReferencesSection } from '@/components/article/references-section'
 
 export const metadata: Metadata = {
-  title: 'Best Premium Noise Cancelling Headphones in India (2026) | TechSelect',
-  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, definitive verdict on which ANC king is worth your money.',
+  title: 'Best Noise Cancelling Headphones in India (2026) | TechSelect',
+  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, definitive verdict on which ANC headphone is worth your money.',
   openGraph: {
-    title: 'Best Premium Noise Cancelling Headphones in India',
+    title: 'Best Noise Cancelling Headphones in India (2026)',
     description: 'Bose QuietComfort vs Sennheiser Momentum 4 — which one should you buy?',
     type: 'article',
   },
@@ -46,7 +45,7 @@ const articleSchema = {
 }
 
 const articleData = {
-  title: 'Bose QuietComfort vs Sennheiser Momentum 4: The Ultimate ANC Shootout',
+  title: 'Best Noise Cancelling Headphones in India (2026)',
   subtitle: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
   author: 'Rahul Sharma',
   authorRole: 'Audio Editor',
@@ -176,7 +175,6 @@ export default function ArticlePage() {
                   }}
                 />
 
-                <ReferencesSection />
               </div>
 
               <div className="hidden lg:block">

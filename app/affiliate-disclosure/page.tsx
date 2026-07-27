@@ -39,10 +39,13 @@ export default function AffiliateDisclosurePage() {
           <p className="text-muted-foreground leading-relaxed mb-4">
             TechSelect is a participant in various affiliate advertising programs designed to provide a means for sites to earn advertising fees by linking to retail websites. Our primary affiliate partners include:
           </p>
+          <p className="text-muted-foreground leading-relaxed mb-4 font-semibold text-foreground">
+            &ldquo;As an Amazon Associate I earn from qualifying purchases.&rdquo;
+          </p>
           <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
             <li>Amazon Associates Program</li>
             <li>Best Buy Affiliate Program</li>
-            <li>B&H Photo Affiliate Program</li>
+            <li>B&amp;H Photo Affiliate Program</li>
             <li>Manufacturer direct affiliate programs</li>
           </ul>
         </section>

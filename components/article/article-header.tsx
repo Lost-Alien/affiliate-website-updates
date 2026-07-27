@@ -72,7 +72,7 @@ export function ArticleHeader({
 
           {/* Prominent Affiliate Disclosure - Amazon Associates Compliant */}
           <div className="mt-6 p-4 bg-muted/60 rounded-xl border border-border max-w-2xl mx-auto text-xs text-muted-foreground leading-relaxed text-center">
-            <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+            <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
           </div>
         </div>
       </div>

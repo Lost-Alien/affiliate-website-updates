@@ -3,17 +3,16 @@ import { TrendingUp } from 'lucide-react'
 
 const popularPosts = [
   { title: 'Best 5G Smartphones in India (2026)', href: '/article/best-5g-smartphones-under-30000-india', category: 'Mobiles' },
-  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/bose-quietcomfort-ultra-review', category: 'Audio' },
+  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-budget-noise-cancelling-headphones-india', category: 'Audio' },
   { title: 'Best Smart Home Appliances & QLED TVs', href: '/article/best-smart-tvs-and-appliances-india', category: 'Smart Home' },
   { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]
 
 const categories = [
-  { name: 'Audio', count: 24, href: '/category/audio' },
-  { name: 'Computers', count: 18, href: '/category/computers' },
-  { name: 'Monitors', count: 12, href: '/category/monitors' },
-  { name: 'Wearables', count: 15, href: '/category/wearables' },
-  { name: 'Home Office', count: 21, href: '/category/home-office' },
+  { name: 'Audio', count: 2, href: '/category/audio' },
+  { name: 'Computers', count: 4, href: '/category/computers' },
+  { name: 'Mobiles', count: 3, href: '/category/mobiles' },
+  { name: 'Smart Home', count: 5, href: '/category/smart-home' },
 ]
 
 export function Sidebar() {

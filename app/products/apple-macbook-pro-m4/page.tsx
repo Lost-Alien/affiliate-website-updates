@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Header } from '@/components/header'
@@ -97,7 +97,7 @@ export default function MacBookProM4Page() {
 
         {/* Top Disclosure Banner */}
         <div className="mt-6 p-4 bg-muted/50 rounded-xl border border-border text-xs text-muted-foreground leading-relaxed text-center">
-          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate, I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+          <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
         </div>
 
         {/* Hero */}
@@ -124,6 +124,13 @@ export default function MacBookProM4Page() {
                 Apple MacBook Pro M4
                 <span className="block text-base font-normal text-muted-foreground mt-1">14-inch · 2024 · macOS Sequoia</span>
               </h1>
+            </div>
+
+            {/* Byline & Dates */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+              <span>Reviewed by <span className="font-medium text-foreground">Priya Sharma</span> · Hardware Editor</span>
+              <span>Published: <span className="font-medium text-foreground">July 18, 2026</span></span>
+              <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
             </div>
 
             {/* Rating */}

@@ -47,11 +47,11 @@ const articleData = {
   title: 'Best Smart Plugs with Energy Monitoring in India (2026)',
   subtitle: 'Automate geysers, air conditioners, and water pumps while cutting monthly electricity bills.',
   author: 'Karan Malhotra',
-  authorRole: 'Smart Home Editor',
+  authorRole: 'Mobile Editor',
   publishDate: 'February 10, 2026',
   updateDate: 'July 26, 2026',
   readTime: '6 min read',
-  category: 'Smart Home',
+  category: 'smart-home',
 }
 
 const keyTakeaways = [

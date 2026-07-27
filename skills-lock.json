@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "amazon-associates": {
+      "source": "rocket-repos/agent-skills",
+      "sourceType": "github",
+      "skillPath": "amazon-associates/SKILL.md",
+      "computedHash": "1c8b5ba9efe3c99c73077dcdf1c8334bbdcab89dccfb84f6096a307ef705a4cc"
+    }
+  }
+}

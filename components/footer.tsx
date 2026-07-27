@@ -4,9 +4,8 @@ const footerLinks = {
   categories: [
     { name: 'Audio', href: '/category/audio' },
     { name: 'Computers', href: '/category/computers' },
-    { name: 'Monitors', href: '/category/monitors' },
-    { name: 'Wearables', href: '/category/wearables' },
-    { name: 'Home Office', href: '/category/home-office' },
+    { name: 'Mobiles', href: '/category/mobiles' },
+    { name: 'Smart Home', href: '/category/smart-home' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
@@ -18,6 +17,7 @@ const footerLinks = {
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Affiliate Disclosure', href: '/affiliate-disclosure' },
+    { name: 'Disclaimer', href: '/disclaimer' },
     { name: 'Cookie Policy', href: '/cookies' },
   ],
 }
