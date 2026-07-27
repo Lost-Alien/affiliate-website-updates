@@ -12,13 +12,13 @@ export interface ArticleItem {
 
 export const ARTICLES_DATA: ArticleItem[] = [
   {
-    title: 'Samsung Galaxy Watch Ultra Review: Titanium Smartwatch Built for Adventure',
-    excerpt: 'Grade 4 Titanium, 3nm Exynos W1000, ECG, Blood Pressure, SpO2, 100-hour battery, and MIL-STD-810H durability — the ultimate Android smartwatch tested.',
+    title: 'Samsung Galaxy Watch8 Review: The Smartest Android Watch Yet',
+    excerpt: '3nm processor, Super AMOLED with 3,000 nits, sleep apnea detection, vascular load monitoring, antioxidant index — the smartest Galaxy Watch reviewed.',
     category: 'Wearables',
     categorySlug: 'wearables',
-    href: '/article/samsung-galaxy-watch-ultra-review',
+    href: '/article/samsung-galaxy-watch8-review',
     readTime: '8 min read',
-    imageUrl: '/products/samsung-galaxy-watch-ultra.png',
+    imageUrl: '/products/samsung-galaxy-watch8.png',
     datePublished: '2026-07-28',
     featured: true,
   },
