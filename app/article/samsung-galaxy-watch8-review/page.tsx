@@ -67,7 +67,7 @@ const products = [
     name: 'Samsung Galaxy Watch8 (Graphite)',
     tagline: 'The Pinnacle of Android Smartwatches',
     rating: 9.3,
-    image: '/products/samsung-galaxy-watch8.png',
+    image: '/products/samsung-galaxy-watch8.webp',
     amazonUrl: AFFILIATE_URL,
     bestFor: 'Android smartphone users, fitness enthusiasts, sleep tracking seekers, and anyone looking for a sleek, high-performance wearable with preventative health tools.',
     features: [

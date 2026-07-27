@@ -18,7 +18,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     categorySlug: 'wearables',
     href: '/article/samsung-galaxy-watch8-review',
     readTime: '8 min read',
-    imageUrl: '/products/samsung-galaxy-watch8.png',
+    imageUrl: '/products/samsung-galaxy-watch8.webp',
     datePublished: '2026-07-28',
     featured: true,
   },

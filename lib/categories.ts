@@ -396,7 +396,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     category: 'Wearables',
     subcategorySlug: 'smartwatches',
     href: '/products/samsung-galaxy-watch8',
-    image: '/products/samsung-galaxy-watch8.png',
+    image: '/products/samsung-galaxy-watch8.webp',
     rating: 9.3,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Samsung-Graphite-Processor-Monitoring-Anti-oxidant/dp/B0FDQKGB28?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=c36e6fb59bdfbf56fffd3ac906cde3cd&ref_=as_li_ss_tl',
