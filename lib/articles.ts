@@ -12,6 +12,17 @@ export interface ArticleItem {
 
 export const ARTICLES_DATA: ArticleItem[] = [
   {
+    title: 'Samsung Galaxy Watch Ultra Review: Titanium Smartwatch Built for Adventure',
+    excerpt: 'Grade 4 Titanium, 3nm Exynos W1000, ECG, Blood Pressure, SpO2, 100-hour battery, and MIL-STD-810H durability — the ultimate Android smartwatch tested.',
+    category: 'Wearables',
+    categorySlug: 'wearables',
+    href: '/article/samsung-galaxy-watch-ultra-review',
+    readTime: '8 min read',
+    imageUrl: '/products/samsung-galaxy-watch-ultra.png',
+    datePublished: '2026-07-28',
+    featured: true,
+  },
+  {
     title: 'Best 5G Smartphones in India (2026): Flagship Cameras & Displays',
     excerpt: 'Comparing Samsung Galaxy 5G, Vivo V70 Elite 5G, 120Hz Dynamic AMOLED displays, and 90W fast charging.',
     category: 'Mobiles',
