@@ -88,7 +88,7 @@ const pros = [
 ]
 
 const cons = [
-  '₹29,900 price tag is premium',
+  'Premium price tag',
   'Design is mostly unchanged from previous QuietComfort 45',
   'Case is slightly bulky for compact bags',
 ]

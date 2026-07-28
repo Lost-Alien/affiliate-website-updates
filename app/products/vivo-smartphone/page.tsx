@@ -234,7 +234,7 @@ export default function VivoSmartphonePage() {
           <h2 className="font-serif text-2xl font-semibold mb-4">Our Verdict</h2>
           <p className="text-primary-foreground/90 leading-relaxed mb-6 text-base">
             With ultra-fast 120W charging, a vibrant 1.5K AMOLED display, and strong Dimensity 9300+ performance,
-            the Vivo X100 Pro 5G offers fantastic value for buyers under ₹40,000 in India.
+            the Vivo X100 Pro 5G offers fantastic value for buyers in India.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-4 bg-primary-foreground/10 rounded-xl">
             <div className="flex-1">
