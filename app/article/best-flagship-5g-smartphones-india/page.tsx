@@ -86,6 +86,30 @@ const products = [
     verdict: 'If taking stunning portrait photos and fast charging are your priorities, the Vivo V70 Elite 5G stands out with its smart Aura Light system.',
     amazonUrl: 'https://www.amazon.in/vivo-V70-Elite-Additional-Exchange/dp/B0GHS4WQYV?tag=techstor0caaf-21',
   },
+  {
+    rank: 2,
+    name: 'Samsung Galaxy S26 Plus 5G',
+    tagline: 'The Ultimate AI Flagship',
+    image: '/products/samsung-galaxy-s26-plus.png',
+    rating: 9.6,
+    bestFor: 'Users wanting pro-grade cameras, 4900mAh two-day battery life, and robust AI tools without the Ultra\'s bulk.',
+    features: [
+      '50MP OIS Triple Camera with Photo Assist AI',
+      '12GB RAM and 512GB ultra-fast storage',
+      '4900mAh battery with Super Fast Wireless Charging',
+      'Live Translate and Note Assist',
+    ],
+    pros: [
+      'Photo Assist AI handles generative fill and subject repositioning instantly',
+      'Incredible battery efficiency for a true 2-day use case',
+      '12GB RAM future-proofs the device for upcoming AI updates',
+    ],
+    cons: [
+      'Charger not included in box',
+    ],
+    verdict: 'The Galaxy S26 Plus is the smartest purchase in Samsung\'s lineup, perfectly balancing AI capabilities, battery life, and price.',
+    amazonUrl: 'https://www.amazon.in/dp/B0GL8J486T?tag=techstor0caaf-21',
+  },
 ]
 
 export default function Best5gSmartphonesPage() {

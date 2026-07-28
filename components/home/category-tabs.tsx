@@ -25,12 +25,12 @@ const articles = [
     imageUrl: '/products/vw-32-inch-qled-smart-tv.png',
   },
   {
-    title: 'Best Tablets for Students, Note-Taking & Digital Art (2026)',
-    excerpt: 'Comparing tablets in India with included stylus S-Pen support, WQXGA AMOLED displays, and Samsung DeX multitasking.',
-    category: 'Computers',
-    href: '/article/best-tablets-for-students-and-creatives-india',
+    title: 'Samsung Galaxy S26 Plus 5G Review: The Ultimate AI Flagship',
+    excerpt: 'Our deep dive into the Samsung Galaxy S26 Plus 5G, featuring 12GB RAM, 512GB storage, and advanced Photo Assist AI capabilities.',
+    category: 'Mobiles',
+    href: '/article/samsung-galaxy-s26-plus-review',
     readTime: '6 min read',
-    imageUrl: '/products/samsung-galaxy-tab.png',
+    imageUrl: '/products/samsung-galaxy-s26-plus.png',
   },
   {
     title: 'ASUS ROG Strix G16 Review & Gaming Benchmarks',
