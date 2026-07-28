@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Clock, Calendar, User } from 'lucide-react'
+import { SocialShareBar } from './social-share-bar'
 
 interface ArticleHeaderProps {
   title: string
@@ -73,6 +74,11 @@ export function ArticleHeader({
           {/* Prominent Affiliate Disclosure - Amazon Associates Compliant */}
           <div className="mt-6 p-4 bg-muted/60 rounded-xl border border-border max-w-2xl mx-auto text-xs text-muted-foreground leading-relaxed text-center">
             <strong>Disclosure:</strong> TechSelect is reader-supported. As an Amazon Associate I earn from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
+          </div>
+
+          {/* Social Media Share & Follow Bar Above Content */}
+          <div className="max-w-2xl mx-auto mt-4 text-left">
+            <SocialShareBar title={title} />
           </div>
         </div>
       </div>

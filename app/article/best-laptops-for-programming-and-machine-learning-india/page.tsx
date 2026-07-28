@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/json-ld'
 import { AuthorBio } from '@/components/article/author-bio'
 import { FAQSection } from '@/components/article/faq-section'
 import { FinalVerdict } from '@/components/article/final-verdict'
+import { SocialShareBar } from '@/components/article/social-share-bar'
 import { Star, Check, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -133,6 +134,9 @@ export default function BestDevLaptopsGuidePage() {
             <span>•</span>
             <span>Updated: July 28, 2026</span>
           </div>
+
+          {/* Social Media Share & Follow Bar Above Content */}
+          <SocialShareBar title="Best Laptops for Software Engineers & Machine Learning in India (2026)" />
         </header>
 
         {/* Intro */}
