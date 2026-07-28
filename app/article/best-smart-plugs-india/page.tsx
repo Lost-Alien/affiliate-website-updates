@@ -29,7 +29,7 @@ const articleSchema = {
   description: 'Automate heavy appliances and monitor electricity consumption with 16A smart plugs.',
   author: {
     '@type': 'Person',
-    name: 'Karan Malhotra',
+    name: 'Aditya Patwa',
   },
   publisher: {
     '@type': 'Organization',
@@ -46,7 +46,7 @@ const articleSchema = {
 const articleData = {
   title: 'Best Smart Plugs with Energy Monitoring in India (2026)',
   subtitle: 'Automate geysers, air conditioners, and water pumps while cutting monthly electricity bills.',
-  author: 'Karan Malhotra',
+  author: 'Aditya Patwa',
   authorRole: 'Mobile Editor',
   publishDate: 'February 10, 2026',
   updateDate: 'July 26, 2026',

@@ -29,7 +29,7 @@ const articleSchema = {
   description: 'Comprehensive benchmark comparison of high-performance laptops in India.',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -46,7 +46,7 @@ const articleSchema = {
 const articleData = {
   title: 'Best Gaming & Developer Laptops Under ₹1 Lakh in India (2026)',
   subtitle: 'Compile code in seconds and render high FPS games without thermal throttling.',
-  author: 'Priya Sharma',
+  author: 'Abhay Gupta',
   authorRole: 'Hardware Editor',
   publishDate: 'March 1, 2026',
   updateDate: 'July 26, 2026',

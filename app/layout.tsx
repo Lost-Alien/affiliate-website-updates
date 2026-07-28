@@ -74,6 +74,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'SiTDlTHQECqLLVCNUAmuObziz4ay4R2v3qcMWXlzLSk',
+    other: {
+      'p:domain_verify': '2e3150904658700f1d7491dda90c49af',
+    },
   },
 }
 
@@ -83,7 +86,13 @@ const organizationSchema = {
   name: 'TechSelect India',
   url: baseUrl,
   logo: `${baseUrl}/icon.svg`,
-  sameAs: ['https://github.com/Lost-Alien/affiliate-website-updates'],
+  sameAs: [
+    'https://x.com/techselect_blog',
+    'https://www.youtube.com/@TechSelect_blog',
+    'https://www.instagram.com/support.techselect.blog/',
+    'https://www.pinterest.com/supporttechselectblog/',
+    'https://github.com/Lost-Alien/affiliate-website-updates',
+  ],
   description: 'Independent technology review platform providing data-driven scores and buying guides for tech products in India.',
 }
 

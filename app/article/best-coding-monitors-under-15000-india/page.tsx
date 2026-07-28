@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
@@ -31,7 +31,7 @@ const articleSchema = {
   description: 'IPS panels, Full HD resolution, and eye-care technology — our picks for the best budget coding monitors.',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -49,7 +49,7 @@ const articleData = {
   title: 'Best Coding Monitors Under ₹15,000 in India (2026)',
   subtitle:
     'We tested Full HD IPS displays with eye-care filters, adjustable stands, and HDMI connectivity to find the best budget monitors for Indian developers.',
-  author: 'Priya Sharma',
+  author: 'Abhay Gupta',
   authorRole: 'Hardware Editor',
   publishDate: 'July 15, 2026',
   updateDate: 'July 26, 2026',

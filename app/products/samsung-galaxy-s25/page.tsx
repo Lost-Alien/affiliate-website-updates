@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -84,7 +84,7 @@ export default function SamsungGalaxyS25Page() {
 
             {/* Byline & Dates */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground mb-6">
-              <span>Reviewed by <span className="font-medium text-foreground">Karan Malhotra</span> · Mobile Editor</span>
+              <span>Reviewed by <span className="font-medium text-foreground">Aditya Patwa</span> · Mobile Editor</span>
               <span>Published: <span className="font-medium text-foreground">July 22, 2026</span></span>
               <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
             </div>

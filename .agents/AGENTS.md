@@ -39,10 +39,10 @@ This workspace enforces strict guidelines to maintain Amazon Associates program 
 ## 5. Trust Signals & Author Bylines
 - **Publish & Update Dates:** All article pages and individual product review pages (`app/products/*`) must display both initial publication date and last updated date.
 - **Consistent Author Bylines:** Authors must have fixed, consistent domain roles sitewide:
-  - `Priya Sharma` → Hardware Editor (Laptops, Monitors, Keyboards)
-  - `Rahul Sharma` → Audio Editor (Headphones, Earbuds, Audio)
-  - `Karan Malhotra` → Mobile & Smart Home Editor (Smartphones, Smart Home, Appliances)
-- **Named Team & Location:** The About page must maintain named editor bios and physical location context (Bengaluru, India).
+  - `Abhay Gupta` → Hardware Editor (Laptops, Monitors, Keyboards)
+  - `Dev Kumar Sharma` → Audio Editor (Headphones, Earbuds, Audio)
+  - `Aditya Patwa` → Mobile & Smart Home Editor (Smartphones, Smart Home, Appliances)
+- **Named Team & Location:** The About page must maintain named editor bios and physical location context (Jabalpur, Madhya Pradesh, India).
 
 ---
 

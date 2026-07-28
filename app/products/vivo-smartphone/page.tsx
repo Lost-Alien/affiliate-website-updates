@@ -124,7 +124,7 @@ export default function VivoSmartphonePage() {
 
             {/* Byline & Dates */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
-              <span>Reviewed by <span className="font-medium text-foreground">Karan Malhotra</span> · Mobile Editor</span>
+              <span>Reviewed by <span className="font-medium text-foreground">Aditya Patwa</span> · Mobile Editor</span>
               <span>Published: <span className="font-medium text-foreground">July 20, 2026</span></span>
               <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
             </div>

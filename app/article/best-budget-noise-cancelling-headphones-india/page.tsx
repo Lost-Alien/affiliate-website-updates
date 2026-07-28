@@ -30,7 +30,7 @@ const articleSchema = {
   description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions.',
   author: {
     '@type': 'Person',
-    name: 'Rahul Sharma',
+    name: 'Dev Kumar Sharma',
   },
   publisher: {
     '@type': 'Organization',
@@ -47,7 +47,7 @@ const articleSchema = {
 const articleData = {
   title: 'Best Noise Cancelling Headphones in India (2026)',
   subtitle: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
-  author: 'Rahul Sharma',
+  author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'July 18, 2026',
   updateDate: 'July 21, 2026',

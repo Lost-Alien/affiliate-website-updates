@@ -24,7 +24,7 @@ const comparisonData = {
   title: 'Best Wireless Earbuds Compared',
   subtitle: 'Side-by-side comparison of our top picks for Indian buyers',
   category: 'Audio',
-  author: 'Rahul Sharma',
+  author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'January 18, 2024',
   readTime: '8 min read',

@@ -26,7 +26,7 @@ const articleSchema = {
   dateModified: '2026-07-28',
   author: {
     '@type': 'Person',
-    name: 'Rahul Sharma',
+    name: 'Dev Kumar Sharma',
     jobTitle: 'Audio & Acoustics Editor',
   },
   publisher: {
@@ -87,7 +87,7 @@ export default function SennheiserMomentum4ReviewPage() {
             Sennheiser Momentum 4 Review: 60-Hour Battery &amp; Acoustic Excellence
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-            <span>By <strong className="text-foreground">Rahul Sharma</strong> (Audio &amp; Acoustics Editor)</span>
+            <span>By <strong className="text-foreground">Dev Kumar Sharma</strong> (Audio &amp; Acoustics Editor)</span>
             <span>•</span>
             <span>Published: June 28, 2026</span>
             <span>•</span>
@@ -180,9 +180,11 @@ export default function SennheiserMomentum4ReviewPage() {
 
         {/* Author Bio */}
         <AuthorBio
-          name="Rahul Sharma"
+          name="Dev Kumar Sharma"
           role="Audio &amp; Acoustics Editor"
-          bio="Rahul has spent over 8 years evaluating wireless headphones, studio monitors, and Hi-Fi DACs. He conducts frequency response measurements, ANC decibel attenuation tests, and battery endurance runs."
+          bio="Dev evaluates wireless headphones, studio monitors, and Hi-Fi DACs for TechSelect. He conducts frequency response measurements, ANC decibel attenuation tests, and battery endurance runs."
+          location="Jabalpur, Madhya Pradesh, India"
+          linkedinUrl="https://www.linkedin.com/in/dev-kumar-sharma-38a300286/"
         />
 
         {/* FAQ Section */}

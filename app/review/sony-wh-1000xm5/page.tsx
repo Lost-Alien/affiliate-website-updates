@@ -31,7 +31,7 @@ const reviewData = {
     'Battery Life': 9.0,
     'Value': 9.0,
   },
-  author: 'Rahul Sharma',
+  author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'January 10, 2024',
   updateDate: 'January 18, 2024',

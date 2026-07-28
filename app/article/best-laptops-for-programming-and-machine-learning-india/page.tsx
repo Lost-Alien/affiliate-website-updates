@@ -24,7 +24,7 @@ const articleSchema = {
   dateModified: '2026-07-28',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
     jobTitle: 'Hardware & Computing Editor',
   },
   publisher: {
@@ -127,7 +127,7 @@ export default function BestDevLaptopsGuidePage() {
             Best Laptops for Software Engineers &amp; Machine Learning in India (2026)
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-            <span>By <strong className="text-foreground">Priya Sharma</strong> (Hardware &amp; Computing Editor)</span>
+            <span>By <strong className="text-foreground">Abhay Gupta</strong> (Hardware &amp; Computing Editor)</span>
             <span>•</span>
             <span>Published: July 27, 2026</span>
             <span>•</span>
@@ -222,9 +222,11 @@ export default function BestDevLaptopsGuidePage() {
 
         {/* Author Bio */}
         <AuthorBio
-          name="Priya Sharma"
+          name="Abhay Gupta"
           role="Hardware &amp; Computing Editor"
-          bio="Priya leads laptop and workstation testing at TechSelect. She conducts standardized Xcode compilation benchmarks, Docker stress testing, and thermal throttling evaluations."
+          bio="Abhay leads laptop and workstation testing at TechSelect. He conducts standardized Xcode compilation benchmarks, Docker stress testing, and thermal throttling evaluations."
+          location="Jabalpur, Madhya Pradesh, India"
+          linkedinUrl="https://www.linkedin.com/in/abhay-gupta-197b17264/"
         />
 
         {/* FAQ Section */}

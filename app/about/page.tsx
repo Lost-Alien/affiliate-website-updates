@@ -1,35 +1,20 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { Users, Award, Shield, Target } from 'lucide-react'
+import { Users, Award, Shield, CheckCircle } from 'lucide-react'
+
+function LinkedinIcon({ className = 'h-3.5 w-3.5' }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9Z" />
+    </svg>
+  )
+}
 
 export const metadata: Metadata = {
   title: 'About Us | TechSelect',
   description: 'Learn about TechSelect - our mission, values, and the team behind our trusted product reviews and buying guides.',
 }
-
-const values = [
-  {
-    icon: Shield,
-    title: 'Independence',
-    description: 'We never accept payment for reviews. Our recommendations are based solely on rigorous testing and expert analysis.',
-  },
-  {
-    icon: Target,
-    title: 'Accuracy',
-    description: 'Every product we review goes through our standardized testing methodology to ensure consistent, comparable results.',
-  },
-  {
-    icon: Award,
-    title: 'Expertise',
-    description: 'Our team includes specialists in audio engineering, display technology, and consumer electronics with decades of combined experience.',
-  },
-  {
-    icon: Users,
-    title: 'Community',
-    description: 'We listen to our readers. Your feedback helps us improve our content and focus on the products that matter most to you.',
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -49,34 +34,53 @@ export default function AboutPage() {
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
             Our Mission
           </h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            In a market flooded with sponsored content and unverified reviews, our mission is simple: to provide trustworthy, transparent product evaluations. We test every product we recommend, analyze its real-world performance, and evaluate whether it offers genuine value for money.
+          </p>
           <p className="text-muted-foreground leading-relaxed">
-            We believe everyone deserves access to reliable product information. Our mission is to empower consumers with the knowledge they need to choose products that truly fit their needs and budget. We achieve this through hands-on testing, transparent methodologies, and clear, actionable recommendations.
+            We focus on key consumer tech categories including laptops, smartphones, audio equipment, and smart home appliances, tailoring our recommendations specifically for Indian consumers.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">
-            Our Values
+            Core Principles
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="bg-card border border-border rounded-lg p-6"
-              >
-                <value.icon className="h-8 w-8 text-primary mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+            <div className="bg-card border border-border rounded-lg p-6">
+              <Shield className="h-8 w-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground text-base mb-2">Editorial Independence</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Our review scores and recommendations are never for sale. Manufacturers cannot pay for favorable reviews or placement on our site.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <CheckCircle className="h-8 w-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground text-base mb-2">Rigorous Testing</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Every product undergoes standardized testing protocols alongside real-world daily use before receiving a rating.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <Users className="h-8 w-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground text-base mb-2">Consumer-First Focus</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We prioritize practical value, long-term durability, and actual user experience over spec-sheet marketing claims.
+              </p>
+            </div>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <Award className="h-8 w-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground text-base mb-2">Transparent Disclosure</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We clearly disclose our affiliate relationships and testing methodologies on every review page across our platform.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="mb-12">
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
-            How We Work
+            How We Test
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Every product we recommend has been personally tested by our team. We purchase products at retail prices whenever possible to ensure our experience matches yours. When manufacturers provide review units, we disclose this clearly and maintain the same rigorous standards.
@@ -91,29 +95,59 @@ export default function AboutPage() {
             Our Team
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            TechSelect is based in Bengaluru, India. Our small team of specialist editors brings deep domain expertise to every review.
+            TechSelect is based in Jabalpur, Madhya Pradesh, India. Our small team of specialist editors brings deep domain expertise to every review.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 not-prose">
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-semibold text-foreground text-base mb-1">Priya Sharma</h3>
-              <p className="text-sm text-primary font-medium mb-2">Hardware Editor</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Covers laptops, monitors, and PC hardware. Former hardware engineer with 7 years of industry experience.
-              </p>
+            <div className="bg-card border border-border rounded-lg p-6 flex flex-col justify-between">
+              <div>
+                <h3 className="font-semibold text-foreground text-base mb-1">Abhay Gupta</h3>
+                <p className="text-sm text-primary font-medium mb-2">Hardware Editor</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Covers laptops, monitors, and PC hardware. Focuses on developer compilation benchmarks and thermal evaluation.
+                </p>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/abhay-gupta-197b17264/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-2 border-t border-border/60"
+              >
+                <LinkedinIcon className="h-3.5 w-3.5" /> LinkedIn Profile
+              </a>
             </div>
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-semibold text-foreground text-base mb-1">Rahul Sharma</h3>
-              <p className="text-sm text-primary font-medium mb-2">Audio Editor</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Specialises in headphones, earbuds, and speaker systems. Tests with calibrated studio equipment.
-              </p>
+            <div className="bg-card border border-border rounded-lg p-6 flex flex-col justify-between">
+              <div>
+                <h3 className="font-semibold text-foreground text-base mb-1">Dev Kumar Sharma</h3>
+                <p className="text-sm text-primary font-medium mb-2">Audio Editor</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Specialises in headphones, earbuds, and speaker systems. Tests active noise cancellation and soundstage dynamics.
+                </p>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/dev-kumar-sharma-38a300286/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-2 border-t border-border/60"
+              >
+                <LinkedinIcon className="h-3.5 w-3.5" /> LinkedIn Profile
+              </a>
             </div>
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-semibold text-foreground text-base mb-1">Karan Malhotra</h3>
-              <p className="text-sm text-primary font-medium mb-2">Mobile &amp; Smart Home Editor</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Covers smartphones, tablets, smart appliances, and home automation products for Indian homes.
-              </p>
+            <div className="bg-card border border-border rounded-lg p-6 flex flex-col justify-between">
+              <div>
+                <h3 className="font-semibold text-foreground text-base mb-1">Aditya Patwa</h3>
+                <p className="text-sm text-primary font-medium mb-2">Mobile &amp; Smart Home Editor</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Covers smartphones, tablets, smart appliances, and home automation products for Indian homes.
+                </p>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/adityapatwa07/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-2 border-t border-border/60"
+              >
+                <LinkedinIcon className="h-3.5 w-3.5" /> LinkedIn Profile
+              </a>
             </div>
           </div>
         </section>

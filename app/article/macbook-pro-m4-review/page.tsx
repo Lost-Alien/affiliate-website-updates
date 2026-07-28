@@ -26,7 +26,7 @@ const articleSchema = {
   dateModified: '2026-07-28',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
     jobTitle: 'Hardware & Computing Editor',
   },
   publisher: {
@@ -87,7 +87,7 @@ export default function MacBookProM4ReviewPage() {
             Apple MacBook Pro M4 Review (2026): Benchmark Testing for Software Engineers
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-            <span>By <strong className="text-foreground">Priya Sharma</strong> (Hardware &amp; Computing Editor)</span>
+            <span>By <strong className="text-foreground">Abhay Gupta</strong> (Hardware &amp; Computing Editor)</span>
             <span>•</span>
             <span>Published: July 27, 2026</span>
             <span>•</span>
@@ -114,7 +114,7 @@ export default function MacBookProM4ReviewPage() {
 
           <h2 className="font-serif text-2xl font-bold mt-8 mb-4">1. Developer Benchmarks &amp; Real-World Testing</h2>
           <p>
-            During our two weeks of hands-on testing in Bengaluru, we subjected the MacBook Pro M4 to real-world developer workloads: compiling a Next.js monorepo with 45 packages, running 12 concurrent Docker microservice containers, and running Xcode iOS simulators.
+            During our two weeks of hands-on testing in Jabalpur, we subjected the MacBook Pro M4 to real-world developer workloads: compiling a Next.js monorepo with 45 packages, running 12 concurrent Docker microservice containers, and running Xcode iOS simulators.
           </p>
           <p>
             The M4 chip’s 4 performance cores and 6 efficiency cores delivered instantaneous response times with zero lag, beating previous generation M2 Pro workstations in single-core compilation tasks.
@@ -123,7 +123,7 @@ export default function MacBookProM4ReviewPage() {
           {/* Testing Data Box */}
           <TestDataBox
             productName="Apple MacBook Pro M4 (16GB RAM / 512GB SSD)"
-            testedBy="Priya Sharma"
+            testedBy="Abhay Gupta"
             testDate="July 2026"
             metrics={labMetrics}
             summary="The MacBook Pro M4 delivered class-leading single-core efficiency and compilation speed. Surface temperatures stayed below 36°C even under sustained multi-threaded compilation loops."
@@ -188,9 +188,11 @@ export default function MacBookProM4ReviewPage() {
 
         {/* Author Bio */}
         <AuthorBio
-          name="Priya Sharma"
-          role="Hardware & Computing Editor"
-          bio="Priya has tested over 120 laptops, workstations, and dev accessories for TechSelect. She specializes in CPU/GPU compilation benchmarks, display color accuracy, and battery degradation analytics."
+          name="Abhay Gupta"
+          role="Hardware &amp; Computing Editor"
+          bio="Abhay tests laptops, workstations, and dev accessories for TechSelect. He specializes in CPU/GPU compilation benchmarks, display color accuracy, and battery degradation analytics."
+          location="Jabalpur, Madhya Pradesh, India"
+          linkedinUrl="https://www.linkedin.com/in/abhay-gupta-197b17264/"
         />
 
         {/* FAQ Section */}

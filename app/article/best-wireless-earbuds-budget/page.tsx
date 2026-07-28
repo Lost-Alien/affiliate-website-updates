@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
@@ -31,7 +31,7 @@ const articleSchema = {
   description: 'We tested budget TWS earbuds for ANC depth, dual-mic call clarity, IPX water resistance, and battery stamina.',
   author: {
     '@type': 'Person',
-    name: 'Rahul Sharma',
+    name: 'Dev Kumar Sharma',
   },
   publisher: {
     '@type': 'Organization',
@@ -49,7 +49,7 @@ const articleData = {
   title: 'Best Wireless Earbuds on a Budget in India (2026)',
   subtitle:
     'We tested TWS earbuds for sound quality, dual-mic call clarity during Indian commutes, ANC depth, IPX rating, and real-world battery stamina.',
-  author: 'Rahul Sharma',
+  author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'July 5, 2026',
   updateDate: 'July 26, 2026',

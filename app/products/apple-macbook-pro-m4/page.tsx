@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Header } from '@/components/header'
@@ -128,7 +128,7 @@ export default function MacBookProM4Page() {
 
             {/* Byline & Dates */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
-              <span>Reviewed by <span className="font-medium text-foreground">Priya Sharma</span> · Hardware Editor</span>
+              <span>Reviewed by <span className="font-medium text-foreground">Abhay Gupta</span> · Hardware Editor</span>
               <span>Published: <span className="font-medium text-foreground">July 18, 2026</span></span>
               <span>Updated: <span className="font-medium text-foreground">July 26, 2026</span></span>
             </div>

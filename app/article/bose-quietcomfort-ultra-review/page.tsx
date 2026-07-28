@@ -26,7 +26,7 @@ const articleSchema = {
   description: 'Full review of Bose QuietComfort Wireless Headphones.',
   author: {
     '@type': 'Person',
-    name: 'Rahul Sharma',
+    name: 'Dev Kumar Sharma',
   },
   publisher: {
     '@type': 'Organization',
@@ -43,7 +43,7 @@ const articleSchema = {
 const articleData = {
   title: 'Bose QuietComfort Headphones Detailed Review',
   subtitle: 'The gold standard for noise cancellation and long-haul flight comfort.',
-  author: 'Rahul Sharma',
+  author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'April 1, 2026',
   updateDate: 'July 26, 2026',

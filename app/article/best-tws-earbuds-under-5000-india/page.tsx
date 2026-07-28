@@ -24,7 +24,7 @@ const articleSchema = {
   dateModified: '2026-07-28',
   author: {
     '@type': 'Person',
-    name: 'Rahul Sharma',
+    name: 'Dev Kumar Sharma',
     jobTitle: 'Audio & Acoustics Editor',
   },
   publisher: {
@@ -102,7 +102,7 @@ export default function BestTWSEarbudsUnder5000GuidePage() {
             Best TWS Wireless Earbuds Under ₹5,000 in India (2026)
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-            <span>By <strong className="text-foreground">Rahul Sharma</strong> (Audio &amp; Acoustics Editor)</span>
+            <span>By <strong className="text-foreground">Dev Kumar Sharma</strong> (Audio &amp; Acoustics Editor)</span>
             <span>•</span>
             <span>Published: July 25, 2026</span>
             <span>•</span>
@@ -197,9 +197,11 @@ export default function BestTWSEarbudsUnder5000GuidePage() {
 
         {/* Author Bio */}
         <AuthorBio
-          name="Rahul Sharma"
+          name="Dev Kumar Sharma"
           role="Audio &amp; Acoustics Editor"
-          bio="Rahul tests wireless earbuds, ANC headphones, and spatial audio systems for TechSelect. He measures microphone call clarity in noisy environments and conducts ANC isolation tests."
+          bio="Dev tests wireless earbuds, ANC headphones, and spatial audio systems for TechSelect. He measures microphone call clarity in noisy environments and conducts ANC isolation tests."
+          location="Jabalpur, Madhya Pradesh, India"
+          linkedinUrl="https://www.linkedin.com/in/dev-kumar-sharma-38a300286/"
         />
 
         {/* FAQ Section */}

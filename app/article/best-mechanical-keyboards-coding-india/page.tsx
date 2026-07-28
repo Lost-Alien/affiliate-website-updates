@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
@@ -31,7 +31,7 @@ const articleSchema = {
   description: 'We tested tactile switches, hot-swappable PCBs, and wireless connectivity to find the best mechanical keyboards for Indian developers.',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -49,7 +49,7 @@ const articleData = {
   title: 'Best Mechanical Keyboards for Coding & Gaming in India (2026)',
   subtitle:
     'We tested tactile switches, hot-swappable PCBs, wireless Bluetooth connectivity, and RGB lighting to find the keyboards that genuinely improve developer and gamer workflows.',
-  author: 'Priya Sharma',
+  author: 'Abhay Gupta',
   authorRole: 'Hardware Editor',
   publishDate: 'July 10, 2026',
   updateDate: 'July 26, 2026',

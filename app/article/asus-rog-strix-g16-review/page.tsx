@@ -26,7 +26,7 @@ const articleSchema = {
   description: 'Benchmarking performance, thermals, and display on the ROG Strix G16.',
   author: {
     '@type': 'Person',
-    name: 'Priya Sharma',
+    name: 'Abhay Gupta',
   },
   publisher: {
     '@type': 'Organization',
@@ -43,7 +43,7 @@ const articleSchema = {
 const articleData = {
   title: 'ASUS ROG Strix G16 Detailed Review',
   subtitle: 'A high-refresh rate desktop replacement for hard-core gamers and developers.',
-  author: 'Priya Sharma',
+  author: 'Abhay Gupta',
   authorRole: 'Hardware Editor',
   publishDate: 'May 1, 2026',
   updateDate: 'July 26, 2026',

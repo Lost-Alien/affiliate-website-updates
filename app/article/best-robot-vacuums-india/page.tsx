@@ -29,7 +29,7 @@ const articleSchema = {
   description: 'Testing robot vacuums for heavy dust and hair handling on Indian flooring.',
   author: {
     '@type': 'Person',
-    name: 'Karan Malhotra',
+    name: 'Aditya Patwa',
   },
   publisher: {
     '@type': 'Organization',
@@ -46,7 +46,7 @@ const articleSchema = {
 const articleData = {
   title: 'Best Smart Home Robot Vacuums for Indian Homes (2026)',
   subtitle: 'Say goodbye to daily sweeping and mopping with automated LiDAR navigation.',
-  author: 'Karan Malhotra',
+  author: 'Aditya Patwa',
   authorRole: 'Smart Home Editor',
   publishDate: 'March 15, 2026',
   updateDate: 'July 26, 2026',

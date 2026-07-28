@@ -24,7 +24,7 @@ const articleSchema = {
   dateModified: '2026-07-28',
   author: {
     '@type': 'Person',
-    name: 'Karan Malhotra',
+    name: 'Aditya Patwa',
     jobTitle: 'Mobile & Smart Home Editor',
   },
   publisher: {
@@ -126,7 +126,7 @@ export default function BestRobotVacuumsGuidePage() {
             Best Robot Vacuum Cleaners with Mop in India (2026)
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-            <span>By <strong className="text-foreground">Karan Malhotra</strong> (Mobile &amp; Smart Home Editor)</span>
+            <span>By <strong className="text-foreground">Aditya Patwa</strong> (Mobile &amp; Smart Home Editor)</span>
             <span>•</span>
             <span>Published: July 26, 2026</span>
             <span>•</span>
@@ -221,9 +221,11 @@ export default function BestRobotVacuumsGuidePage() {
 
         {/* Author Bio */}
         <AuthorBio
-          name="Karan Malhotra"
+          name="Aditya Patwa"
           role="Mobile &amp; Smart Home Editor"
-          bio="Karan tests smart home robots, automated mop docks, and home vacuuming systems for TechSelect. He conducts obstacle avoidance challenges and floor dirt pickup tests in real home setups."
+          bio="Aditya tests smart home robots, automated mop docks, and home vacuuming systems for TechSelect. He conducts obstacle avoidance challenges and floor dirt pickup tests in real home setups."
+          location="Jabalpur, Madhya Pradesh, India"
+          linkedinUrl="https://www.linkedin.com/in/adityapatwa07/"
         />
 
         {/* FAQ Section */}
