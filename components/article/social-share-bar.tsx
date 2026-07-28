@@ -1,19 +1,82 @@
 'use client'
 
-import { useState } from 'react'
-import { Share2, Check, Copy } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Share2, Check, Copy, ExternalLink } from 'lucide-react'
 
 interface SocialShareBarProps {
   title?: string
   url?: string
 }
 
-export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url }: SocialShareBarProps) {
+export function SocialShareBar({ title: initialTitle, url: initialUrl }: SocialShareBarProps) {
   const [copied, setCopied] = useState(false)
+  const [currentUrl, setCurrentUrl] = useState(initialUrl || '')
+  const [articleTitle, setArticleTitle] = useState(initialTitle || '')
+  const [canNativeShare, setCanNativeShare] = useState(false)
 
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : (url || 'https://techselect.blog')
-  const encodedUrl = encodeURIComponent(currentUrl)
-  const encodedTitle = encodeURIComponent(title)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const activeUrl = initialUrl || window.location.href
+      setCurrentUrl(activeUrl)
+
+      const detectedTitle =
+        initialTitle ||
+        document.querySelector('h1')?.textContent?.trim() ||
+        document.title.replace(' | TechSelect', '').trim() ||
+        'TechSelect Review & Buying Guide'
+
+      setArticleTitle(detectedTitle)
+
+      if ('share' in navigator) {
+        setCanNativeShare(true)
+      }
+    }
+  }, [initialTitle, initialUrl])
+
+  // Base encoded URL used by all share links
+  const encodedUrl = encodeURIComponent(currentUrl || 'https://techselect.blog')
+
+  // --- Platform-specific share text helpers ---
+  // X/Twitter: 280 chars total. URL counts as 23 chars. Reserve 20 chars for " via @techselect_blog"
+  // So title text budget = 280 - 23 - 20 - 1 (space) = 236 chars
+  const X_TITLE_LIMIT = 236
+  const twitterTitle = articleTitle.length > X_TITLE_LIMIT
+    ? articleTitle.slice(0, X_TITLE_LIMIT - 1) + '…'
+    : articleTitle
+  const twitterText = encodeURIComponent(`${twitterTitle} via @techselect_blog`)
+
+  // WhatsApp: No hard limit, but include a contextual intro for better CTR
+  // Format: "📖 <title>\n\nRead the full review on TechSelect:\n<url>"
+  const whatsappText = encodeURIComponent(
+    `📖 ${articleTitle}\n\nRead the full review on TechSelect:\n${currentUrl || 'https://techselect.blog'}`
+  )
+
+  // Pinterest: 500 char description limit. Append hashtag for discoverability.
+  const PINTEREST_DESC_LIMIT = 490 // leave room for hashtag
+  const pinterestDesc = articleTitle.length > PINTEREST_DESC_LIMIT
+    ? articleTitle.slice(0, PINTEREST_DESC_LIMIT - 1) + '…'
+    : articleTitle
+  const pinterestText = encodeURIComponent(`${pinterestDesc} #TechSelect`)
+
+  // Native Share: Keep text concise for mobile — 100 char limit on text field
+  const NATIVE_SHARE_LIMIT = 100
+  const nativeShareText = `📖 ${articleTitle}`.length > NATIVE_SHARE_LIMIT
+    ? `📖 ${articleTitle}`.slice(0, NATIVE_SHARE_LIMIT - 1) + '…'
+    : `📖 ${articleTitle}`
+
+  const handleNativeShare = async () => {
+    if (typeof window !== 'undefined' && 'share' in navigator) {
+      try {
+        await navigator.share({
+          title: articleTitle,
+          text: nativeShareText,
+          url: currentUrl,
+        })
+      } catch {
+        // User cancelled or share failed
+      }
+    }
+  }
 
   const handleCopyLink = async () => {
     try {
@@ -30,7 +93,8 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
   const shareLinks = [
     {
       name: 'X (Twitter)',
-      href: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+      // text = "<title> via @techselect_blog" (≤257 chars) + url (23 chars) = within 280
+      href: `https://x.com/intent/tweet?text=${twitterText}&url=${encodedUrl}`,
       bg: 'hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black',
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -40,6 +104,7 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
     },
     {
       name: 'LinkedIn',
+      // LinkedIn sharing pulls og:title / og:description automatically from the URL
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
       bg: 'hover:bg-[#0A66C2] hover:text-white',
       icon: (
@@ -50,7 +115,8 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
     },
     {
       name: 'Pinterest',
-      href: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
+      // description = "<title> #TechSelect" (≤500 chars)
+      href: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${pinterestText}`,
       bg: 'hover:bg-[#E60023] hover:text-white',
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -60,7 +126,8 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
     },
     {
       name: 'WhatsApp',
-      href: `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`,
+      // Full contextual message: emoji + title + intro phrase + URL
+      href: `https://api.whatsapp.com/send?text=${whatsappText}`,
       bg: 'hover:bg-[#25D366] hover:text-white',
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -70,6 +137,7 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
     },
     {
       name: 'Facebook',
+      // Facebook pulls og:title, og:description, og:image automatically from the URL
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
       bg: 'hover:bg-[#1877F2] hover:text-white',
       icon: (
@@ -130,8 +198,19 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
         <div className="flex items-center flex-wrap gap-2.5">
           <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground mr-1">
             <Share2 className="w-3.5 h-3.5 text-primary" />
-            Share Article:
+            Share Post:
           </span>
+
+          {canNativeShare && (
+            <button
+              onClick={handleNativeShare}
+              title="Share via device apps"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-primary/30 bg-primary/10 text-xs font-semibold text-primary hover:bg-primary hover:text-primary-foreground transition-all shadow-2xs cursor-pointer"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>Share Post</span>
+            </button>
+          )}
 
           {shareLinks.map((item) => (
             <a
@@ -139,7 +218,7 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              title={`Share on ${item.name}`}
+              title={`Share post on ${item.name}`}
               className={`p-2 rounded-xl border border-border bg-background text-muted-foreground transition-all duration-200 hover:scale-105 shadow-2xs ${item.bg}`}
             >
               {item.icon}
@@ -148,13 +227,13 @@ export function SocialShareBar({ title = 'TechSelect Review & Buying Guide', url
 
           <button
             onClick={handleCopyLink}
-            title="Copy Article Link"
+            title="Copy Post Link"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-border bg-background text-xs font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-all shadow-2xs cursor-pointer"
           >
             {copied ? (
               <>
                 <Check className="w-3.5 h-3.5 text-emerald-500" />
-                <span className="text-emerald-600 font-semibold">Copied!</span>
+                <span className="text-emerald-600 font-semibold">Link Copied!</span>
               </>
             ) : (
               <>
