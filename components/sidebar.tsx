@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
 
 const popularPosts = [
-  { title: 'Best 5G Smartphones in India (2026)', href: '/article/best-5g-smartphones-under-30000-india', category: 'Mobiles' },
-  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-budget-noise-cancelling-headphones-india', category: 'Audio' },
+  { title: 'Best Flagship 5G Smartphones in India (2026)', href: '/article/best-flagship-5g-smartphones-india', category: 'Mobiles' },
+  { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-premium-noise-cancelling-headphones-india', category: 'Audio' },
   { title: 'Best Smart Home Appliances & QLED TVs', href: '/article/best-smart-tvs-and-appliances-india', category: 'Smart Home' },
   { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]

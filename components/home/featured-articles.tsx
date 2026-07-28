@@ -9,15 +9,15 @@ export function FeaturedArticles() {
 
   return (
     <section>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="font-serif text-2xl font-semibold text-foreground">Featured Guides</h2>
-        <Link
-          href="/article"
-          className="text-sm font-medium text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1"
-        >
-          View all <ArrowRight className="h-3.5 w-3.5" />
-        </Link>
+      <div className="flex items-center gap-2 mb-2">
+        <Star className="h-5 w-5 text-accent" />
+        <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground">
+          Top Picks for 2026
+        </h2>
       </div>
+      <p className="text-xs text-muted-foreground mb-6">
+        * As an Amazon Associate, TechSelect earns from qualifying purchases.
+      </p>
 
       {/* #1 Top Featured Product — Full Width */}
       <div className="bg-card border border-border rounded-xl overflow-hidden mb-6 group hover:border-accent/50 transition-all hover:shadow-md">
@@ -145,10 +145,6 @@ export function FeaturedArticles() {
           </article>
         ))}
       </div>
-
-      <p className="text-xs text-muted-foreground text-center mt-4">
-        * As an Amazon Associate, TechSelect earns from qualifying purchases.
-      </p>
     </section>
   )
 }

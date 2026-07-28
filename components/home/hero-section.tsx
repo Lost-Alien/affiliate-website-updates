@@ -13,7 +13,7 @@ export function HeroSection() {
             Make Smarter Tech Decisions
           </h1>
           <p className="mt-4 text-lg text-primary-foreground/80 leading-relaxed max-w-2xl">
-            We test hundreds of products to bring you honest, unbiased reviews and buying guides for the Indian market. No hype, no fluff — just the information you need.
+            We've hands-on tested 15+ laptops, headphones, phones, and smart home devices to bring you honest, unbiased reviews for the Indian market. No hype, no fluff — just the information you need.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link

@@ -317,12 +317,12 @@ export default function MacBookProM4Page() {
         <section className="mb-12 bg-muted/40 border border-border rounded-2xl p-6">
           <h2 className="font-serif text-lg font-semibold text-foreground mb-3">Related Comparison</h2>
           <Link
-            href="/article/best-wireless-earbuds-budget"
-            className="group flex items-center gap-4 hover:opacity-80 transition-opacity"
+            href="/article/best-gaming-laptops-under-1-lakh-india"
+            className="flex items-center gap-3 group"
           >
             <div className="flex-1">
-              <p className="font-medium text-foreground group-hover:text-accent transition-colors">
-                ASUS ROG Strix G16 vs Apple MacBook Pro M4: The Developer Shootout
+              <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                Best Gaming & Developer Laptops Under ₹1 Lakh in India
               </p>
               <p className="text-sm text-muted-foreground mt-1">
                 We tested compile times, gaming frame rates, and battery limits to find the real winner.

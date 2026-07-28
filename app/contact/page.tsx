@@ -52,10 +52,16 @@ export default function ContactPage() {
 
         <div className="bg-card border border-border rounded-lg p-6">
           <Clock className="h-8 w-8 text-primary mb-4" />
-          <h2 className="font-semibold text-foreground mb-2">Response Time</h2>
-          <p className="text-sm text-muted-foreground">
-            We typically respond within 2-3 business days
+          <h2 className="font-semibold text-foreground mb-2">Phone</h2>
+          <p className="text-sm text-muted-foreground mb-3">
+            Available Mon-Fri, 9am-5pm IST
           </p>
+          <a
+            href="tel:+918045678900"
+            className="text-sm text-primary hover:underline"
+          >
+            +91 80 4567 8900
+          </a>
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6">

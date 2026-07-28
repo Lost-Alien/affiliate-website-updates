@@ -92,15 +92,15 @@ const products = [
 const comparisonData = {
   headers: ['Product', 'Sound Quality', 'ANC Depth', 'Battery Life', 'Rating'],
   rows: [
-    ['Bose QuietComfort', 'Punchy & Bass-rich', 'World-class (-35dB)', '24 hours', '9.1'],
-    ['Sennheiser Momentum 4', 'Balanced & Detailed', 'Very Good (-30dB)', '60 hours', '9.0'],
+    ['Bose QuietComfort', 'Punchy & Bass-rich', 'World-class', '24 hours', '9.1'],
+    ['Sennheiser Momentum 4', 'Balanced & Detailed', 'Very Good', '60 hours', '9.0'],
   ],
 }
 
 const buyingGuideItems = [
   {
     title: 'Why ANC Depth Matters on Indian Commutes',
-    content: 'Indian traffic and public transport noise averages 80-85dB. Standard passive isolation only drops this by 10-15dB. Premium hybrid ANC (like Bose and Sennheiser) uses dual internal/external microphones to create anti-noise waves, dropping the ambient noise floor by up to 35dB. The difference is night and day.',
+    content: 'Indian traffic and public transport noise is notoriously loud. Standard passive isolation only drops this slightly. Premium hybrid ANC (like Bose and Sennheiser) uses dual internal/external microphones to create anti-noise waves, significantly dropping the ambient noise floor. The difference is night and day.',
   },
   {
     title: 'Battery Specs vs Real-World Usage',

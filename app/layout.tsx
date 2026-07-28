@@ -21,18 +21,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'TechSelect India | Premium Tech Reviews & Buying Guides',
-    template: '%s | TechSelect India',
+    template: '%s',
   },
   description:
     'Expert, hands-on product reviews and buying guides tailored for Indian buyers. Discover deep-dive tests of laptops, headphones, smartphones, and consumer tech.',
-  keywords: [
-    'tech reviews India',
-    'best laptops India',
-    'best earbuds India',
-    'buying guide India',
-    'Bose QuietComfort review',
-    'ASUS ROG Strix G16 review',
-  ],
   authors: [{ name: 'abs6187', url: 'https://github.com/abs6187' }],
   creator: 'TechSelect Team',
   publisher: 'TechSelect India',
