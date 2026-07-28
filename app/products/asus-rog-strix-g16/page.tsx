@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ASUS ROG Strix G16 Review — RTX 5070 Ti Gaming Laptop',
     description: 'Full review of ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX, 32GB DDR5, and a blazing 2.5K 240Hz display.',
-    images: [{ url: '/products/asus-rog-strix-g16.jpg' }],
+    images: [{ url: '/products/asus-rog-strix-g16.png' }],
   },
 }
 
@@ -26,7 +26,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'ASUS ROG Strix G16 (G615LR-S5190WS)',
-  image: 'https://techselect.blog/products/asus-rog-strix-g16.jpg',
+  image: 'https://techselect.blog/products/asus-rog-strix-g16.png',
   description: 'ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX processor, NVIDIA GeForce RTX 5070 Ti 12GB GPU, 32GB DDR5 RAM, and 16-inch 2.5K 240Hz display.',
   brand: {
     '@type': 'Brand',
@@ -106,7 +106,7 @@ export default function AsusRogStrixG16Page() {
           {/* Product Image */}
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
-              src="/products/asus-rog-strix-g16.jpg"
+              src="/products/asus-rog-strix-g16.png"
               alt="ASUS ROG Strix G16 Gaming Laptop — Eclipse Gray"
               fill
               className="object-contain p-6"

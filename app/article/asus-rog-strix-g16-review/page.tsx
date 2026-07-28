@@ -63,7 +63,7 @@ const products = [
     name: 'ASUS ROG Strix G16',
     tagline: 'High Performance Desktop Replacement',
     rating: 9.4,
-    image: '/products/asus-rog-strix-g16.jpg',
+    image: '/products/asus-rog-strix-g16.png',
     amazonUrl: 'https://www.amazon.in/dp/B0F5BH7D1L?th=1&tag=techstor0caaf-21',
     bestFor: 'Gamers, 3D artists, and developers compiling huge codebases.',
     features: ['Intel Core Ultra 9 processor', 'NVIDIA GeForce RTX graphics', '32GB DDR5 RAM', '2.5K 240Hz IPS screen'],

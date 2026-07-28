@@ -127,7 +127,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     category: 'Computers',
     subcategorySlug: 'laptops',
     href: '/products/asus-rog-strix-g16',
-    image: '/products/asus-rog-strix-g16.jpg',
+    image: '/products/asus-rog-strix-g16.png',
     rating: 9.4,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=5d528a812b0131c07a2021e4fa256922&ref_=as_li_ss_tl',
