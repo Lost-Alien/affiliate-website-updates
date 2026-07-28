@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: 'Honest, expert product reviews and buying guides for Indian tech buyers.',
     images: [
       {
-        url: `${baseUrl}/social/og-default.jpg`,
+        url: `${baseUrl}/social/og-default.png`,
         width: 1200,
         height: 628,
         alt: 'TechSelect India — Expert Tech Reviews & Buying Guides',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     creator: '@techselect_blog',
     title: 'TechSelect India | Expert Tech Reviews & Buying Guides',
     description: 'Hands-on product testing and honest buying guides for tech enthusiasts in India.',
-    images: [`${baseUrl}/social/og-default.jpg`],
+    images: [`${baseUrl}/social/og-default.png`],
   },
   robots: {
     index: true,
