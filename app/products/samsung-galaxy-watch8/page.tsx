@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Cpu, Watch, Battery, Heart, ShieldCheck, ThumbsUp, ThumbsDown } from 'lucide-react'
 
 const AFFILIATE_URL = "https://www.amazon.in/Samsung-Graphite-Processor-Monitoring-Anti-oxidant/dp/B0FDQKGB28?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=c36e6fb59bdfbf56fffd3ac906cde3cd&ref_=as_li_ss_tl"
@@ -78,6 +79,11 @@ export default function SamsungGalaxyWatch8Page() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               Samsung Galaxy Watch8 (Graphite)
             </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             <p className="text-muted-foreground text-sm mb-4">
               3nm Processor · 3,000 Nits Super AMOLED · Sleep Apnea & Vascular Load Tracking
             </p>
@@ -261,6 +267,12 @@ export default function SamsungGalaxyWatch8Page() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

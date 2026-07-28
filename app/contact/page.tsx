@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { Mail, MessageSquare, Clock } from 'lucide-react'
+import { Mail, MessageSquare, Clock, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Contact Us | TechSelect',
@@ -21,7 +21,7 @@ export default function ContactPage() {
         Have a question, suggestion, or feedback? We&apos;d love to hear from you. Our team reads every message and responds as quickly as possible.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         <div className="bg-card border border-border rounded-lg p-6">
           <Mail className="h-8 w-8 text-primary mb-4" />
           <h2 className="font-semibold text-foreground mb-2">Email Us</h2>
@@ -55,6 +55,17 @@ export default function ContactPage() {
           <h2 className="font-semibold text-foreground mb-2">Response Time</h2>
           <p className="text-sm text-muted-foreground">
             We typically respond within 2-3 business days
+          </p>
+        </div>
+
+        <div className="bg-card border border-border rounded-lg p-6">
+          <MapPin className="h-8 w-8 text-primary mb-4" />
+          <h2 className="font-semibold text-foreground mb-2">Office Address</h2>
+          <p className="text-sm text-muted-foreground">
+            TechSelect India<br/>
+            Level 3, Prestige Tech Park<br/>
+            Kadubeesanahalli, Bengaluru<br/>
+            Karnataka 560103, India
           </p>
         </div>
       </div>

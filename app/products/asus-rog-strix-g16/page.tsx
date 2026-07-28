@@ -5,6 +5,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Cpu, Monitor, HardDrive, MemoryStick, Battery, Weight } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -124,6 +125,11 @@ export default function AsusRogStrixG16Page() {
                 ASUS ROG Strix G16
                 <span className="block text-base font-normal text-muted-foreground mt-1">G615LR-S5190WS — Eclipse Gray</span>
               </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             </div>
 
             {/* Byline & Dates */}
@@ -257,6 +263,12 @@ export default function AsusRogStrixG16Page() {
             Read our affiliate disclosure.
           </Link>
         </p>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

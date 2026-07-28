@@ -167,36 +167,7 @@ export const ARTICLES_DATA: ArticleItem[] = [
     imageUrl: '/products/bose-quietcomfort.png',
     datePublished: '2026-07-25',
   },
-  {
-    title: 'Best Mechanical Keyboards for Coding & Gaming in India (2026)',
-    excerpt: 'We compared tactile vs linear switches, hot-swap PCBs, Bluetooth connectivity, and compact layouts for Indian developers.',
-    category: 'Computers',
-    categorySlug: 'computers',
-    href: '/article/best-mechanical-keyboards-coding-india',
-    readTime: '7 min read',
-    imageUrl: '/products/asus-tuf-gaming-a15.png',
-    datePublished: '2026-07-10',
-  },
-  {
-    title: 'Best Coding Monitors Under ₹15,000 in India (2026)',
-    excerpt: 'IPS vs VA panels, flicker-free backlights, blue light filter modes, and HDMI/DP connectivity compared for developers.',
-    category: 'Computers',
-    categorySlug: 'computers',
-    href: '/article/best-coding-monitors-under-15000-india',
-    readTime: '6 min read',
-    imageUrl: '/products/asus-tuf-gaming-a15.png',
-    datePublished: '2026-07-15',
-  },
-  {
-    title: 'Best Wireless Earbuds on a Budget in India (2026)',
-    excerpt: 'Budget TWS earbuds tested for ANC depth, ENC call clarity, IPX water resistance, and real-world battery life in Indian conditions.',
-    category: 'Audio',
-    categorySlug: 'audio',
-    href: '/article/best-wireless-earbuds-budget',
-    readTime: '5 min read',
-    imageUrl: '/products/bose-quietcomfort.png',
-    datePublished: '2026-07-05',
-  },
+
 ]
 
 export function getSortedArticles(): ArticleItem[] {

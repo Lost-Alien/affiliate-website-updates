@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Zap, Shield, Wifi, Smartphone, Timer, DollarSign } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -119,6 +120,11 @@ export default function TapoSmartPlugPage() {
                 TP-Link Tapo P110 (16A)
                 <span className="block text-base font-normal text-muted-foreground mt-1">Wi-Fi Smart Plug with Energy Monitoring</span>
               </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             </div>
 
             {/* Byline & Dates */}
@@ -255,6 +261,12 @@ export default function TapoSmartPlugPage() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

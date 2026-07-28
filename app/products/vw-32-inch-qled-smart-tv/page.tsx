@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Monitor, Volume2, Wifi, Tv, ShieldCheck, ThumbsUp, ThumbsDown } from 'lucide-react'
 
 const AFFILIATE_URL = "https://www.amazon.in/inches-Frameless-Ready-QLED-VW32MAX/dp/B0GXK5K633?tag=techstor0caaf-21"
@@ -76,6 +77,11 @@ export default function Vw32InchQledTvPage() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               VW 32-inch Frameless QLED Smart TV
             </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             <p className="text-muted-foreground text-sm mb-4">
               Quantum Dot Color Technology · Ultra-Thin Frameless Bezel · 20W Stereo Sound
             </p>
@@ -209,6 +215,12 @@ export default function Vw32InchQledTvPage() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

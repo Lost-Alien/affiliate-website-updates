@@ -164,6 +164,21 @@ export default function AboutPage() {
           </p>
         </section>
       </article>
+      <section className="mt-12 p-6 sm:p-8 bg-muted/30 rounded-2xl border border-border text-center">
+        <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+          Our Location
+        </h2>
+        <p className="text-muted-foreground leading-relaxed mb-6 max-w-lg mx-auto">
+          Our editorial and testing team operates out of Bengaluru, India's technology hub.
+        </p>
+        <div className="text-foreground/90 font-medium">
+          TechSelect India<br />
+          Level 3, Prestige Tech Park<br />
+          Kadubeesanahalli, Bengaluru<br />
+          Karnataka 560103, India
+        </div>
+      </section>
+
 
       <div className="mt-8 pt-8 border-t border-border">
         <Link

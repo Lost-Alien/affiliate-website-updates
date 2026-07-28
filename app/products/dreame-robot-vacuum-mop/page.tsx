@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Zap, ShieldCheck, Cpu, RefreshCw, ThumbsUp, ThumbsDown } from 'lucide-react'
 
 const AFFILIATE_URL = "https://www.amazon.in/Self-Emptying-Hands-Off-Collection-MopExtend-Anti-Tangle/dp/B0H2DD8Z5T?tag=techstor0caaf-21"
@@ -78,6 +79,11 @@ export default function DreameRobotVacuumPage() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               Dreame L10s Ultra Robot Vacuum &amp; Mop
             </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             <p className="text-muted-foreground text-sm mb-4">
               MopExtend Technology · Auto Dust Emptying Station · Anti-Tangle Brush · 7000Pa Suction
             </p>
@@ -215,6 +221,12 @@ export default function DreameRobotVacuumPage() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

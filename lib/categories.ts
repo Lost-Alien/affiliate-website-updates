@@ -204,8 +204,8 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
   },
   // ─── MOBILES ────────────────────────────────────────────────────────────────
   {
-    title: 'Samsung Galaxy 5G Smartphone',
-    description: 'Samsung\'s flagship Android phone featuring a 120Hz Dynamic AMOLED display, pro-grade 50MP camera, and 5000 mAh fast-charging battery.',
+    title: 'Samsung Galaxy S25 5G Smartphone',
+    description: '120Hz Dynamic AMOLED display, pro-grade 50MP camera, and 5000 mAh fast-charging battery.',
     category: 'Mobiles',
     subcategorySlug: 'smartphones',
     href: '/products/samsung-galaxy-s25',

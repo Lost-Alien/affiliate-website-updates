@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Cpu, HardDrive, Monitor, ShieldCheck, ThumbsUp, ThumbsDown } from 'lucide-react'
 
 const AFFILIATE_URL = "https://www.amazon.in/ASUS-3050-4GB-Upgradeable-Graphite-FA506NCQ-HN006W/dp/B0GW85JTBN?tag=techstor0caaf-21"
@@ -76,6 +77,11 @@ export default function AsusTufGamingA15Page() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               ASUS TUF Gaming A15
             </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             <p className="text-muted-foreground text-sm mb-4">
               RTX 3050 4GB GPU · 144Hz FHD Display · Upgradeable RAM &amp; Dual SSD Slots
             </p>
@@ -209,6 +215,12 @@ export default function AsusTufGamingA15Page() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>

@@ -4,6 +4,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
+import { AuthorBio } from '@/components/article/author-bio'
 import { Star, Check, ExternalLink, Cpu, Smartphone, Battery, Camera, ShieldCheck, ThumbsUp, ThumbsDown } from 'lucide-react'
 
 const AFFILIATE_URL = "https://www.amazon.in/vivo-V70-Elite-Additional-Exchange/dp/B0GHS4WQYV?tag=techstor0caaf-21"
@@ -76,6 +77,11 @@ export default function VivoV70ElitePage() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               Vivo V70 Elite 5G
             </h1>
+            <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-primary/80"></span>
+              Published: July 2026
+            </div>
+
             <p className="text-muted-foreground text-sm mb-4">
               Studio Aura Portrait Camera · 1.5K 120Hz Curved AMOLED · 90W FlashCharge
             </p>
@@ -209,6 +215,12 @@ export default function VivoV70ElitePage() {
             </a>
           </div>
         </section>
+      
+        <AuthorBio
+          name="Arjun Mehta"
+          role="Hardware Editor"
+          bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
+        />
       </main>
       <Footer />
     </>
