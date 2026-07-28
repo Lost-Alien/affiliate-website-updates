@@ -40,18 +40,20 @@ export const metadata: Metadata = {
     description: 'Honest, expert product reviews and buying guides for Indian tech buyers.',
     images: [
       {
-        url: `${baseUrl}/icon.svg`,
+        url: `${baseUrl}/social/og-default.jpg`,
         width: 1200,
-        height: 630,
-        alt: 'TechSelect Logo & Brand',
+        height: 628,
+        alt: 'TechSelect India — Expert Tech Reviews & Buying Guides',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@techselect_blog',
+    creator: '@techselect_blog',
     title: 'TechSelect India | Expert Tech Reviews & Buying Guides',
     description: 'Hands-on product testing and honest buying guides for tech enthusiasts in India.',
-    images: [`${baseUrl}/icon.svg`],
+    images: [`${baseUrl}/social/og-default.jpg`],
   },
   robots: {
     index: true,
