@@ -18,7 +18,7 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Samsung Galaxy Watch8 (Graphite)',
-  image: 'https://techselect.blog/products/samsung-galaxy-watch8.webp',
+  image: 'https://techselect.blog/products/samsung-galaxy-watch8.png',
   description: 'Samsung Galaxy Watch8 smartwatch with 3nm processor, Super AMOLED 3000 nits display, Dynamic Lug System, sleep apnea detection, vascular load monitoring, and antioxidant index tracking.',
   brand: {
     '@type': 'Brand',
@@ -61,7 +61,7 @@ export default function SamsungGalaxyWatch8Page() {
           {/* Product Image */}
           <div className="bg-card border border-border rounded-2xl overflow-hidden aspect-square relative shadow-sm">
             <Image
-              src="/products/samsung-galaxy-watch8.webp"
+              src="/products/samsung-galaxy-watch8.png"
               alt="Samsung Galaxy Watch8 Graphite Smartwatch"
               fill
               className="object-contain p-8"
