@@ -115,8 +115,8 @@ export function SocialShareBar({ title: initialTitle, url: initialUrl }: SocialS
     },
     {
       name: 'Pinterest',
-      // description = "<title> #TechSelect" (≤500 chars)
-      href: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${pinterestText}`,
+      // description = "<title> #TechSelect" (≤500 chars) & media = valid PNG image
+      href: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&media=${encodeURIComponent('https://techselect.blog/logo.png')}&description=${pinterestText}`,
       bg: 'hover:bg-[#E60023] hover:text-white',
       icon: (
         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
