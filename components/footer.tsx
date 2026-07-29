@@ -12,6 +12,7 @@ const footerLinks = {
     { name: 'How We Test', href: '/how-we-test' },
     { name: 'Editorial Guidelines', href: '/editorial-guidelines' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Canva Link Hub', href: 'https://techselectblog.my.canva.site/' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -118,12 +119,23 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith('http') ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
