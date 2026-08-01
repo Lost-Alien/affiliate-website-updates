@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
+import { WhatsAppWidget } from '@/components/whatsapp-widget'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -81,6 +82,7 @@ const organizationSchema = {
   url: baseUrl,
   logo: `${baseUrl}/icon.svg`,
   sameAs: [
+    'https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C',
     'https://x.com/techselect_blog',
     'https://www.youtube.com/@TechSelect_blog',
     'https://www.instagram.com/support.techselect.blog/',
@@ -100,6 +102,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <JsonLd data={organizationSchema} />
         {children}
+        <WhatsAppWidget />
         <Analytics />
       </body>
     </html>

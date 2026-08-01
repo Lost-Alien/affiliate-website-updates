@@ -37,30 +37,34 @@ export default function ContactPage() {
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6">
-          <MessageSquare className="h-8 w-8 text-primary mb-4" />
-          <h2 className="font-semibold text-foreground mb-2">Press Inquiries</h2>
+          <MessageSquare className="h-8 w-8 text-emerald-500 mb-4" />
+          <h2 className="font-semibold text-foreground mb-2">WhatsApp Support</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Media, brand partnerships, and review unit requests
+            Direct chat for reader questions & support
           </p>
           <a
-            href="mailto:press@techselect.blog"
-            className="text-sm text-primary hover:underline"
+            href="https://wa.me/919202876921"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
           >
-            press@techselect.blog
+            +91 92028 76921
           </a>
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6">
-          <Clock className="h-8 w-8 text-primary mb-4" />
-          <h2 className="font-semibold text-foreground mb-2">Phone</h2>
+          <Clock className="h-8 w-8 text-emerald-500 mb-4" />
+          <h2 className="font-semibold text-foreground mb-2">WhatsApp Channel</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Available Mon-Fri, 9am-5pm IST
+            Instant tech deal alerts & new reviews
           </p>
           <a
-            href="tel:+918045678900"
-            className="text-sm text-primary hover:underline"
+            href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
           >
-            +91 80 4567 8900
+            Join TechSelect Channel &rarr;
           </a>
         </div>
 
@@ -69,9 +73,8 @@ export default function ContactPage() {
           <h2 className="font-semibold text-foreground mb-2">Office Address</h2>
           <p className="text-sm text-muted-foreground">
             TechSelect India<br/>
-            Level 3, Prestige Tech Park<br/>
-            Kadubeesanahalli, Bengaluru<br/>
-            Karnataka 560103, India
+            Jabalpur, Madhya Pradesh<br/>
+            India
           </p>
         </div>
       </div>
