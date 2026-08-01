@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
 import { AuthorBio } from '@/components/article/author-bio'
+import { LiveAmazonPrice } from '@/components/product/live-price'
 import { Star, Check, ExternalLink, Zap, Compass, ShieldCheck, Sparkles, Sliders } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -147,11 +148,7 @@ export default function EcovacsT50ProPage() {
             </div>
 
             {/* Price */}
-            <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
-              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
-              <p className="text-xs text-muted-foreground mt-1">Includes All-in-One OMNI Station, dust bag & dual mop pads</p>
-            </div>
+            <LiveAmazonPrice asin="B0DRJPJLNQ" fallbackUrl={AFFILIATE_URL} />
 
             {/* CTA */}
             <a

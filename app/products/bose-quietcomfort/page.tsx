@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
 import { JsonLd } from '@/components/json-ld'
 import { AuthorBio } from '@/components/article/author-bio'
+import { LiveAmazonPrice } from '@/components/product/live-price'
 import { Star, Check, ExternalLink, Headphones, Battery, Bluetooth, Weight, ShieldCheck } from 'lucide-react'
 
 const AFFILIATE_URL =
@@ -172,11 +173,7 @@ export default function BoseQuietComfortPage() {
             </div>
 
             {/* Price */}
-            <div className="bg-muted/50 rounded-xl p-4 border border-border">
-              <p className="text-xs text-muted-foreground mb-1">Price & Availability on Amazon India</p>
-              <p className="text-xl font-bold text-foreground">Check Latest Price</p>
-              <p className="text-xs text-muted-foreground mt-1">Includes carrying case, 3.5mm audio cable & USB-C cable</p>
-            </div>
+            <LiveAmazonPrice asin="B0FDKPFLFP" fallbackUrl={AFFILIATE_URL} />
 
             {/* CTA */}
             <a

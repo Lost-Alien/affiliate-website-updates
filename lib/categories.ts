@@ -114,6 +114,7 @@ export interface CategoryContentItem {
   rating?: number
   price?: string
   amazonUrl?: string
+  asin?: string
   type: 'article' | 'review' | 'comparison'
   specs?: { label: string; value: string }[]
   badge?: string
@@ -131,6 +132,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.4,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=5d528a812b0131c07a2021e4fa256922&ref_=as_li_ss_tl',
+    asin: 'B0F5BH7D1L',
     type: 'review',
     badge: '#1 Gaming Laptop',
     specs: [
@@ -151,6 +153,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.2,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Apple-MacBook-13-inch-10%E2%80%91core-Unified/dp/B0DLHYDDFY?linkCode=ll2&tag=techstor0caaf-21&linkId=4ad9b60e3c4f42cc4e9ac49d4c8967e7&ref_=as_li_ss_tl',
+    asin: 'B0DLHYDDFY',
     type: 'review',
     badge: 'Best MacBook',
     specs: [
@@ -172,6 +175,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.1,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Bose-QuietComfort-Bluetooth-Headphones-Cancelling/dp/B0FDKPFLFP?linkCode=ll2&tag=techstor0caaf-21&linkId=122c872c91a5eabaf2731569876ee2aa&ref_=as_li_ss_tl',
+    asin: 'B0FDKPFLFP',
     type: 'review',
     badge: 'Best ANC',
     specs: [
@@ -192,6 +196,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.0,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Sennheiser-Momentum-Wireless-Headphones-Cancelling-ANC/dp/B0B6G9TPNQ?linkCode=ll2&tag=techstor0caaf-21&linkId=624f127efe2e59a13c34318c7b90d7ee&ref_=as_li_ss_tl',
+    asin: 'B0B6G9TPNQ',
     type: 'review',
     badge: 'Audiophile Pick',
     specs: [
@@ -213,6 +218,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.5,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Samsung-Galaxy-Display-Refresh-Storage/dp/B0FNWNZZ1B?tag=techstor0caaf-21',
+    asin: 'B0FNWNZZ1B',
     type: 'review',
     badge: 'Editor\'s Choice',
     specs: [
@@ -232,6 +238,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 8.9,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/dp/B0GX94B58L?tag=techstor0caaf-21',
+    asin: 'B0GX94B58L',
     type: 'review',
     badge: 'Best Camera Value',
     specs: [
@@ -251,6 +258,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.2,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/vivo-V70-Elite-Additional-Exchange/dp/B0GHS4WQYV?tag=techstor0caaf-21',
+    asin: 'B0GHS4WQYV',
     type: 'review',
     badge: 'Best Camera',
     specs: [
@@ -269,6 +277,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.1,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/ASUS-3050-4GB-Upgradeable-Graphite-FA506NCQ-HN006W/dp/B0GW85JTBN?tag=techstor0caaf-21',
+    asin: 'B0GW85JTBN',
     type: 'review',
     badge: 'Great Value',
     specs: [
@@ -287,6 +296,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.6,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/dp/B0GL8J486T?tag=techstor0caaf-21',
+    asin: 'B0GL8J486T',
     type: 'review',
     badge: 'Premium AI Flagship',
     specs: [
@@ -306,6 +316,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 8.8,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/ECOVACS-T50-PRO-Ultra-Thin-Zerotangle/dp/B0DRJPJLNQ?linkCode=ll2&tag=techstor0caaf-21&linkId=42263cbb289297ede12d9457887f1871&ref_=as_li_ss_tl',
+    asin: 'B0DRJPJLNQ',
     type: 'review',
     badge: 'Editor\'s Choice',
     specs: [
@@ -326,6 +337,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.1,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/TP-Link-Tapo-P110-Energy-Monitoring/dp/B097XZ3X7H?tag=techstor0caaf-21',
+    asin: 'B097XZ3X7H',
     type: 'review',
     badge: 'Top Pick',
     specs: [
@@ -345,6 +357,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 8.9,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/inches-Frameless-Ready-QLED-VW32MAX/dp/B0GXK5K633?tag=techstor0caaf-21',
+    asin: 'B0GXK5K633',
     type: 'review',
     badge: 'Best Budget TV',
     specs: [
@@ -363,6 +376,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.0,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Lloyd-Convertible-Installation-Indication-GLS18I3AGGSC/dp/B0GJDVGS6P?tag=techstor0caaf-21',
+    asin: 'B0GJDVGS6P',
     type: 'review',
     badge: 'Great Value',
     specs: [
@@ -381,6 +395,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.4,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Self-Emptying-Hands-Off-Collection-MopExtend-Anti-Tangle/dp/B0H2DD8Z5T?tag=techstor0caaf-21',
+    asin: 'B0H2DD8Z5T',
     type: 'review',
     badge: 'Best Hands-Off',
     specs: [
@@ -400,6 +415,7 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
     rating: 9.3,
     price: 'Check Price',
     amazonUrl: 'https://www.amazon.in/Samsung-Graphite-Processor-Monitoring-Anti-oxidant/dp/B0FDQKGB28?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=c36e6fb59bdfbf56fffd3ac906cde3cd&ref_=as_li_ss_tl',
+    asin: 'B0FDQKGB28',
     type: 'review',
     badge: 'Best Smartwatch',
     specs: [
