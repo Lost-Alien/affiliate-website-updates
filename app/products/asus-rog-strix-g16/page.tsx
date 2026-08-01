@@ -233,7 +233,49 @@ export default function AsusRogStrixG16Page() {
           </div>
         </section>
 
-                {/* In-depth Review */}
+        {/* Real Reviews & Hands-on Gallery */}
+        <section className="mb-12 bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+          <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">Hands-On Gallery & Real Review</h2>
+          <p className="text-muted-foreground mb-6 leading-relaxed">
+            We don't just read spec sheets—we test the actual hardware. Here are some real, unedited photos of the ASUS ROG Strix G16 in our testing environment, showcasing its aggressive styling, RGB illumination, and robust cooling chassis.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image 
+                src="/products/real-reviews/asus/asus-rog-real-1.jpg" 
+                alt="ASUS ROG Strix G16 Hands-on 1" 
+                fill 
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image 
+                src="/products/real-reviews/asus/asus-rog-real-2.jpg" 
+                alt="ASUS ROG Strix G16 Hands-on 2" 
+                fill 
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image 
+                src="/products/real-reviews/asus/asus-rog-real-3.jpg" 
+                alt="ASUS ROG Strix G16 Hands-on 3" 
+                fill 
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border shadow-sm">
+              <Image 
+                src="/products/real-reviews/asus/asus-rog-real-4.jpg" 
+                alt="ASUS ROG Strix G16 Hands-on 4" 
+                fill 
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* In-depth Review */}
         <section className="mb-12 bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
           <h2 className="font-serif text-2xl font-semibold text-foreground mb-6">Full Review: Desktop Performance in a Laptop Chassis</h2>
 
