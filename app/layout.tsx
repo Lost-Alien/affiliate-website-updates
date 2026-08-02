@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   robots: {
     index: true,
-    follow: true,
+follow: true,
     googleBot: {
       index: true,
       follow: true,
@@ -81,6 +81,7 @@ const organizationSchema = {
   url: baseUrl,
   logo: `${baseUrl}/icon.svg`,
   sameAs: [
+    'https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C',
     'https://x.com/techselect_blog',
     'https://www.youtube.com/@TechSelect_blog',
     'https://www.instagram.com/support.techselect.blog/',
