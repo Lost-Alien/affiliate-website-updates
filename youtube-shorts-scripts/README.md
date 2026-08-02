@@ -10,6 +10,7 @@ All scripts in this directory are formatted for **vertical 9:16 video production
 
 | Script File | Topic / Product | Target URL |
 |---|---|---|
+| 🏷️ [`00-generic-tags-and-hashtags.md`](./00-generic-tags-and-hashtags.md) | **Master Generic Tags & Hashtags Copy-Paste Guide** | [techselect.blog](https://techselect.blog) |
 | 📄 [`01-asus-rog-strix-g16.md`](./01-asus-rog-strix-g16.md) | ASUS ROG Strix G16 (RTX 5070 Ti & Core Ultra 9) | [techselect.blog/products/asus-rog-strix-g16](https://techselect.blog/products/asus-rog-strix-g16) |
 | 📄 [`02-samsung-galaxy-watch-8.md`](./02-samsung-galaxy-watch-8.md) | Samsung Galaxy Watch 8 (3nm AI Smartwatch) | [techselect.blog/products/samsung-galaxy-watch8](https://techselect.blog/products/samsung-galaxy-watch8) |
 | 📄 [`03-samsung-galaxy-s26-plus.md`](./03-samsung-galaxy-s26-plus.md) | Samsung Galaxy S26 Plus 5G (AI Photo Assist) | [techselect.blog/products/samsung-galaxy-s26-plus](https://techselect.blog/products/samsung-galaxy-s26-plus) |
