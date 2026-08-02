@@ -21,9 +21,9 @@ export function FeaturedArticles() {
 
       {/* #1 Top Featured Product — Full Width */}
       <div className="bg-card border border-border rounded-xl overflow-hidden mb-6 group hover:border-accent/50 transition-all hover:shadow-md">
-        <div className="flex flex-col sm:flex-row">
-          <Link href={topProduct.href} className="sm:w-64 flex-shrink-0 block">
-            <div className="relative aspect-square sm:h-full bg-muted overflow-hidden">
+        <div className="flex flex-col sm:flex-row h-full">
+          <Link href={topProduct.href} className="sm:w-64 flex-shrink-0 block border-b sm:border-b-0 sm:border-r border-border min-h-[220px]">
+            <div className="relative w-full h-full aspect-square sm:aspect-auto bg-muted overflow-hidden">
               <span className="absolute top-3 left-3 z-10 px-2.5 py-1 text-xs font-bold bg-primary text-primary-foreground rounded-full">
                 #1 Top Pick
               </span>
@@ -65,10 +65,9 @@ export function FeaturedArticles() {
                 </span>
               </div>
             </div>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               {topProduct.amazonUrl && (
-                <>
-<a
+                <a
                   href={topProduct.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
@@ -76,10 +75,6 @@ export function FeaturedArticles() {
                 >
                   Buy on Amazon.in (Earns Commission) <ExternalLink className="h-3.5 w-3.5" />
                 </a>
-<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
-              Product prices and availability are accurate as of the date/time indicated and are subject to change.
-            </p>
-</>
               )}
               <Link
                 href={topProduct.href}
@@ -88,6 +83,11 @@ export function FeaturedArticles() {
                 Full Review <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
+            {topProduct.amazonUrl && (
+              <p className="text-[10px] text-muted-foreground mt-2 leading-tight">
+                Product prices and availability are accurate as of the date/time indicated and are subject to change.
+              </p>
+            )}
           </div>
         </div>
       </div>

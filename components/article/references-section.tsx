@@ -1,12 +1,16 @@
 import { ExternalLink, BookOpen } from 'lucide-react'
 
-export interface ReferenceItem {
+interface Reference {
   title: string
   source: string
   url: string
 }
 
-export function ReferencesSection({ references }: { references: ReferenceItem[] }) {
+interface ReferencesSectionProps {
+  references: Reference[]
+}
+
+export function ReferencesSection({ references }: ReferencesSectionProps) {
   if (!references || references.length === 0) return null;
 
   return (
