@@ -101,6 +101,13 @@ const performanceNotes = [
   },
 ]
 
+const headphoneReferences = [
+  { title: 'Sony WH-1000XM5 Review: A New Standard', source: 'Gadgets360', url: 'https://www.gadgets360.com/audio/reviews/sony-wh-1000xm5-review' },
+  { title: 'Best Wireless Headphones in India 2024', source: 'Beebom', url: 'https://beebom.com/best-wireless-headphones-india/' },
+  { title: 'Sony WH-1000XM5 vs Bose QuietComfort Ultra', source: 'TechRadar India', url: 'https://www.techradar.com/in/reviews/sony-wh-1000xm5' },
+  { title: 'Best ANC Headphones Buying Guide', source: 'Indian Express Tech', url: 'https://indianexpress.com/article/technology/gadgets/' }
+];
+
 export default function ReviewPage() {
   return (
     <>
@@ -153,7 +160,7 @@ export default function ReviewPage() {
                 productName={reviewData.productName}
               />
 
-              <ReferencesSection />
+              {/* Pass references here */}\n<ReferencesSection references={headphoneReferences} />
             </div>
 
             {/* Sidebar - Desktop Only */}

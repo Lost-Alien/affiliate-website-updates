@@ -167,7 +167,8 @@ export default function SennheiserMomentum4ReviewPage() {
             <h3 className="font-serif font-bold text-xl">Sennheiser Momentum 4 Wireless</h3>
             <p className="text-xs text-primary-foreground/80 mt-1">60-Hour Battery · 42mm Transducers · Adaptive ANC · aptX Adaptive</p>
           </div>
-          <a
+          <>
+<a
             href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -176,6 +177,10 @@ export default function SennheiserMomentum4ReviewPage() {
             Check Price on Amazon.in
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
 
         {/* Author Bio */}

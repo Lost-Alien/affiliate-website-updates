@@ -116,7 +116,8 @@ export default function DreameRobotVacuumPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              <>
+<a
                 href={AFFILIATE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -125,6 +126,10 @@ export default function DreameRobotVacuumPage() {
                 Check Price on Amazon
                 <ExternalLink className="h-5 w-5" />
               </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
             </div>
           </div>
         </div>

@@ -129,7 +129,8 @@ export function ProductSection({
           </div>
 
           {/* CTA */}
-          <a
+          <>
+<a
             href={targetUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -138,6 +139,10 @@ export function ProductSection({
             Check Price on Amazon.in (Earns Commission)
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
       </div>
     </section>

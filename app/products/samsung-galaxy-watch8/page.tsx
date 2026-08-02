@@ -90,7 +90,7 @@ export default function SamsungGalaxyWatch8Page() {
 
             {/* Byline & Dates */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground mb-6">
-              <span>Reviewed by <span className="font-medium text-foreground">Arjun Mehta</span> · Wearables Editor</span>
+              <span>Reviewed by <span className="font-medium text-foreground">Abhay Gupta</span> · Wearables Editor</span>
               <span>Published: <span className="font-medium text-foreground">July 28, 2026</span></span>
               <span>Updated: <span className="font-medium text-foreground">July 28, 2026</span></span>
             </div>
@@ -115,7 +115,8 @@ export default function SamsungGalaxyWatch8Page() {
             </div>
 
             {/* CTA */}
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -124,6 +125,10 @@ export default function SamsungGalaxyWatch8Page() {
               Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
 
             {/* Quick Specs */}
             <div className="mt-8 grid grid-cols-2 gap-3 text-xs">
@@ -256,7 +261,8 @@ export default function SamsungGalaxyWatch8Page() {
             The Samsung Galaxy Watch8 sets a new benchmark for Android smartwatches in 2026. With its ultra-bright 3,000 nit display, lightning-fast 3nm processor, and life-saving health features like sleep apnea detection, it is a must-upgrade wearable for any Android or Samsung user.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md mx-auto">
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -265,11 +271,15 @@ export default function SamsungGalaxyWatch8Page() {
               Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
           </div>
         </section>
       
         <AuthorBio
-          name="Arjun Mehta"
+          name="Abhay Gupta"
           role="Hardware Editor"
           bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
         />

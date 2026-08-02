@@ -167,7 +167,8 @@ export default function SamsungGalaxyS25ReviewPage() {
             <h3 className="font-serif font-bold text-xl">Samsung Galaxy S25 5G</h3>
             <p className="text-xs text-primary-foreground/80 mt-1">6.7-inch 120Hz Dynamic AMOLED · Snapdragon 8 Elite · 50MP Camera</p>
           </div>
-          <a
+          <>
+<a
             href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -176,6 +177,10 @@ export default function SamsungGalaxyS25ReviewPage() {
             Check Price on Amazon.in
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
 
         {/* Author Bio */}

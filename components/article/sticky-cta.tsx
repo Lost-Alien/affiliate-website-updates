@@ -38,7 +38,8 @@ export function StickyCTA({ productName, href }: StickyCTAProps) {
           <p className="font-medium text-foreground truncate">{productName}</p>
           <p className="text-sm text-muted-foreground">Our Top Pick</p>
         </div>
-        <a
+        <>
+<a
           href={href}
           target="_blank"
           rel="noopener noreferrer sponsored"
@@ -47,6 +48,10 @@ export function StickyCTA({ productName, href }: StickyCTAProps) {
           Check Price on Amazon.in (Earns Commission)
           <ExternalLink className="h-4 w-4" />
         </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
       </div>
     </div>
   )

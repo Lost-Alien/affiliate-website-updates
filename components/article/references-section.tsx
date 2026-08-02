@@ -1,29 +1,14 @@
 import { ExternalLink, BookOpen } from 'lucide-react'
 
-const references = [
-  {
-    title: 'Sony WH-1000XM5 Review: A New Standard',
-    source: 'Gadgets360',
-    url: 'https://www.gadgets360.com/audio/reviews/sony-wh-1000xm5-review',
-  },
-  {
-    title: 'Best Wireless Headphones in India 2024',
-    source: 'Beebom',
-    url: 'https://beebom.com/best-wireless-headphones-india/',
-  },
-  {
-    title: 'Sony WH-1000XM5 vs Bose QuietComfort Ultra',
-    source: 'TechRadar India',
-    url: 'https://www.techradar.com/in/reviews/sony-wh-1000xm5',
-  },
-  {
-    title: 'Best ANC Headphones Buying Guide',
-    source: 'Indian Express Tech',
-    url: 'https://indianexpress.com/article/technology/gadgets/',
-  },
-]
+export interface ReferenceItem {
+  title: string
+  source: string
+  url: string
+}
 
-export function ReferencesSection() {
+export function ReferencesSection({ references }: { references: ReferenceItem[] }) {
+  if (!references || references.length === 0) return null;
+
   return (
     <section className="mt-12 pt-8 border-t border-border">
       <div className="flex items-center gap-2 mb-4">

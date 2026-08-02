@@ -175,7 +175,8 @@ export default function MacBookProM4ReviewPage() {
             <h3 className="font-serif font-bold text-xl">Apple MacBook Pro M4 (16GB RAM)</h3>
             <p className="text-xs text-primary-foreground/80 mt-1">14.2-inch Liquid Retina XDR · 10-core CPU · 10-core GPU</p>
           </div>
-          <a
+          <>
+<a
             href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -184,6 +185,10 @@ export default function MacBookProM4ReviewPage() {
             Check Price on Amazon.in
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
 
         {/* Author Bio */}

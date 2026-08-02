@@ -200,7 +200,8 @@ export default function BestDevLaptopsGuidePage() {
 
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-border">
                 <p className="text-xs text-muted-foreground italic flex-1">{product.verdict}</p>
-                <a
+                <>
+<a
                   href={product.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
@@ -209,6 +210,10 @@ export default function BestDevLaptopsGuidePage() {
                   Check Price on Amazon.in
                   <ExternalLink className="h-3.5 w-3.5" />
                 </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
               </div>
             </section>
           ))}

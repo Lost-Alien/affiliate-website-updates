@@ -176,7 +176,8 @@ export default function BoseQuietComfortPage() {
             <LiveAmazonPrice asin="B0FDKPFLFP" fallbackUrl={AFFILIATE_URL} />
 
             {/* CTA */}
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -185,6 +186,10 @@ export default function BoseQuietComfortPage() {
               Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
 
             <p className="text-xs text-muted-foreground text-center">
               *As an Amazon Associate we earn from qualifying purchases at no extra cost to you.
@@ -288,7 +293,8 @@ export default function BoseQuietComfortPage() {
               <p className="text-sm text-primary-foreground/70">Best ANC Headphones 2025</p>
               <p className="font-bold text-lg">Bose QuietComfort Wireless</p>
             </div>
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -297,6 +303,10 @@ export default function BoseQuietComfortPage() {
               Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
           </div>
         </section>
 
@@ -309,7 +319,7 @@ export default function BoseQuietComfortPage() {
         </p>
       
         <AuthorBio
-          name="Arjun Mehta"
+          name="Abhay Gupta"
           role="Hardware Editor"
           bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
         />

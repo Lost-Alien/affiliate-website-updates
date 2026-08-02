@@ -27,7 +27,8 @@ export function QuickVerdict({ winner, summary }: QuickVerdictProps) {
             <p className="text-sm text-primary-foreground/70">Our Top Pick</p>
             <p className="font-semibold text-lg">{winner.name}</p>
           </div>
-          <a
+          <>
+<a
             href={getAmazonAffiliateUrl(winner.name)}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -36,6 +37,10 @@ export function QuickVerdict({ winner, summary }: QuickVerdictProps) {
             Check Price on Amazon.in
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
       </div>
     </section>

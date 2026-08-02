@@ -128,6 +128,13 @@ const verdictData = {
   summary: 'For most iPhone users in India, the Apple AirPods Pro (2nd Gen) offers the best overall experience. Android users should consider the Sony WF-1000XM5 for superior sound quality, or the Samsung Galaxy Buds2 Pro for great value and Samsung ecosystem integration. All three options deliver excellent ANC and premium build quality.',
 }
 
+const headphoneReferences = [
+  { title: 'Sony WH-1000XM5 Review: A New Standard', source: 'Gadgets360', url: 'https://www.gadgets360.com/audio/reviews/sony-wh-1000xm5-review' },
+  { title: 'Best Wireless Headphones in India 2024', source: 'Beebom', url: 'https://beebom.com/best-wireless-headphones-india/' },
+  { title: 'Sony WH-1000XM5 vs Bose QuietComfort Ultra', source: 'TechRadar India', url: 'https://www.techradar.com/in/reviews/sony-wh-1000xm5' },
+  { title: 'Best ANC Headphones Buying Guide', source: 'Indian Express Tech', url: 'https://indianexpress.com/article/technology/gadgets/' }
+];
+
 export default function ComparisonPage() {
   return (
     <>
@@ -159,7 +166,7 @@ export default function ComparisonPage() {
 
               <QuickVerdict {...verdictData} />
 
-              <ReferencesSection />
+              {/* Pass references here */}\n<ReferencesSection references={headphoneReferences} />
             </div>
 
             {/* Sidebar - Desktop Only */}

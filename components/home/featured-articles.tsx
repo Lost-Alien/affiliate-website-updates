@@ -67,7 +67,8 @@ export function FeaturedArticles() {
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {topProduct.amazonUrl && (
-                <a
+                <>
+<a
                   href={topProduct.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
@@ -75,6 +76,10 @@ export function FeaturedArticles() {
                 >
                   Buy on Amazon.in (Earns Commission) <ExternalLink className="h-3.5 w-3.5" />
                 </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
               )}
               <Link
                 href={topProduct.href}
@@ -132,7 +137,8 @@ export function FeaturedArticles() {
                 )}
               </div>
               {product.amazonUrl && (
-                <a
+                <>
+<a
                   href={product.amazonUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
@@ -140,6 +146,10 @@ export function FeaturedArticles() {
                 >
                   Check Price on Amazon.in (Earns Commission) <ExternalLink className="h-3 w-3" />
                 </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
               )}
             </div>
           </article>

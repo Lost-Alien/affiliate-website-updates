@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
+import { CATEGORIES } from '@/lib/categories'
+
 const footerLinks = {
-  categories: [
-    { name: 'Audio', href: '/category/audio' },
-    { name: 'Computers', href: '/category/computers' },
-    { name: 'Mobiles', href: '/category/mobiles' },
-    { name: 'Smart Home', href: '/category/smart-home' },
-  ],
+  categories: CATEGORIES.filter(c => c.active).map(c => ({
+    name: c.name,
+    href: `/category/${c.slug}`
+  })),
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'How We Test', href: '/how-we-test' },

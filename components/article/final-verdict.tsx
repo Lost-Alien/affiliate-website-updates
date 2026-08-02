@@ -27,7 +27,8 @@ export function FinalVerdict({ title, content, topPick }: FinalVerdictProps) {
             <p className="text-sm text-primary-foreground/70">Our Top Pick</p>
             <p className="font-semibold text-lg">{topPick.name}</p>
           </div>
-          <a
+          <>
+<a
             href={topPick.href}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -36,6 +37,10 @@ export function FinalVerdict({ title, content, topPick }: FinalVerdictProps) {
             Buy on Amazon.in (Earns Commission)
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
       </div>
     </section>

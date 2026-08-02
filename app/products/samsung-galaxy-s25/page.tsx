@@ -115,7 +115,8 @@ export default function SamsungGalaxyS25Page() {
             </div>
 
             {/* CTA */}
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -124,6 +125,10 @@ export default function SamsungGalaxyS25Page() {
               Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
 
             {/* Quick Specs */}
             <div className="mt-8 grid grid-cols-2 gap-3 text-xs">
@@ -234,7 +239,8 @@ export default function SamsungGalaxyS25Page() {
             If you want a top-tier flagship Android smartphone with industry-leading display quality, versatile cameras, and reliable 5G battery performance, this Samsung Galaxy device is an absolute recommendation.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md mx-auto">
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -243,11 +249,15 @@ export default function SamsungGalaxyS25Page() {
               Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
           </div>
         </section>
       
         <AuthorBio
-          name="Arjun Mehta"
+          name="Abhay Gupta"
           role="Hardware Editor"
           bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
         />

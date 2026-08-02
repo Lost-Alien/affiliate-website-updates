@@ -154,7 +154,8 @@ export default function TapoSmartPlugPage() {
             </div>
 
             {/* CTA */}
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -163,6 +164,10 @@ export default function TapoSmartPlugPage() {
               Check Price on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
 
             {/* Quick Specs */}
             <div className="grid grid-cols-2 gap-2">
@@ -250,7 +255,8 @@ export default function TapoSmartPlugPage() {
               <p className="text-sm text-primary-foreground/70">Top Smart Home Pick</p>
               <p className="font-bold text-lg">TP-Link Tapo P110 (16A)</p>
             </div>
-            <a
+            <>
+<a
               href={AFFILIATE_URL}
               target="_blank"
               rel="noopener noreferrer sponsored"
@@ -259,11 +265,15 @@ export default function TapoSmartPlugPage() {
               Buy on Amazon.in (Earns Commission)
               <ExternalLink className="h-4 w-4" />
             </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
           </div>
         </section>
       
         <AuthorBio
-          name="Arjun Mehta"
+          name="Abhay Gupta"
           role="Hardware Editor"
           bio="Arjun is a consumer technology expert with over 6 years of experience testing laptops, smartphones, and smart home devices. Before joining TechSelect, he was a senior reviewer at a leading Indian tech publication."
         />

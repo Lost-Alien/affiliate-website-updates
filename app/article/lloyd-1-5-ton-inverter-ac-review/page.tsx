@@ -167,7 +167,8 @@ export default function LloydACReviewPage() {
             <h3 className="font-serif font-bold text-xl">Lloyd 1.5 Ton 3 Star Inverter AC</h3>
             <p className="text-xs text-primary-foreground/80 mt-1">1.5 Ton · 5-in-1 Convertible · 100% Copper · 52°C Ambient Cooling</p>
           </div>
-          <a
+          <>
+<a
             href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -176,6 +177,10 @@ export default function LloydACReviewPage() {
             Check Price on Amazon.in
             <ExternalLink className="h-4 w-4" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         </div>
 
         {/* Author Bio */}

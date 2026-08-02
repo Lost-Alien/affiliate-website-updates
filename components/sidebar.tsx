@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
 
+import { CATEGORIES } from '@/lib/categories'
+
 const popularPosts = [
   { title: 'Best Flagship 5G Smartphones in India (2026)', href: '/article/best-flagship-5g-smartphones-india', category: 'Mobiles' },
   { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-premium-noise-cancelling-headphones-india', category: 'Audio' },
@@ -8,12 +10,14 @@ const popularPosts = [
   { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]
 
-const categories = [
-  { name: 'Audio', count: 2, href: '/category/audio' },
-  { name: 'Computers', count: 4, href: '/category/computers' },
-  { name: 'Mobiles', count: 3, href: '/category/mobiles' },
-  { name: 'Smart Home', count: 5, href: '/category/smart-home' },
-]
+const categories = CATEGORIES
+  .filter(c => c.active)
+  .map(c => ({
+    name: c.name,
+    href: `/category/${c.slug}`,
+    count: c.subcategories.reduce((acc, sub) => acc + sub.count, 0)
+  }))
+  .filter(c => c.count > 0)
 
 export function Sidebar() {
   return (

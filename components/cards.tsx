@@ -258,7 +258,8 @@ export function ProductListingCard({
         </div>
 
         {amazonUrl && (
-          <a
+          <>
+<a
             href={amazonUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
@@ -267,6 +268,10 @@ export function ProductListingCard({
             Check Price on Amazon.in (Earns Commission)
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
+<p className="text-[10px] text-muted-foreground text-center mt-2 leading-tight">
+              Product prices and availability are accurate as of the date/time indicated and are subject to change.
+            </p>
+</>
         )}
       </div>
     </article>
