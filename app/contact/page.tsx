@@ -37,18 +37,18 @@ export default function ContactPage() {
         </div>
 
         <div className="bg-card border border-border rounded-lg p-6">
-          <MessageSquare className="h-8 w-8 text-emerald-500 mb-4" />
-          <h2 className="font-semibold text-foreground mb-2">WhatsApp Support</h2>
+          <MessageSquare className="h-8 w-8 text-sky-500 mb-4" />
+          <h2 className="font-semibold text-foreground mb-2">Telegram Deals Channel</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Direct chat for reader questions & support
+            Instant price drop alerts & deals (@TechSelectDeals)
           </p>
           <a
-            href="https://wa.me/919202876921"
+            href="https://t.me/TechSelectDeals"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
+            className="text-sm text-sky-600 dark:text-sky-400 font-medium hover:underline flex items-center gap-1"
           >
-            +91 92028 76921
+            Join @TechSelectDeals &rarr;
           </a>
         </div>
 

@@ -81,6 +81,7 @@ const organizationSchema = {
   url: baseUrl,
   logo: `${baseUrl}/icon.svg`,
   sameAs: [
+    'https://t.me/TechSelectDeals',
     'https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C',
     'https://x.com/techselect_blog',
     'https://www.youtube.com/@TechSelect_blog',
