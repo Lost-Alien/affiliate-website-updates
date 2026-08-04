@@ -1,17 +1,18 @@
 import Link from 'next/link'
-import { CATEGORIES } from '@/lib/categories'
-
-const footerCategories = CATEGORIES.filter((c) => c.active).map((c) => ({
-  name: c.name,
-  href: `/category/${c.slug}`,
-}))
 
 const footerLinks = {
+  categories: [
+    { name: 'Audio', href: '/category/audio' },
+    { name: 'Computers', href: '/category/computers' },
+    { name: 'Mobiles', href: '/category/mobiles' },
+    { name: 'Smart Home', href: '/category/smart-home' },
+  ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'How We Test', href: '/how-we-test' },
     { name: 'Editorial Guidelines', href: '/editorial-guidelines' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Canva Link Hub', href: 'https://techselectblog.my.canva.site/' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -97,7 +98,7 @@ export function Footer() {
               Categories
             </h3>
             <ul className="mt-4 space-y-2">
-              {footerCategories.map((link) => (
+              {footerLinks.categories.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

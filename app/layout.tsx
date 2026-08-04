@@ -34,15 +34,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
+    url: baseUrl,
     siteName: 'TechSelect India',
     title: 'TechSelect India | Expert Product Reviews & Buying Guides',
     description: 'Honest, expert product reviews and buying guides for Indian tech buyers.',
     images: [
       {
-        url: `${baseUrl}/og-default.png`,
+        url: `${baseUrl}/logo.png`,
         width: 1200,
         height: 630,
-        alt: 'TechSelect India — Expert Product Reviews & Buying Guides',
+        alt: 'TechSelect Logo & Brand',
       },
     ],
   },
@@ -50,7 +51,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@techselect_blog',
     creator: '@techselect_blog',
-    images: [`${baseUrl}/og-default.png`],
+    title: 'TechSelect India | Expert Tech Reviews & Buying Guides',
+    description: 'Hands-on product testing and honest buying guides for tech enthusiasts in India.',
+    images: [`${baseUrl}/logo.png`],
   },
   robots: {
     index: true,

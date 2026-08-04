@@ -240,29 +240,26 @@ export default function GigabyteRtx5070TiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm">
               <Image 
-                src="/products/real-reviews/rtx-5070-ti/rtx-5070-ti-real-photo.jpg" 
+                src="/products/real-reviews/rtx-5070-ti/Rtx 5070ti Real Img.jpg" 
                 alt="RTX 5070 Ti Installed in Test Bench" 
                 fill 
                 className="object-cover hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm">
               <Image 
-                src="/products/real-reviews/rtx-5070-ti/rtx-5070-ti-benchmark-1.png" 
+                src="/products/real-reviews/rtx-5070-ti/Benchmark.png" 
                 alt="RTX 5070 Ti Benchmark Score 1" 
                 fill 
                 className="object-contain bg-zinc-900 hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-sm md:col-span-2">
               <Image 
-                src="/products/real-reviews/rtx-5070-ti/rtx-5070-ti-benchmark-2.png" 
+                src="/products/real-reviews/rtx-5070-ti/Benchmark 2.png" 
                 alt="RTX 5070 Ti Benchmark Score 2" 
                 fill 
                 className="object-contain bg-zinc-900 hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, 100vw"
               />
             </div>
           </div>

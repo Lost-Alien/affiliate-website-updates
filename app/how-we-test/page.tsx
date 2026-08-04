@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import { Headphones, Monitor, Watch, Laptop, Mic2 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -63,8 +61,6 @@ const categories = [
 
 export default function HowWeTestPage() {
   return (
-    <>
-      <Header />
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'How We Test' }]} />
       
@@ -203,8 +199,15 @@ export default function HowWeTestPage() {
           </div>
         </section>
       </article>
+
+      <div className="mt-8 pt-8 border-t border-border">
+        <Link
+          href="/"
+          className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+        >
+          &larr; Back to Home
+        </Link>
+      </div>
     </main>
-      <Footer />
-    </>
   )
 }

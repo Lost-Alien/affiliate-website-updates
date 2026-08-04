@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Breadcrumb } from '@/components/breadcrumb'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | TechSelect',
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <>
-      <Header />
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Cookie Policy' }]} />
       
@@ -122,8 +119,15 @@ export default function CookiePolicyPage() {
           </p>
         </section>
       </article>
+
+      <div className="mt-8 pt-8 border-t border-border">
+        <Link
+          href="/"
+          className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+        >
+          &larr; Back to Home
+        </Link>
+      </div>
     </main>
-      <Footer />
-    </>
   )
 }
