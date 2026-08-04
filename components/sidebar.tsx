@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
+import { CATEGORIES } from '@/lib/categories'
 
 const popularPosts = [
   { title: 'Best Flagship 5G Smartphones in India (2026)', href: '/article/best-flagship-5g-smartphones-india', category: 'Mobiles' },
@@ -8,12 +9,11 @@ const popularPosts = [
   { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]
 
-const categories = [
-  { name: 'Audio', count: 2, href: '/category/audio' },
-  { name: 'Computers', count: 4, href: '/category/computers' },
-  { name: 'Mobiles', count: 3, href: '/category/mobiles' },
-  { name: 'Smart Home', count: 5, href: '/category/smart-home' },
-]
+const sidebarCategories = CATEGORIES.filter((c) => c.active).map((c) => ({
+  name: c.name,
+  count: c.subcategories.reduce((sum, sub) => sum + sub.count, 0),
+  href: `/category/${c.slug}`,
+}))
 
 export function Sidebar() {
   return (
@@ -49,7 +49,7 @@ export function Sidebar() {
       <div className="bg-card rounded-lg border border-border p-6">
         <h3 className="font-serif font-semibold text-foreground mb-4">Categories</h3>
         <ul className="space-y-2">
-          {categories.map((category) => (
+          {sidebarCategories.map((category) => (
             <li key={category.name}>
               <Link
                 href={category.href}

@@ -34,7 +34,7 @@ export function SocialShareBar({ title: initialTitle, url: initialUrl }: SocialS
   }, [initialTitle, initialUrl])
 
   // Base encoded URL used by all share links
-  const encodedUrl = encodeURIComponent(currentUrl || 'https://techselect.blog')
+  const encodedUrl = encodeURIComponent(currentUrl)
 
   // --- Platform-specific share text helpers ---
   // X/Twitter: 280 chars total. URL counts as 23 chars. Reserve 20 chars for " via @techselect_blog"
@@ -48,7 +48,7 @@ export function SocialShareBar({ title: initialTitle, url: initialUrl }: SocialS
   // WhatsApp: No hard limit, but include a contextual intro for better CTR
   // Format: "📖 <title>\n\nRead the full review on TechSelect:\n<url>"
   const whatsappText = encodeURIComponent(
-    `📖 ${articleTitle}\n\nRead the full review on TechSelect:\n${currentUrl || 'https://techselect.blog'}`
+    `📖 ${articleTitle}\n\nRead the full review on TechSelect:\n${currentUrl}`
   )
 
   // Pinterest: 500 char description limit. Append hashtag for discoverability.

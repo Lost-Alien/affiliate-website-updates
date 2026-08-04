@@ -60,8 +60,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Category & Subcategory routes
-  CATEGORIES.forEach((cat) => {
+  // Category & Subcategory routes — only include active ones
+  CATEGORIES.filter((cat) => cat.active).forEach((cat) => {
     routes.push({
       url: `${baseUrl}/category/${cat.slug}`,
       lastModified: currentDate,
@@ -69,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })
 
-    cat.subcategories.forEach((sub) => {
+    cat.subcategories.filter((sub) => sub.active).forEach((sub) => {
       routes.push({
         url: `${baseUrl}/category/${cat.slug}/${sub.slug}`,
         lastModified: currentDate,
