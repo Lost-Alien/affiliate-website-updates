@@ -24,6 +24,7 @@ export default [
       '.next/**',
       'out/**',
       '.vercel/**',
+      '.agents/**',
       'postcss.config.mjs',
       'pnpm-lock.yaml',
       'next.config.mjs',
