@@ -4,6 +4,13 @@ import { getLiveDeals, saveLiveDeals, type Deal } from '@/lib/redis'
 
 const WEBHOOK_SECRET = process.env.WEBSITE_WEBHOOK_SECRET || ''
 
+export async function GET() {
+  return NextResponse.json({
+    status: 'ok',
+    message: 'TechSelect Deals Webhook API is active and listening for deals.',
+  })
+}
+
 export async function POST(request: NextRequest) {
   // 1. Verify secret from Telegram Bot
   const secret = request.headers.get('x-webhook-secret') ?? ''
