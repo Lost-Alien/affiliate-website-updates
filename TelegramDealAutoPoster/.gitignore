@@ -1,0 +1,8 @@
+# Python bytecode cache (from local py_compile tests — never commit)
+__pycache__/
+*.pyc
+*.pyo
+
+# Real bot secrets — never commit
+.env
+.env.local

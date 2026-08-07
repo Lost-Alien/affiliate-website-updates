@@ -129,6 +129,12 @@ export function Header() {
                 )}
               </div>
             ))}
+            <Link
+              href="/sales"
+              className="py-2 text-sm font-semibold text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 transition-colors"
+            >
+              ⚡ Sales Now
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -183,6 +189,13 @@ export function Header() {
       {isMenuOpen && (
         <nav className="md:hidden border-t border-border bg-background max-h-[calc(100vh-4rem)] overflow-y-auto" aria-label="Mobile navigation">
           <div className="px-4 py-4 space-y-2">
+            <Link
+              href="/sales"
+              className="block px-3 py-2 text-base font-semibold text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 border-b border-border/40 pb-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              ⚡ Sales Now
+            </Link>
             {navCategories.map((category) => {
               const isExpanded = expandedMobileCategory === category.slug
               return (

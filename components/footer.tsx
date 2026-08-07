@@ -12,6 +12,7 @@ const footerLinks = {
     { name: 'How We Test', href: '/how-we-test' },
     { name: 'Editorial Guidelines', href: '/editorial-guidelines' },
     { name: 'Contact', href: '/contact' },
+    { name: '⚡ Flash Deals', href: '/sales' },
     { name: 'Telegram Deals Channel', href: 'https://t.me/TechSelectDeals' },
     { name: 'WhatsApp Channel', href: 'https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C' },
     { name: 'Canva Link Hub', href: 'https://techselectblog.my.canva.site/' },
