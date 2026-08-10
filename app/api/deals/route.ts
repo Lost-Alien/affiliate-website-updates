@@ -65,8 +65,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Failed to persist deals' }, { status: 500 })
     }
 
-    // 6. Revalidate the Sales page
+    // 6. Revalidate the Sales page and Homepage
     revalidatePath('/sales')
+    revalidatePath('/')
 
     return NextResponse.json({ success: true, count: newDeals.length })
   } catch (error) {

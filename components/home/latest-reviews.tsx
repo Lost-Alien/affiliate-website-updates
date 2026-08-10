@@ -2,9 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Star, ExternalLink } from 'lucide-react'
 import { SAMPLE_PRODUCTS } from '@/lib/categories'
+import { dedupeBy } from '@/lib/dedup'
 
 export function LatestReviews() {
-  const topRated = SAMPLE_PRODUCTS.slice(0, 4)
+  const uniqueProducts = dedupeBy(SAMPLE_PRODUCTS, (p) => p.href)
+  // Take top-rated items, avoiding duplicating the #1 top pick if desired or taking unique items
+  const topRated = uniqueProducts.slice(1, 5)
 
   return (
     <section>

@@ -5,6 +5,7 @@ import { ArticleCard, ProductListingCard } from '@/components/cards'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CATEGORIES, SAMPLE_PRODUCTS } from '@/lib/categories'
+import { dedupeBy } from '@/lib/dedup'
 import { PackageSearch, ArrowLeft, ArrowRight } from 'lucide-react'
 
 interface SubcategoryPageProps {
@@ -62,7 +63,7 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
   const sub = cat?.subcategories.find((s) => s.slug === subcategorySlug.toLowerCase())
 
   // Find products matching category and subcategory slug
-  const matchingProducts = SAMPLE_PRODUCTS.filter((p) => {
+  const rawMatchingProducts = SAMPLE_PRODUCTS.filter((p) => {
     const categoryMatches = cat
       ? p.category.toLowerCase() === cat.name.toLowerCase()
       : p.category.toLowerCase() === categorySlug.toLowerCase()
@@ -71,6 +72,7 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
 
     return categoryMatches && subcategoryMatches
   })
+  const matchingProducts = dedupeBy(rawMatchingProducts, (p) => p.href)
 
   const isSubcategoryActive = sub ? sub.active : false
   const hasProducts = matchingProducts.length > 0
@@ -92,7 +94,10 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
 
   // Active subcategories in this category for related recommendations
   const relatedSubcategories = cat ? cat.subcategories.filter((s) => s.active && s.slug !== subcategorySlug) : []
-  const recommendedGuides = SAMPLE_PRODUCTS.slice(0, 3)
+  const recommendedGuides = dedupeBy(
+    SAMPLE_PRODUCTS.filter((p) => !matchingProducts.some((m) => m.href === p.href)),
+    (p) => p.href
+  ).slice(0, 3)
 
   // If subcategory or category has no active products, render fallback UI card with related details!
   if (!hasActiveContent) {

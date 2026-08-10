@@ -2,10 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Star, ExternalLink } from 'lucide-react'
 import { SAMPLE_PRODUCTS } from '@/lib/categories'
+import { dedupeBy } from '@/lib/dedup'
 
 export function FeaturedArticles() {
-  const topProduct = SAMPLE_PRODUCTS[0] // ASUS ROG always first
-  const otherProducts = SAMPLE_PRODUCTS.slice(1)
+  const uniqueProducts = dedupeBy(SAMPLE_PRODUCTS, (p) => p.href)
+  const topProduct = uniqueProducts[0]
+  const otherProducts = uniqueProducts.slice(1)
 
   return (
     <section>

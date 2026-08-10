@@ -5,6 +5,7 @@ import { ArticleCard, ReviewCard } from '@/components/cards'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CATEGORIES, SAMPLE_PRODUCTS } from '@/lib/categories'
+import { dedupeBy } from '@/lib/dedup'
 
 interface CategoryPageProps {
   params: Promise<{
@@ -57,13 +58,17 @@ export default async function DynamicCategoryPage({ params }: CategoryPageProps)
   }
 
   // Find products / reviews matching this category
-  const activeProducts = SAMPLE_PRODUCTS.filter(
+  const rawActiveProducts = SAMPLE_PRODUCTS.filter(
     (p) => p.category.toLowerCase() === cat.name.toLowerCase()
   )
+  const activeProducts = dedupeBy(rawActiveProducts, (p) => p.href)
 
   const articles = activeProducts.filter((p) => p.type === 'article')
   const reviews = activeProducts.filter((p) => p.type === 'review')
-  const recommendedGuides = SAMPLE_PRODUCTS.slice(0, 4)
+  const recommendedGuides = dedupeBy(
+    SAMPLE_PRODUCTS.filter((p) => p.category.toLowerCase() !== cat.name.toLowerCase()),
+    (p) => p.href
+  ).slice(0, 4)
 
   return (
     <>

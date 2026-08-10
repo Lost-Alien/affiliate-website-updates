@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { TrendingUp } from 'lucide-react'
+import { dedupeBy } from '@/lib/dedup'
 
-const popularPosts = [
+const rawPopularPosts = [
   { title: 'Best Flagship 5G Smartphones in India (2026)', href: '/article/best-flagship-5g-smartphones-india', category: 'Mobiles' },
   { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-premium-noise-cancelling-headphones-india', category: 'Audio' },
   { title: 'Best Smart Home Appliances & QLED TVs', href: '/article/best-smart-tvs-and-appliances-india', category: 'Smart Home' },
@@ -16,6 +17,7 @@ const categories = [
 ]
 
 export function Sidebar() {
+  const popularPosts = dedupeBy(rawPopularPosts, (p) => p.href)
   return (
     <aside className="space-y-8">
       {/* Popular Posts */}
