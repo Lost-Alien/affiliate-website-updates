@@ -16,6 +16,8 @@ export async function HomeDealsBanner() {
   const rawDeals = await getLiveDeals()
   const uniqueDeals = dedupeBy(rawDeals, (d) => d.asin)
   const deals = uniqueDeals.slice(0, 6)
+  // eslint-disable-next-line react-hooks/purity
+  const nowMs = Date.now()
 
   if (deals.length === 0) {
     return null
@@ -59,10 +61,18 @@ export async function HomeDealsBanner() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {deals.map((deal) => {
             const { title, desc } = parseDealTitle(deal.text)
-            const dateStr = new Date(deal.postedAt * 1000).toLocaleString('en-IN', {
-              dateStyle: 'short',
-              timeStyle: 'short',
-            })
+            const postedMs = deal.postedAt * 1000
+            const diffMin = Math.floor((nowMs - postedMs) / 60000)
+            const relativeTime =
+              diffMin < 1
+                ? 'just now'
+                : diffMin === 1
+                  ? '1 minute ago'
+                  : diffMin < 60
+                    ? `${diffMin} minutes ago`
+                    : diffMin < 120
+                      ? '1 hour ago'
+                      : `${Math.floor(diffMin / 60)} hours ago`
 
             return (
               <div
@@ -70,9 +80,8 @@ export async function HomeDealsBanner() {
                 className="bg-card border border-border rounded-xl p-4 hover:border-amber-500/50 transition-all hover:shadow-md flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between text-[11px] text-muted-foreground mb-2">
-                    <span className="font-mono bg-muted px-2 py-0.5 rounded">ASIN: {deal.asin}</span>
-                    <span>{dateStr}</span>
+                  <div className="flex items-center justify-end text-[11px] text-muted-foreground mb-2">
+                    <span>{relativeTime}</span>
                   </div>
                   <h3 className="font-serif font-bold text-sm text-foreground group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2 mb-1.5">
                     {title}

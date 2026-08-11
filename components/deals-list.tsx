@@ -12,6 +12,7 @@ export function DealsList({ initialDeals }: DealsListProps) {
   const [deals, setDeals] = useState<Deal[]>(initialDeals)
   const [search, setSearch] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [nowMs] = useState<number>(() => Date.now())
 
   const handleRefresh = async () => {
     setIsLoading(true)
@@ -91,10 +92,18 @@ export function DealsList({ initialDeals }: DealsListProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredDeals.map((deal) => {
             const { title, desc } = parseDealText(deal.text)
-            const dateStr = new Date(deal.postedAt * 1000).toLocaleString('en-IN', {
-              dateStyle: 'medium',
-              timeStyle: 'short',
-            })
+            const postedMs = deal.postedAt * 1000
+            const diffMin = Math.floor((nowMs - postedMs) / 60000)
+            const relativeTime =
+              diffMin < 1
+                ? 'just now'
+                : diffMin === 1
+                  ? '1 minute ago'
+                  : diffMin < 60
+                    ? `${diffMin} minutes ago`
+                    : diffMin < 120
+                      ? '1 hour ago'
+                      : `${Math.floor(diffMin / 60)} hours ago`
 
             return (
               <div
@@ -111,8 +120,8 @@ export function DealsList({ initialDeals }: DealsListProps) {
                       </span>
                       Active Deal
                     </span>
-                    <span className="text-[11px] text-muted-foreground font-mono bg-muted px-2 py-0.5 rounded">
-                      ASIN: {deal.asin}
+                    <span className="text-[11px] text-muted-foreground bg-muted px-2 py-0.5 rounded">
+                      {relativeTime}
                     </span>
                   </div>
 
@@ -133,7 +142,7 @@ export function DealsList({ initialDeals }: DealsListProps) {
                   <div className="flex flex-col gap-1 text-[11px] text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
-                      Updated: {dateStr}
+                      Posted {relativeTime}
                     </span>
                     <span className="flex items-center gap-1 leading-tight font-light italic">
                       <Info className="h-2.5 w-2.5 shrink-0" />
