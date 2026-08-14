@@ -26,18 +26,35 @@ export type Deal = {
   text: string
 }
 
+export const DEFAULT_DEALS: Deal[] = [
+  {
+    asin: 'B087Q2PGF7',
+    affiliateUrl: 'https://www.amazon.in/dp/B087Q2PGF7?social_share=cm_sw_r_cp_ud_dp_WRJGTC0RBYZ45JTXWAS2&linkCode=ll2&tag=techstor0caaf-21&linkId=e3dc2fcfca053f6bb66c850dab97d35c&ref_=as_li_ss_tl',
+    sourceTitle: 'BLUE TEA 3-in-1 Combo Herbal Tea',
+    hasMedia: false,
+    postedAt: Math.floor(Date.now() / 1000),
+    text: 'BLUE TEA 3-in-1 Combo Herbal Loose Leaf Tea (Butterfly Pea 25g, Hibiscus 50g, Chamomile 30g) - Caffeine Free Herbal Tea\nCheck Price: https://www.amazon.in/dp/B087Q2PGF7?social_share=cm_sw_r_cp_ud_dp_WRJGTC0RBYZ45JTXWAS2&linkCode=ll2&tag=techstor0caaf-21&linkId=e3dc2fcfca053f6bb66c850dab97d35c&ref_=as_li_ss_tl',
+  },
+]
+
 const DEALS_KEY = 'techselect:live_deals'
 
 export async function getLiveDeals(): Promise<Deal[]> {
   if (!redisClient) {
-    return []
+    return DEFAULT_DEALS
   }
   try {
     const deals = await redisClient.get<Deal[]>(DEALS_KEY)
-    return deals || []
+    if (!deals || deals.length === 0) {
+      return DEFAULT_DEALS
+    }
+    // Ensure default featured deals are included if not present
+    const asinsInRedis = new Set(deals.map((d) => d.asin))
+    const missingDefaults = DEFAULT_DEALS.filter((d) => !asinsInRedis.has(d.asin))
+    return [...deals, ...missingDefaults]
   } catch (error) {
     console.error('Failed to fetch live deals from Redis:', error)
-    return []
+    return DEFAULT_DEALS
   }
 }
 
