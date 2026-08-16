@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
+import { DealsPopup } from '@/components/conversion/deals-popup'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -102,6 +103,7 @@ export default function RootLayout({
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <JsonLd data={organizationSchema} />
         {children}
+        <DealsPopup />
         <Analytics />
       </body>
     </html>

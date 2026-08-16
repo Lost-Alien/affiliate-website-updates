@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "test": "node --test tests/site-suite.test.ts",
     "lint:arch": "depcruise --config .dependency-cruiser.cjs app components lib",
     "knip": "knip",
     "prepare": "husky"
