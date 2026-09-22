@@ -11,6 +11,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.techselect.blog' }],
+        destination: 'https://techselect.blog/:path*',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

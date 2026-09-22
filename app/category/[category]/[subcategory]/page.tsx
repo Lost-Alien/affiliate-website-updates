@@ -36,6 +36,20 @@ export async function generateMetadata({ params }: SubcategoryPageProps): Promis
   const cat = CATEGORIES.find((c) => c.slug === categorySlug.toLowerCase())
   const sub = cat?.subcategories.find((s) => s.slug === subcategorySlug.toLowerCase())
 
+  const rawMatchingProducts = SAMPLE_PRODUCTS.filter((p) => {
+    const categoryMatches = cat
+      ? p.category.toLowerCase() === cat.name.toLowerCase()
+      : p.category.toLowerCase() === categorySlug.toLowerCase()
+
+    const subcategoryMatches = p.subcategorySlug.toLowerCase() === subcategorySlug.toLowerCase()
+
+    return categoryMatches && subcategoryMatches
+  })
+
+  const isSubcategoryActive = sub ? sub.active : false
+  const hasProducts = rawMatchingProducts.length > 0
+  const hasActiveContent = (isSubcategoryActive || hasProducts) && hasProducts
+
   const formattedSubName = sub
     ? sub.name
     : subcategorySlug
@@ -53,6 +67,12 @@ export async function generateMetadata({ params }: SubcategoryPageProps): Promis
   return {
     title: `${formattedSubName} - ${formattedCatName} Reviews | TechSelect`,
     description: sub?.description || `Expert reviews and buying guides for ${formattedSubName}.`,
+    ...(!hasActiveContent && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
   }
 }
 

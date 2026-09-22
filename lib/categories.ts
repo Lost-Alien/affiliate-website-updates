@@ -186,6 +186,18 @@ export const SAMPLE_PRODUCTS: CategoryContentItem[] = [
       { label: 'Battery', value: 'Up to 22 hours' },
     ],
   },
+  // ─── TABLETS ───────────────────────────────────────────────────────────────
+  {
+    title: 'Best Tablets for Students and Creatives in India (2026)',
+    description: 'Comprehensive buying guide comparing Apple iPad 10th Gen, Samsung Galaxy Tab S9 FE, and Xiaomi Pad 6 for note-taking, digital art, S-Pen/Apple Pencil stylus latency, and multitasking.',
+    category: 'Computers',
+    subcategorySlug: 'tablets',
+    href: '/article/best-tablets-for-students-and-creatives-india',
+    image: '/products/samsung-galaxy-tab.png',
+    rating: 9.3,
+    type: 'article',
+    badge: 'Buying Guide',
+  },
   // ─── HEADPHONES ─────────────────────────────────────────────────────────────
   {
     title: 'Bose QuietComfort Wireless Headphones',

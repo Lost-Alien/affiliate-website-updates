@@ -10,6 +10,10 @@ export const revalidate = 0 // always dynamic
 export const metadata: Metadata = {
   title: '⚡ Live Flash Deals & Price Drops | TechSelect India',
   description: 'Real-time Amazon price drops, flash deals, and best offers in India. Updated live from TechSelect Deals channel.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default async function SalesPage() {

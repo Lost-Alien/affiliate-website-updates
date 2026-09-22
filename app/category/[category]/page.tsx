@@ -26,12 +26,22 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   if (!cat) {
     return {
       title: 'Category Not Found | TechSelect',
+      robots: {
+        index: false,
+        follow: true,
+      },
     }
   }
 
   return {
     title: `${cat.name} Reviews & Buying Guides | TechSelect India`,
     description: cat.description,
+    ...(!cat.active && {
+      robots: {
+        index: false,
+        follow: true,
+      },
+    }),
   }
 }
 

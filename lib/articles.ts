@@ -167,7 +167,17 @@ export const ARTICLES_DATA: ArticleItem[] = [
     imageUrl: '/products/bose-quietcomfort.png',
     datePublished: '2026-07-25',
   },
-
+  {
+    title: 'Best Tablets for Students and Creatives in India (2026)',
+    excerpt: 'Comprehensive comparison of Apple iPad 10th Gen, Samsung Galaxy Tab S9 FE, and Xiaomi Pad 6 for lecture note-taking, digital art, stylus latency, and multitasking in India.',
+    category: 'Computers',
+    categorySlug: 'computers',
+    href: '/article/best-tablets-for-students-and-creatives-india',
+    readTime: '9 min read',
+    imageUrl: '/products/samsung-galaxy-tab.png',
+    datePublished: '2026-07-28',
+    featured: true,
+  },
 ]
 
 export function getSortedArticles(): ArticleItem[] {
