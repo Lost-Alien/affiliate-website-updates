@@ -71,6 +71,7 @@ follow: true,
     google: 'SiTDlTHQECqLLVCNUAmuObziz4ay4R2v3qcMWXlzLSk',
     other: {
       'p:domain_verify': '2e3150904658700f1d7491dda90c49af',
+      'mitgo-verification': '425557e3-f99c-4af8-a23d-8f9dca239589',
     },
   },
 }
