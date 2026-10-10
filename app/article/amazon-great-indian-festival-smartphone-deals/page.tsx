@@ -441,10 +441,10 @@ export default function GreatIndianFestivalDealsPage() {
         <section className="space-y-12 mb-16">
           <div className="border-b border-border pb-4">
             <h2 className="font-serif text-3xl font-bold text-foreground">
-              Deep-Dive Analysis: The 8 Best Phone Deals
+              Detailed Breakdown of Each Phone Deal
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
-              Independent lab testing insights, genuine street pricing, and real-world caveats for each device.
+              Honest thoughts, real street prices, and what to watch out for before buying.
             </p>
           </div>
 
@@ -502,7 +502,7 @@ export default function GreatIndianFestivalDealsPage() {
                   {/* Best For */}
                   <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
                     <p className="text-sm leading-relaxed">
-                      <strong className="text-foreground">Ideal User Profile: </strong>
+                      <strong className="text-foreground">Who should buy this: </strong>
                       <span className="text-muted-foreground">{deal.bestFor}</span>
                     </p>
                   </div>
@@ -510,7 +510,7 @@ export default function GreatIndianFestivalDealsPage() {
                   {/* Hardware Specs Grid */}
                   <div>
                     <h4 className="font-semibold text-foreground text-sm uppercase tracking-wider mb-3">
-                      Key Technical Features
+                      Main Highlights
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {deal.features.map((feature, idx) => (
@@ -555,10 +555,10 @@ export default function GreatIndianFestivalDealsPage() {
                     </div>
                   </div>
 
-                  {/* Editorial Verdict */}
+                  {/* Our Verdict */}
                   <div className="border-t border-border pt-4">
                     <p className="text-sm text-foreground/90 leading-relaxed italic">
-                      <strong>Editorial Verdict: </strong>
+                      <strong>Our Verdict: </strong>
                       {deal.verdict}
                     </p>
                   </div>
@@ -628,7 +628,7 @@ export default function GreatIndianFestivalDealsPage() {
           <div className="flex items-center gap-2 mb-4">
             <Award className="h-6 w-6 text-amber-400" />
             <h2 className="font-serif text-2xl font-bold">
-              Final Editorial Recommendation
+              Final Recommendation
             </h2>
           </div>
 
