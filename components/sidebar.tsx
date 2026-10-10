@@ -3,16 +3,16 @@ import { TrendingUp } from 'lucide-react'
 import { dedupeBy } from '@/lib/dedup'
 
 const rawPopularPosts = [
+  { title: 'Amazon Great Indian Festival Smartphone Deals (2026)', href: '/article/amazon-great-indian-festival-smartphone-deals', category: 'Mobiles' },
   { title: 'Best Flagship 5G Smartphones in India (2026)', href: '/article/best-flagship-5g-smartphones-india', category: 'Mobiles' },
   { title: 'Bose QuietComfort vs Sennheiser Momentum 4', href: '/article/best-premium-noise-cancelling-headphones-india', category: 'Audio' },
   { title: 'Best Smart Home Appliances & QLED TVs', href: '/article/best-smart-tvs-and-appliances-india', category: 'Smart Home' },
-  { title: 'ASUS ROG Strix G16 Gaming Review', href: '/article/asus-rog-strix-g16-review', category: 'Computers' },
 ]
 
 const categories = [
   { name: 'Audio', count: 2, href: '/category/audio' },
   { name: 'Computers', count: 4, href: '/category/computers' },
-  { name: 'Mobiles', count: 3, href: '/category/mobiles' },
+  { name: 'Mobiles', count: 4, href: '/category/mobiles' },
   { name: 'Smart Home', count: 5, href: '/category/smart-home' },
 ]
 

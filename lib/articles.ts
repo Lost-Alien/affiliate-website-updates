@@ -12,6 +12,17 @@ export interface ArticleItem {
 
 export const ARTICLES_DATA: ArticleItem[] = [
   {
+    title: 'Amazon Great Indian Festival (2026): Best Smartphone Deals & Price Audit',
+    excerpt: 'Auditing real festive price cuts on Galaxy S25 Ultra, OnePlus 15R, Xiaomi 17, iQOO 15R, and OnePlus Nord 6 during Amazon Great Indian Festival 2026.',
+    category: 'Mobiles',
+    categorySlug: 'mobiles',
+    href: '/article/amazon-great-indian-festival-smartphone-deals',
+    readTime: '9 min read',
+    imageUrl: '/products/samsung-galaxy-s25.png',
+    datePublished: '2026-10-08',
+    featured: true,
+  },
+  {
     title: 'Samsung Galaxy Watch8 Review: The Smartest Android Watch Yet',
     excerpt: '3nm processor, Super AMOLED with 3,000 nits, sleep apnea detection, vascular load monitoring, antioxidant index — the smartest Galaxy Watch reviewed.',
     category: 'Wearables',
