@@ -95,7 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ARTICLES_DATA.forEach((article) => {
     routes.push({
       url: `${baseUrl}${article.href}`,
-      lastModified: currentDate,
+      lastModified: article.datePublished ? new Date(article.datePublished).toISOString() : currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     })

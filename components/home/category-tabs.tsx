@@ -15,7 +15,7 @@ export function CategoryTabs() {
   const uniqueArticles = dedupeBy(ARTICLES_DATA, (a) => a.href)
 
   const filteredArticles = activeCategory === 'All'
-    ? uniqueArticles.slice(0, 8)
+    ? uniqueArticles
     : uniqueArticles.filter(article => article.category === activeCategory)
 
   const viewAllHref = activeCategory === 'All'
