@@ -101,6 +101,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} bg-background`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3694601959788233"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <JsonLd data={organizationSchema} />
         {children}
