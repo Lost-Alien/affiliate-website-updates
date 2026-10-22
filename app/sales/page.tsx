@@ -47,18 +47,63 @@ export default async function SalesPage() {
             <h1 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-2">
               ⚡ Sales Now & Price Drops
             </h1>
-            <p className="text-muted-foreground">
-              Automated, real-time price drops from the{' '}
+            <p className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>Real-time price drop channels:</span>
+              <a
+                href="https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold inline-flex items-center gap-1"
+              >
+                TS Flash Deals Hub (All Items)
+              </a>
+              <span>•</span>
+              <a
+                href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-700 dark:text-emerald-400 hover:underline font-semibold inline-flex items-center gap-1"
+              >
+                WhatsApp Channel (Mobiles &amp; Laptops)
+              </a>
+              <span>•</span>
               <a
                 href="https://t.me/TechSelectDeals"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline font-semibold"
+                className="text-sky-600 dark:text-sky-400 hover:underline font-semibold inline-flex items-center gap-1"
               >
-                @TechSelectDeals
-              </a>{' '}
-              Telegram channel.
+                @TechSelectDeals (Telegram)
+              </a>
             </p>
+          </div>
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <a
+              href="https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs sm:text-sm rounded-xl shadow transition-colors"
+            >
+              <span>TS Flash Deals Hub</span>
+              <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded font-mono">All Items</span>
+            </a>
+            <a
+              href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-800 hover:bg-emerald-900 text-white font-medium text-xs sm:text-sm rounded-xl shadow transition-colors"
+            >
+              <span>WhatsApp Channel</span>
+              <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded font-mono">Tech</span>
+            </a>
+            <a
+              href="https://t.me/TechSelectDeals"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white font-medium text-xs sm:text-sm rounded-xl shadow transition-colors"
+            >
+              <span>Join @TechSelectDeals</span>
+            </a>
           </div>
         </div>
 

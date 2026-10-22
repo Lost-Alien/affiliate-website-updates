@@ -21,12 +21,12 @@ export default function ContactPage() {
         Have a question, suggestion, or feedback? We&apos;d love to hear from you. Our team reads every message and responds as quickly as possible.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <div className="bg-card border border-border rounded-lg p-6">
           <Mail className="h-8 w-8 text-primary mb-4" />
           <h2 className="font-semibold text-foreground mb-2">Email Us</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            General inquiries and feedback
+            General inquiries and editorial feedback
           </p>
           <a
             href="mailto:support@techselect.blog"
@@ -36,11 +36,49 @@ export default function ContactPage() {
           </a>
         </div>
 
+        <div className="bg-card border border-emerald-500/30 rounded-lg p-6 bg-gradient-to-br from-emerald-500/5 to-transparent">
+          <Clock className="h-8 w-8 text-emerald-500 mb-4" />
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+            <span>TS Flash Deals Hub</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full">All Items</span>
+          </h2>
+          <p className="text-sm text-muted-foreground mb-3">
+            Instant price drop alerts &amp; flash deals on <strong>all items</strong> (Fashion, Home, Electronics &amp; Daily Loot).
+          </p>
+          <a
+            href="https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
+          >
+            Join TS Flash Deals Hub &rarr;
+          </a>
+        </div>
+
+        <div className="bg-card border border-border rounded-lg p-6">
+          <Clock className="h-8 w-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+            <span>WhatsApp Channel</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full">Mobiles &amp; Tech</span>
+          </h2>
+          <p className="text-sm text-muted-foreground mb-3">
+            Main channel for mobile deals, laptop discounts, consumer electronics &amp; tech guides.
+          </p>
+          <a
+            href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
+          >
+            Join WhatsApp Channel &rarr;
+          </a>
+        </div>
+
         <div className="bg-card border border-border rounded-lg p-6">
           <MessageSquare className="h-8 w-8 text-sky-500 mb-4" />
           <h2 className="font-semibold text-foreground mb-2">Telegram Deals Channel</h2>
           <p className="text-sm text-muted-foreground mb-3">
-            Instant price drop alerts & deals (@TechSelectDeals)
+            Instant price drop alerts &amp; deals (@TechSelectDeals).
           </p>
           <a
             href="https://t.me/TechSelectDeals"
@@ -49,22 +87,6 @@ export default function ContactPage() {
             className="text-sm text-sky-600 dark:text-sky-400 font-medium hover:underline flex items-center gap-1"
           >
             Join @TechSelectDeals &rarr;
-          </a>
-        </div>
-
-        <div className="bg-card border border-border rounded-lg p-6">
-          <Clock className="h-8 w-8 text-emerald-500 mb-4" />
-          <h2 className="font-semibold text-foreground mb-2">WhatsApp Channel</h2>
-          <p className="text-sm text-muted-foreground mb-3">
-            Instant tech deal alerts & new reviews
-          </p>
-          <a
-            href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline flex items-center gap-1"
-          >
-            Join TechSelect Channel &rarr;
           </a>
         </div>
 
@@ -78,6 +100,7 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+
 
       <section className="bg-card border border-border rounded-lg p-8 mb-8">
         <h2 className="font-serif text-xl font-semibold text-foreground mb-6">

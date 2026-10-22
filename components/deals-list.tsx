@@ -78,15 +78,37 @@ export function DealsList({ initialDeals }: DealsListProps) {
       {filteredDeals.length === 0 ? (
         <div className="text-center py-20 bg-card/50 border border-border border-dashed rounded-3xl">
           <p className="text-muted-foreground mb-4">No deals matching your search were found.</p>
-          <a
-            href="https://t.me/TechSelectDeals"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-          >
-            <span>Follow our Telegram Channel for live posts</span>
-            <ExternalLink className="h-4 w-4" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+            >
+              <span>TS Flash Deals Hub (All Items)</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
+            <span className="text-muted-foreground hidden sm:inline">•</span>
+            <a
+              href="https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-emerald-700 dark:text-emerald-500 font-semibold hover:underline"
+            >
+              <span>WhatsApp Channel (Mobiles &amp; Tech)</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
+            <span className="text-muted-foreground hidden sm:inline">•</span>
+            <a
+              href="https://t.me/TechSelectDeals"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sky-600 dark:text-sky-400 font-semibold hover:underline"
+            >
+              <span>Telegram Channel</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

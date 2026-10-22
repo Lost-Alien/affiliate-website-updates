@@ -25,8 +25,10 @@ Include these standard links in every YouTube Short description, pinned comment,
 
 * **Official Website:** [https://techselect.blog](https://techselect.blog)
 * **YouTube Channel:** `@TechSelect_blog` — [https://www.youtube.com/@TechSelect_blog](https://www.youtube.com/@TechSelect_blog)
-* **Official WhatsApp Channel:** [https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C](https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C)
+* **Official WhatsApp Channel (Mobiles, Laptops & Tech):** [https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C](https://whatsapp.com/channel/0029VbDdnbkG3R3e7wu0g70C)
+* **TS Flash Deals Hub (WhatsApp - All Items & Loot):** [https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E](https://whatsapp.com/channel/0029Vb8ptNY545ux1D4rUA2E)
 * **Direct WhatsApp Support:** `+91 92028 76921` — [https://wa.me/919202876921](https://wa.me/919202876921)
+
 * **X (Twitter):** `@techselect_blog` — [https://x.com/techselect_blog](https://x.com/techselect_blog)
 * **Instagram:** `@support.techselect.blog` — [https://www.instagram.com/support.techselect.blog/](https://www.instagram.com/support.techselect.blog/)
 * **Pinterest:** `@supporttechselectblog` — [https://www.pinterest.com/supporttechselectblog/](https://www.pinterest.com/supporttechselectblog/)
