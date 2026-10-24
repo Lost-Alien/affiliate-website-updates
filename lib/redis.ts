@@ -48,10 +48,9 @@ export async function getLiveDeals(): Promise<Deal[]> {
     if (!deals || deals.length === 0) {
       return DEFAULT_DEALS
     }
-    // Ensure default featured deals are included if not present
-    const asinsInRedis = new Set(deals.map((d) => d.asin))
-    const missingDefaults = DEFAULT_DEALS.filter((d) => !asinsInRedis.has(d.asin))
-    return [...deals, ...missingDefaults]
+    // Strictly sort by newest first (descending timestamp) and keep only the latest 30 deals
+    const sortedDeals = [...deals].sort((a, b) => (b.postedAt || 0) - (a.postedAt || 0))
+    return sortedDeals.slice(0, 30)
   } catch (error) {
     console.error('Failed to fetch live deals from Redis:', error)
     return DEFAULT_DEALS

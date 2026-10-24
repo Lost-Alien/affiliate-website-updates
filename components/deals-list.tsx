@@ -41,11 +41,13 @@ export function DealsList({ initialDeals }: DealsListProps) {
     return { title, desc }
   }
 
-  const filteredDeals = deals.filter(deal => {
-    const textLower = deal.text.toLowerCase()
-    const searchLower = search.toLowerCase()
-    return textLower.includes(searchLower) || deal.asin.toLowerCase().includes(searchLower)
-  })
+  const filteredDeals = deals
+    .filter(deal => {
+      const textLower = deal.text.toLowerCase()
+      const searchLower = search.toLowerCase()
+      return textLower.includes(searchLower) || deal.asin.toLowerCase().includes(searchLower)
+    })
+    .sort((a, b) => (b.postedAt || 0) - (a.postedAt || 0))
 
   return (
     <div className="space-y-6">
