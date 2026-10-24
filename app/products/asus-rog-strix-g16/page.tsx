@@ -13,12 +13,15 @@ const AFFILIATE_URL =
   'https://www.amazon.in/dp/B0F5BH7D1L?th=1&linkCode=ll2&tag=techstor0caaf-21&linkId=5d528a812b0131c07a2021e4fa256922&ref_=as_li_ss_tl'
 
 export const metadata: Metadata = {
-  title: 'ASUS ROG Strix G16 (G615LR-S5190WS) Review | TechSelect',
+  title: 'ASUS ROG Strix G16 G615LR Review (RTX 5070 Ti) | TechSelect',
   description:
-    'In-depth review of the ASUS ROG Strix G16 with Intel Core Ultra 9 275HX and RTX 5070 Ti. Find out if it is worth ₹2,75,990 for Indian gamers.',
+    'In-depth review of the ASUS ROG Strix G16 (G615LR-S5190WS) with Intel Core Ultra 9 275HX and RTX 5070 Ti 12GB. Benchmarks, thermals, and price test.',
+  alternates: {
+    canonical: 'https://techselect.blog/products/asus-rog-strix-g16',
+  },
   openGraph: {
-    title: 'ASUS ROG Strix G16 Review — RTX 5070 Ti Gaming Laptop',
-    description: 'Full review of ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX, 32GB DDR5, and a blazing 2.5K 240Hz display.',
+    title: 'ASUS ROG Strix G16 (G615LR) Review — RTX 5070 Ti Gaming Laptop',
+    description: 'Full review of ASUS ROG Strix G16 (G615LR) gaming laptop featuring Intel Core Ultra 9 275HX, RTX 5070 Ti 140W TGP, 32GB DDR5, and a blazing 2.5K 240Hz display.',
     images: [{ url: '/products/asus-rog-strix-g16.png' }],
   },
 }
@@ -27,8 +30,11 @@ const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'ASUS ROG Strix G16 (G615LR-S5190WS)',
+  model: 'G615LR-S5190WS',
+  mpn: 'G615LR',
+  sku: 'G615LR-S5190WS',
   image: 'https://techselect.blog/products/asus-rog-strix-g16.png',
-  description: 'ASUS ROG Strix G16 gaming laptop featuring Intel Core Ultra 9 275HX processor, NVIDIA GeForce RTX 5070 Ti 12GB GPU, 32GB DDR5 RAM, and 16-inch 2.5K 240Hz display.',
+  description: 'ASUS ROG Strix G16 (G615LR) gaming laptop featuring Intel Core Ultra 9 275HX processor, NVIDIA GeForce RTX 5070 Ti 12GB GPU, 32GB DDR5 RAM, and 16-inch 2.5K 240Hz display.',
   brand: {
     '@type': 'Brand',
     name: 'ASUS',
@@ -38,8 +44,44 @@ const productSchema = {
     url: AFFILIATE_URL,
     priceCurrency: 'INR',
     price: '275990',
+    priceValidUntil: '2026-12-31',
     availability: 'https://schema.org/InStock',
     itemCondition: 'https://schema.org/NewCondition',
+    shippingDetails: {
+      '@type': 'OfferShippingDetails',
+      shippingRate: {
+        '@type': 'MonetaryAmount',
+        value: '0',
+        currency: 'INR',
+      },
+      shippingDestination: {
+        '@type': 'DefinedRegion',
+        addressCountry: 'IN',
+      },
+      deliveryTime: {
+        '@type': 'ShippingDeliveryTime',
+        handlingTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 0,
+          maxValue: 1,
+          unitCode: 'd',
+        },
+        transitTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 1,
+          maxValue: 4,
+          unitCode: 'd',
+        },
+      },
+    },
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: 'IN',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 7,
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn',
+    },
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -123,8 +165,8 @@ export default function AsusRogStrixG16Page() {
                 Editor&apos;s Choice — Gaming Laptops
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground leading-tight">
-                ASUS ROG Strix G16
-                <span className="block text-base font-normal text-muted-foreground mt-1">G615LR-S5190WS — Eclipse Gray</span>
+                ASUS ROG Strix G16 (G615LR)
+                <span className="block text-base font-normal text-muted-foreground mt-1">Model G615LR-S5190WS — Intel Core Ultra 9 + RTX 5070 Ti (Eclipse Gray)</span>
               </h1>
             <div className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary/80"></span>

@@ -14,43 +14,94 @@ import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 
 export const metadata: Metadata = {
-  title: 'Best Noise Cancelling Headphones in India (2026) | TechSelect',
-  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions. Here is the honest, definitive verdict on which ANC headphone is worth your money.',
+  title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser Tested | TechSelect',
+  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 across Indian conditions (Delhi Metro, flights, and open offices). Hands-on verdict on ANC depth, 60h battery life, and sound quality.',
+  alternates: {
+    canonical: 'https://techselect.blog/article/best-premium-noise-cancelling-headphones-india',
+  },
   openGraph: {
-    title: 'Best Noise Cancelling Headphones in India (2026)',
-    description: 'Bose QuietComfort vs Sennheiser Momentum 4 — which one should you buy?',
+    title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser | TechSelect',
+    description: 'Bose QuietComfort vs Sennheiser Momentum 4 — in-depth ANC shootout and battery endurance test on Indian commutes.',
+    url: 'https://techselect.blog/article/best-premium-noise-cancelling-headphones-india',
     type: 'article',
+    publishedTime: '2026-06-28',
+    modifiedTime: '2026-10-24',
+    images: [{ url: '/products/sennheiser-momentum-4.png' }],
   },
 }
 
 const articleSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Bose QuietComfort vs Sennheiser Momentum 4: The Ultimate ANC Shootout',
-  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions.',
-  author: {
-    '@type': 'Person',
-    name: 'Dev Kumar Sharma',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'TechSelect India',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://techselect.blog/icon.svg',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Best Noise Cancelling Headphones in India (2026): Bose QuietComfort vs Sennheiser Momentum 4',
+      description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 in real-world Indian conditions on Delhi Metro, domestic flights, and noisy office floors.',
+      image: 'https://techselect.blog/products/sennheiser-momentum-4.png',
+      datePublished: '2026-06-28',
+      dateModified: '2026-10-24',
+      author: {
+        '@type': 'Person',
+        name: 'Dev Kumar Sharma',
+        jobTitle: 'Audio Editor',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'TechSelect India',
+        url: 'https://techselect.blog',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://techselect.blog/icon.svg',
+        },
+      },
     },
-  },
-  datePublished: '2026-01-15',
-  dateModified: '2026-07-22',
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Which has better noise cancellation: Bose QuietComfort or Sennheiser Momentum 4?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bose QuietComfort has superior low-frequency active noise cancellation. It completely silences Delhi Metro engine rumble, bus vibrations, and aircraft cabin roar. Sennheiser Momentum 4 offers very good adaptive ANC, but Bose creates a deeper cone of silence.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Which ANC headphone has the longest battery life in India?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The Sennheiser Momentum 4 leads the industry with an astonishing 60 hours of continuous playtime with ANC turned on. Bose QuietComfort delivers 24 hours of playback on a full charge.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do these headphones completely block out human chatter in Indian offices?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No ANC headphone silences human voices 100%, because speech consists of dynamic, irregular high-mid frequencies. However, both headphones reduce office banter to a soft murmur, and playing music at just 20-30% volume makes external conversation inaudible.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How fast do the Bose QuietComfort and Sennheiser Momentum 4 charge?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bose delivers 2.5 hours of playback from a 15-minute quick charge via USB-C. Sennheiser delivers up to 4 hours of playback from a 10-minute quick charge.',
+          },
+        },
+      ],
+    },
+  ],
 }
 
 const articleData = {
-  title: 'Best Noise Cancelling Headphones in India (2026)',
+  title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser Tested',
   subtitle: 'We wore these on local trains, flights, and loud office floors to find the undisputed noise-cancelling king.',
   author: 'Dev Kumar Sharma',
   authorRole: 'Audio Editor',
   publishDate: 'July 18, 2026',
-  updateDate: 'July 21, 2026',
+  updateDate: 'October 24, 2026',
   readTime: '7 min read',
   category: 'Audio',
 }
@@ -90,10 +141,10 @@ const products = [
 ]
 
 const comparisonData = {
-  headers: ['Product', 'Sound Quality', 'ANC Depth', 'Battery Life', 'Rating'],
+  headers: ['Product', 'ANC Depth (Noise Floor)', 'Sound Signature', 'Battery Life (ANC On)', 'Weight', 'Rating'],
   rows: [
-    ['Bose QuietComfort', 'Punchy & Bass-rich', 'World-class', '24 hours', '9.1'],
-    ['Sennheiser Momentum 4', 'Balanced & Detailed', 'Very Good', '60 hours', '9.0'],
+    ['Bose QuietComfort', 'Industry-Leading Hybrid (Silences metro & engines)', 'Punchy bass & clear vocal dialogue', '24 Hours', '250g (Ultra-plush)', '9.1'],
+    ['Sennheiser Momentum 4', 'Adaptive Hybrid (Muffles office & street chatter)', 'Audiophile detailed soundstage', '60 Hours (Unrivaled)', '293g (Thick cushion)', '9.0'],
   ],
 }
 
@@ -145,6 +196,27 @@ export default function ArticlePage() {
                 </div>
 
                 <KeyTakeaways items={keyTakeaways} />
+
+                {/* Quick Verdict Box */}
+                <div className="my-8 p-6 bg-primary/5 border border-primary/20 rounded-2xl">
+                  <h3 className="font-serif text-lg font-bold text-foreground mb-3">Quick Verdict at a Glance</h3>
+                  <div className="grid sm:grid-cols-2 gap-4 text-sm">
+                    <div className="p-4 bg-card rounded-xl border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-primary">Top Pick for Pure Silence</span>
+                      <h4 className="font-bold text-foreground mt-1">Bose QuietComfort</h4>
+                      <p className="text-muted-foreground text-xs mt-1 leading-relaxed">
+                        Best-in-class active noise cancellation, lightweight 250g body, reliable physical click buttons, and effortless fold-flat travel case.
+                      </p>
+                    </div>
+                    <div className="p-4 bg-card rounded-xl border border-border">
+                      <span className="text-xs font-bold uppercase tracking-wider text-accent">Top Pick for Audiophiles & Battery</span>
+                      <h4 className="font-bold text-foreground mt-1">Sennheiser Momentum 4</h4>
+                      <p className="text-muted-foreground text-xs mt-1 leading-relaxed">
+                        Astonishing 60-hour battery life (charge once every two weeks), expansive audiophile soundstage, and 42mm high-res dynamic drivers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
                 <ComparisonTable headers={comparisonData.headers} rows={comparisonData.rows} />
 

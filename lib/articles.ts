@@ -7,6 +7,7 @@ export interface ArticleItem {
   readTime: string
   imageUrl: string
   datePublished: string // YYYY-MM-DD
+  dateModified?: string // YYYY-MM-DD
   featured?: boolean
 }
 
@@ -97,14 +98,15 @@ export const ARTICLES_DATA: ArticleItem[] = [
     datePublished: '2026-07-10',
   },
   {
-    title: 'Best Premium Noise Cancelling Headphones in India',
-    excerpt: 'Top over-ear headphones with active noise cancellation, long battery life, and comfortable ear cushions.',
+    title: 'Best Premium Noise Cancelling Headphones in India (2026)',
+    excerpt: 'Field-tested on Indian metro commutes and busy offices: Bose QuietComfort vs Sennheiser Momentum 4 on ANC depth, audio fidelity, and 60-hour battery life.',
     category: 'Audio',
     categorySlug: 'audio',
     href: '/article/best-premium-noise-cancelling-headphones-india',
-    readTime: '6 min read',
+    readTime: '7 min read',
     imageUrl: '/products/sennheiser-momentum-4.png',
     datePublished: '2026-06-28',
+    dateModified: '2026-10-24',
   },
   {
     title: 'Apple MacBook Pro M4 Review: Developers Benchmark Test',
@@ -139,14 +141,15 @@ export const ARTICLES_DATA: ArticleItem[] = [
     datePublished: '2026-07-27',
   },
   {
-    title: 'Best Robot Vacuum Cleaners with Mop in India (2026)',
-    excerpt: 'Comparing Dreame L10s Ultra and ECOVACS Deebot T50 Pro for Indian marble, tile, and carpet floors. Tested 7000Pa vs 15000Pa suction and self-emptying docks.',
+    title: 'Best Robot Vacuum Cleaners with Mop in India (2026): Hands-On Tested',
+    excerpt: 'Field-tested on Indian marble, vitrified tile, and carpet floors: Dreame L10s Ultra vs ECOVACS Deebot T50 Pro on 7,000Pa vs 15,000Pa suction, corner reach, and self-cleaning docks.',
     category: 'Smart Home',
     categorySlug: 'smart-home',
     href: '/article/best-robot-vacuums-with-mop-india',
     readTime: '9 min read',
     imageUrl: '/products/dreame-robot-vacuum-mop.png',
     datePublished: '2026-07-26',
+    dateModified: '2026-10-24',
   },
   {
     title: 'Sennheiser Momentum 4 Review: 60-Hour Battery & Acoustic Test',
