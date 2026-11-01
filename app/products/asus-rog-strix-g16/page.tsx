@@ -1,3 +1,4 @@
+import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -193,6 +194,8 @@ export default function AsusRogStrixG16Page() {
                 <p className="text-xs text-muted-foreground">TechSelect Score</p>
               </div>
             </div>
+
+            <BuyingSummary options={[{"name": "ASUS ROG Strix G16 G615LR", "bestFor": "Gaming and GPU-heavy workloads where performance comes first.", "tradeoff": "Consider portability, battery use, and your exact GPU/memory configuration before ordering.", "href": "https://www.amazon.in/dp/B0F5BH7D1L?tag=techstor0caaf-21"}]} relatedHref="/article/best-laptops-for-programming-and-machine-learning-india" relatedLabel="Compare laptops for your workload" />
 
             {/* Price */}
             <LiveAmazonPrice asin="B0F5BH7D1L" fallbackUrl={AFFILIATE_URL} />

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Search, RefreshCw, ShoppingCart, ExternalLink, Calendar, Info } from 'lucide-react'
 import type { Deal } from '@/lib/redis'
+import { getDealContent } from '@/lib/deals'
 
 interface DealsListProps {
   initialDeals: Deal[]
@@ -27,18 +28,6 @@ export function DealsList({ initialDeals }: DealsListProps) {
     } finally {
       setIsLoading(false)
     }
-  }
-
-  // Parse deal text to extract a clean title and description
-  const parseDealText = (text: string) => {
-    const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
-    if (lines.length === 0) return { title: 'Amazon Deal', desc: '' }
-
-    // Try to find the title (often the first line or line without URLs)
-    const title = lines[0].replace(/(?:🔥|🛍️|⚡|🏷️|🛒|✨)/gu, '').trim()
-    const desc = lines.slice(1).join('\n')
-
-    return { title, desc }
   }
 
   const filteredDeals = deals
@@ -115,7 +104,7 @@ export function DealsList({ initialDeals }: DealsListProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredDeals.map((deal) => {
-            const { title, desc } = parseDealText(deal.text)
+            const { title, description: desc } = getDealContent(deal.text, deal.asin)
             const postedMs = deal.postedAt * 1000
             const diffMin = Math.floor((nowMs - postedMs) / 60000)
             const relativeTime =
@@ -131,6 +120,7 @@ export function DealsList({ initialDeals }: DealsListProps) {
 
             return (
               <div
+                id={`asin-${deal.asin}`}
                 key={deal.asin}
                 className="group relative bg-card hover:bg-accent/5 hover:border-primary/30 border border-border rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
               >

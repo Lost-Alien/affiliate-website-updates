@@ -17,17 +17,17 @@ export function HeroSection() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/category/audio"
+              href="/sales"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-foreground text-primary font-medium rounded-lg hover:bg-primary-foreground/90 transition-colors"
             >
-              Browse Categories
+              Browse Today&apos;s Deals
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/how-we-test"
+              href="/article"
               className="inline-flex items-center gap-2 px-5 py-2.5 border border-primary-foreground/30 text-primary-foreground font-medium rounded-lg hover:bg-primary-foreground/10 transition-colors"
             >
-              How We Test
+              Reviews &amp; Buying Guides
             </Link>
           </div>
         </div>

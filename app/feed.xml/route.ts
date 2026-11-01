@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { ARTICLES_DATA } from '@/lib/articles'
 import { getLiveDeals, type Deal } from '@/lib/redis'
+import { getDealContent } from '@/lib/deals'
+import { SAMPLE_PRODUCTS } from '@/lib/categories'
 
 function escapeXml(unsafe: string): string {
   return unsafe
@@ -24,10 +26,12 @@ export async function GET() {
 
   // Build RSS Items
   const dealItems = liveDeals.map((deal) => {
-    const title = deal.sourceTitle ? `[Deal] ${deal.sourceTitle}` : `[Deal] Amazon Product ${deal.asin}`
+    const content = getDealContent(deal.text, deal.asin)
+    const title = `[Deal] ${content.title}`
     const link = `${baseUrl}/sales#asin-${deal.asin}`
     const pubDate = new Date(deal.postedAt * 1000).toUTCString()
-    const description = deal.text ? escapeXml(deal.text) : `TechSelect Loot Deal - ASIN: ${deal.asin}`
+    const description = escapeXml(`${content.description} As an Amazon Associate I earn from qualifying purchases.`)
+    const image = SAMPLE_PRODUCTS.find((product) => product.asin === deal.asin)?.image
 
     return `
     <item>
@@ -36,6 +40,7 @@ export async function GET() {
       <description>${description}</description>
       <pubDate>${pubDate}</pubDate>
       <guid isPermaLink="true">${escapeXml(link)}</guid>
+      ${image ? `<media:content url="${escapeXml(`${baseUrl}${image}`)}" medium="image" />` : ''}
     </item>`
   })
 
@@ -51,13 +56,14 @@ export async function GET() {
       <description>${description}</description>
       <pubDate>${pubDate}</pubDate>
       <guid isPermaLink="true">${escapeXml(link)}</guid>
+      <media:content url="${escapeXml(`${baseUrl}${article.imageUrl}`)}" medium="image" />
     </item>`
   })
 
   const allItemsXml = [...dealItems, ...articleItems].join('\n')
 
   const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>TechSelect — Tech Reviews, Buying Guides &amp; Loot Deals</title>
     <link>${baseUrl}</link>

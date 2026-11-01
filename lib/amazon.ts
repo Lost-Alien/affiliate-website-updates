@@ -107,13 +107,12 @@ async function getToken(): Promise<string | null> {
     return cached.accessToken
   }
 
-  if (inflight) return inflight
-
-  inflight = fetchToken(tokenEndpoint).finally(() => {
-    inflight = null
-  })
-
   try {
+    if (!inflight) {
+      inflight = fetchToken(tokenEndpoint).finally(() => {
+        inflight = null
+      })
+    }
     return await inflight
   } catch (err) {
     console.error('[amazon-creators] Token error:', err)

@@ -2,20 +2,12 @@ import Link from 'next/link'
 import { ExternalLink, Flame, ArrowRight } from 'lucide-react'
 import { getLiveDeals } from '@/lib/redis'
 import { dedupeBy } from '@/lib/dedup'
-
-function parseDealTitle(text: string): { title: string; desc: string } {
-  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean)
-  if (lines.length === 0) return { title: 'Amazon Deal', desc: '' }
-
-  const title = lines[0].replace(/(?:🔥|🛍️|⚡|🏷️|🛒|✨)/gu, '').trim()
-  const desc = lines.slice(1).join(' ')
-  return { title, desc }
-}
+import { getDealContent, isTechDeal } from '@/lib/deals'
 
 export async function HomeDealsBanner() {
   const rawDeals = await getLiveDeals()
   const uniqueDeals = dedupeBy(rawDeals, (d) => d.asin)
-  const deals = uniqueDeals.slice(0, 6)
+  const deals = uniqueDeals.filter((deal) => isTechDeal(getDealContent(deal.text, deal.asin).title)).slice(0, 6)
   // eslint-disable-next-line react-hooks/purity
   const nowMs = Date.now()
 
@@ -39,7 +31,7 @@ export async function HomeDealsBanner() {
               </span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
-              ⚡ Flash Deals & Price Drops
+              ⚡ Tech Deals & Price Drops
             </h2>
           </div>
 
@@ -60,7 +52,7 @@ export async function HomeDealsBanner() {
         {/* Deals Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {deals.map((deal) => {
-            const { title, desc } = parseDealTitle(deal.text)
+            const { title, description: desc } = getDealContent(deal.text, deal.asin)
             const postedMs = deal.postedAt * 1000
             const diffMin = Math.floor((nowMs - postedMs) / 60000)
             const relativeTime =

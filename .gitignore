@@ -31,3 +31,5 @@ service-account*.json
 .commandcode/
 skills-lock.json
 vendors/
+.pinterest/
+__pycache__/

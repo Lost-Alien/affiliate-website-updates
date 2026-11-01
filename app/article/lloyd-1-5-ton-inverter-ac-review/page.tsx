@@ -1,3 +1,4 @@
+import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -12,8 +13,9 @@ import { Check, ExternalLink } from 'lucide-react'
 const AFFILIATE_URL = "https://www.amazon.in/Lloyd-Convertible-Installation-Indication-GLS18I3AGGSC/dp/B0GJDVGS6P?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'Lloyd 1.5 Ton 3 Star Inverter AC Review (2026): Cooling Test | TechSelect India',
-  description: 'Hands-on review of Lloyd 1.5 Ton 5-in-1 Convertible Inverter Split AC. Tested 52°C ambient heat cooling, power consumption, 100% copper condenser, and low noise in Indian summer conditions.',
+  title: 'Lloyd 1.5 Ton Inverter AC Review: Cooling & Buying Advice | TechSelect',
+  description: 'Considering a Lloyd 1.5 Ton inverter AC? Read our cooling review, power-use notes, room considerations, and installation checklist before choosing.',
+  alternates: { canonical: 'https://techselect.blog/article/lloyd-1-5-ton-inverter-ac-review' },
 }
 
 const articleSchema = {
@@ -94,6 +96,8 @@ export default function LloydACReviewPage() {
             <span>Updated: July 28, 2026</span>
           </div>
         </header>
+        <BuyingSummary options={[{"name": "Lloyd 1.5 Ton Inverter AC", "bestFor": "Shoppers comparing a convertible split AC for their room.", "tradeoff": "Check room suitability, installation charges, electrical requirements, and local service coverage.", "href": "https://www.amazon.in/dp/B0GJDVGS6P?tag=techstor0caaf-21"}]} relatedHref="/category/smart-home/appliances" relatedLabel="Compare home appliances" />
+
 
         {/* Hero Feature Image */}
         <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-border mb-8 bg-card">

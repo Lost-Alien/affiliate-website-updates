@@ -1,3 +1,4 @@
+import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -12,8 +13,8 @@ import { ComparisonTable } from '@/components/article/comparison-table'
 import { Star, Check, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best Robot Vacuum Cleaners with Mop in India (2026): Hands-On Tested | TechSelect',
-  description: 'Field-tested on Indian marble, vitrified tile, and carpet floors: Dreame L10s Ultra vs ECOVACS Deebot T50 Pro. Evaluated 7,000Pa vs 15,000Pa suction, robotic corner mopping, and self-cleaning docks.',
+  title: 'Best Robot Vacuum with Mop in India: Dreame vs ECOVACS | TechSelect',
+  description: 'Compare Dreame and ECOVACS robot vacuum-mops for Indian homes. Check furniture clearance, dock space, maintenance, and cleaning tradeoffs before buying.',
   alternates: {
     canonical: 'https://techselect.blog/article/best-robot-vacuums-with-mop-india',
   },
@@ -215,6 +216,8 @@ export default function BestRobotVacuumsGuidePage() {
             <span>Updated: October 24, 2026</span>
           </div>
         </header>
+        <BuyingSummary options={[{"name": "Dreame robot vacuum and mop", "bestFor": "Reducing daily floor-cleaning work with a docking station.", "tradeoff": "Allow space for the dock and plan for water refills, cleaning, and consumables.", "href": "https://www.amazon.in/dp/B0H2DD8Z5T?tag=techstor0caaf-21"}, {"name": "ECOVACS Deebot T50 Pro Omni", "bestFor": "Comparing automated cleaning for homes with low furniture.", "tradeoff": "Measure furniture clearance and doorway thresholds before ordering.", "href": "https://www.amazon.in/dp/B0F2H3942Z?tag=techstor0caaf-21"}]} relatedHref="/category/smart-home/robot-vacuums" relatedLabel="Explore robot vacuum reviews" />
+
 
         {/* Intro */}
         <p className="text-lg font-medium text-muted-foreground leading-relaxed mb-8">

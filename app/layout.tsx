@@ -4,6 +4,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
 import { DealsPopup } from '@/components/conversion/deals-popup'
+import { TrafficTracker } from '@/components/conversion/traffic-tracker'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -113,6 +114,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         {children}
         <DealsPopup />
+        <TrafficTracker />
         <Analytics />
       </body>
     </html>

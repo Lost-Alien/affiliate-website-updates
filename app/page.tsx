@@ -7,6 +7,8 @@ import { FeaturedArticles } from '@/components/home/featured-articles'
 import { CategoryTabs } from '@/components/home/category-tabs'
 import { LatestReviews } from '@/components/home/latest-reviews'
 
+export const dynamic = 'force-dynamic'
+
 export default function HomePage() {
   return (
     <>

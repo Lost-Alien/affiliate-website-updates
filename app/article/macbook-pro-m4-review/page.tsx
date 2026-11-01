@@ -1,3 +1,4 @@
+import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -12,8 +13,9 @@ import { Check, ExternalLink } from 'lucide-react'
 const AFFILIATE_URL = "https://www.amazon.in/Apple-MacBook-10%E2%80%91core-10%E2%80%91core-Unified/dp/B0DLHGK5TG?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'Apple MacBook Pro M4 Review (2026): Developers Benchmark Test | TechSelect India',
-  description: 'In-depth review of Apple MacBook Pro M4. Tested Xcode compilation speed, Docker monorepo performance, Liquid Retina XDR display, and 24-hour real battery life.',
+  title: 'MacBook Pro M4 Review for Developers: Is It Worth It? | TechSelect',
+  description: 'MacBook Pro M4 for coding: compilation, Docker, display, battery, and memory choices. Read the tradeoffs and compare alternatives before buying.',
+  alternates: { canonical: 'https://techselect.blog/article/macbook-pro-m4-review' },
 }
 
 const articleSchema = {
@@ -94,6 +96,8 @@ export default function MacBookProM4ReviewPage() {
             <span>Updated: July 28, 2026</span>
           </div>
         </header>
+        <BuyingSummary options={[{"name": "MacBook Pro M4", "bestFor": "Developers who want macOS and a portable coding machine.", "tradeoff": "Choose memory and storage for your workload before buying; compare a Windows laptop if gaming matters.", "href": "https://www.amazon.in/dp/B0DLHGK5TG?tag=techstor0caaf-21"}]} relatedHref="/article/best-laptops-for-programming-and-machine-learning-india" relatedLabel="Compare laptops for programming and ML" />
+
 
         {/* Hero Feature Image */}
         <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-border mb-8 bg-card">

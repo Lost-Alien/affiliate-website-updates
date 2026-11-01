@@ -39,6 +39,10 @@ export const DEFAULT_DEALS: Deal[] = [
 
 const DEALS_KEY = 'techselect:live_deals'
 
+export function getRedisClient(): Redis | null {
+  return redisClient
+}
+
 export async function getLiveDeals(): Promise<Deal[]> {
   if (!redisClient) {
     return DEFAULT_DEALS

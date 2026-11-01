@@ -1,3 +1,4 @@
+import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -14,8 +15,8 @@ import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 
 export const metadata: Metadata = {
-  title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser Tested | TechSelect',
-  description: 'We tested the Bose QuietComfort and Sennheiser Momentum 4 across Indian conditions (Delhi Metro, flights, and open offices). Hands-on verdict on ANC depth, 60h battery life, and sound quality.',
+  title: 'Best Noise Cancelling Headphones in India: Bose vs Sennheiser | TechSelect',
+  description: 'Bose QuietComfort or Sennheiser Momentum 4? Compare noise cancellation, comfort, battery life, and buying tradeoffs for travel and work in India.',
   alternates: {
     canonical: 'https://techselect.blog/article/best-premium-noise-cancelling-headphones-india',
   },
@@ -185,6 +186,8 @@ export default function ArticlePage() {
             <div className="lg:grid lg:grid-cols-3 lg:gap-12">
               <div className="lg:col-span-2">
                 <AffiliateDisclosure />
+        <BuyingSummary options={[{"name": "Bose QuietComfort", "bestFor": "Commuting, flights, and prioritising noise cancellation.", "tradeoff": "Compare battery needs and fit with the Momentum 4 before choosing.", "href": "https://www.amazon.in/dp/B0FDKPFLFP?tag=techstor0caaf-21"}, {"name": "Sennheiser Momentum 4", "bestFor": "Long listening sessions and prioritising battery endurance.", "tradeoff": "Read the ANC comparison if maximum isolation is your main requirement.", "href": "https://www.amazon.in/dp/B0B6G9TPNQ?tag=techstor0caaf-21"}]} relatedHref="/category/audio/headphones" relatedLabel="Explore all headphone reviews" />
+
                 
                 <div className="prose prose-lg max-w-none mt-8">
                   <p className="text-lg text-foreground leading-relaxed font-semibold">

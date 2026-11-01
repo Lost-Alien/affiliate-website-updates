@@ -37,11 +37,14 @@ export default function PrivacyPolicyPage() {
             We may collect the following types of information:
           </p>
           <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-            <li><strong>Usage Data:</strong> Information about how you interact with our website, including pages visited, time spent, and referring sources.</li>
+            <li><strong>Usage Data:</strong> Aggregate counts of pages viewed, affiliate-link clicks, and community-link clicks, grouped by a limited traffic-source label. Our first-party counters do not identify individual visitors or confirm purchases.</li>
             <li><strong>Device Information:</strong> Browser type, operating system, and device identifiers.</li>
             <li><strong>Contact Information:</strong> If you contact us or subscribe to our newsletter, we collect your email address and any information you provide.</li>
             <li><strong>Cookies:</strong> Small data files stored on your device to enhance your browsing experience.</li>
           </ul>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Our first-party measurement uses browser session storage to remember a traffic-source label for the current tab. Aggregate daily counts are retained for up to 90 days. We do not store raw IP addresses in these counters; a short-lived, rotating hash is used for rate limiting. Collection respects the browser&apos;s Do Not Track setting.
+          </p>
         </section>
 
         <section className="mb-8">

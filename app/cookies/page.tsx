@@ -42,9 +42,9 @@ export default function CookiePolicyPage() {
             These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility.
           </p>
 
-          <h3 className="font-semibold text-foreground mb-2 mt-6">Analytics Cookies</h3>
+          <h3 className="font-semibold text-foreground mb-2 mt-6">Analytics and Session Storage</h3>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            We use analytics cookies to understand how visitors interact with our website. This helps us improve our content and user experience. Data collected includes pages visited, time on site, and traffic sources.
+            Vercel Web Analytics measures website traffic without analytics cookies. Our first-party counters use session storage to remember a traffic-source label in the current browser tab and aggregate page views and outbound clicks. These counters respect Do Not Track and do not record purchases or identify individual visitors.
           </p>
 
           <h3 className="font-semibold text-foreground mb-2 mt-6">Preference Cookies</h3>
