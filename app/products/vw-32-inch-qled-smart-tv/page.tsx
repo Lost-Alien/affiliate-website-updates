@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -24,22 +25,12 @@ const productSchema = {
     '@type': 'Brand',
     name: 'Visio World',
   },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    availability: 'https://schema.org/InStock',
-    seller: {
-      '@type': 'Organization',
-      name: 'Amazon.in',
-    },
-  },
 }
 
 export default function Vw32InchQledTvPage() {
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={createEditorialProductSchema(productSchema, {"ratingValue":8.3,"authorName":"TechSelect Editorial Team","authorType":"Organization","url":"https://techselect.blog/products/vw-32-inch-qled-smart-tv"})} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

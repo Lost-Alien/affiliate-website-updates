@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import { BuyingSummary } from '@/components/conversion/buying-summary'
 import type { Metadata } from 'next'
 import Image from 'next/image'
@@ -40,56 +41,6 @@ const productSchema = {
     '@type': 'Brand',
     name: 'ASUS',
   },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    price: '275990',
-    priceValidUntil: '2026-12-31',
-    availability: 'https://schema.org/InStock',
-    itemCondition: 'https://schema.org/NewCondition',
-    shippingDetails: {
-      '@type': 'OfferShippingDetails',
-      shippingRate: {
-        '@type': 'MonetaryAmount',
-        value: '0',
-        currency: 'INR',
-      },
-      shippingDestination: {
-        '@type': 'DefinedRegion',
-        addressCountry: 'IN',
-      },
-      deliveryTime: {
-        '@type': 'ShippingDeliveryTime',
-        handlingTime: {
-          '@type': 'QuantitativeValue',
-          minValue: 0,
-          maxValue: 1,
-          unitCode: 'd',
-        },
-        transitTime: {
-          '@type': 'QuantitativeValue',
-          minValue: 1,
-          maxValue: 4,
-          unitCode: 'd',
-        },
-      },
-    },
-    hasMerchantReturnPolicy: {
-      '@type': 'MerchantReturnPolicy',
-      applicableCountry: 'IN',
-      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-      merchantReturnDays: 7,
-      returnMethod: 'https://schema.org/ReturnByMail',
-      returnFees: 'https://schema.org/FreeReturn',
-    },
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '9.4',
-    bestRating: '10',
-    reviewCount: '1',
-  },
 }
 
 const specs = [
@@ -128,7 +79,7 @@ const ratingBreakdown = [
 export default function AsusRogStrixG16Page() {
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={createEditorialProductSchema(productSchema, {"ratingValue":9.4,"authorName":"Abhay Gupta","authorType":"Person","url":"https://techselect.blog/products/asus-rog-strix-g16"})} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

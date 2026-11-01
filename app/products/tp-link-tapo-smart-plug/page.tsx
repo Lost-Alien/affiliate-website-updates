@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -30,19 +31,6 @@ const productSchema = {
   brand: {
     '@type': 'Brand',
     name: 'TP-Link',
-  },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    availability: 'https://schema.org/InStock',
-    itemCondition: 'https://schema.org/NewCondition',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '9.1',
-    bestRating: '10',
-    reviewCount: '1',
   },
 }
 
@@ -79,7 +67,7 @@ const ratingBreakdown = [
 export default function TapoSmartPlugPage() {
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={createEditorialProductSchema(productSchema, {"ratingValue":9.1,"authorName":"Aditya Patwa","authorType":"Person","url":"https://techselect.blog/products/tp-link-tapo-smart-plug"})} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

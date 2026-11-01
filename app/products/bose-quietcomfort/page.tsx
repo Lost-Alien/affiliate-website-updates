@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -32,20 +33,6 @@ const productSchema = {
   brand: {
     '@type': 'Brand',
     name: 'Bose',
-  },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    price: '29900',
-    availability: 'https://schema.org/InStock',
-    itemCondition: 'https://schema.org/NewCondition',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '9.1',
-    bestRating: '10',
-    reviewCount: '1',
   },
 }
 
@@ -105,7 +92,7 @@ const ratingBreakdown = [
 export default function BoseQuietComfortPage() {
   return (
     <>
-      <JsonLd data={[productSchema, FAQSchema]} />
+      <JsonLd data={[createEditorialProductSchema(productSchema, {"ratingValue":9.1,"authorName":"Dev Kumar Sharma","authorType":"Person","url":"https://techselect.blog/products/bose-quietcomfort"}), FAQSchema]} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

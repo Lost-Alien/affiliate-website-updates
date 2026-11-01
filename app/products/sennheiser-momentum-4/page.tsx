@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,20 +34,6 @@ const productSchema = {
     '@type': 'Brand',
     name: 'Sennheiser',
   },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    price: '26990',
-    availability: 'https://schema.org/InStock',
-    itemCondition: 'https://schema.org/NewCondition',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '9.0',
-    bestRating: '10',
-    reviewCount: '1',
-  },
 }
 
 const specs = [
@@ -81,7 +68,7 @@ const ratingBreakdown = [
 export default function SennheiserMomentum4Page() {
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={createEditorialProductSchema(productSchema, {"ratingValue":9,"authorName":"Dev Kumar Sharma","authorType":"Person","url":"https://techselect.blog/products/sennheiser-momentum-4"})} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

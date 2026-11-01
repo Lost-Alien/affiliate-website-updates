@@ -1,3 +1,4 @@
+import { createEditorialProductSchema } from '@/lib/product-schema'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -33,20 +34,6 @@ const productSchema = {
     '@type': 'Brand',
     name: 'ECOVACS',
   },
-  offers: {
-    '@type': 'Offer',
-    url: AFFILIATE_URL,
-    priceCurrency: 'INR',
-    price: '49900',
-    availability: 'https://schema.org/InStock',
-    itemCondition: 'https://schema.org/NewCondition',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '8.8',
-    bestRating: '10',
-    reviewCount: '1',
-  },
 }
 
 const specs = [
@@ -80,7 +67,7 @@ const ratingBreakdown = [
 export default function EcovacsT50ProPage() {
   return (
     <>
-      <JsonLd data={productSchema} />
+      <JsonLd data={createEditorialProductSchema(productSchema, {"ratingValue":8.8,"authorName":"Aditya Patwa","authorType":"Person","url":"https://techselect.blog/products/ecovacs-t50-pro"})} />
       <Header />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
         <Breadcrumb

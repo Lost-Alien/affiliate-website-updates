@@ -4,9 +4,9 @@ Connection verified on 1 November 2026 through MCP: `supporttechselectblog`, BUS
 
 The local MCP server is `aymandakirgh/pinterest-mcp`, checked out at `vendors/pinterest-mcp` from commit `6cc45f23ceca9f03f6569a274e521aecf00050f6`. The vendor directory is ignored. Codex's global `pinterest` MCP entry launches `node scripts/pinterest.mjs mcp` using an absolute path, so the server can be discovered from any working directory.
 
-App ID: `1633012`. The app ID and callback are saved in ignored `.env.local`. The limited token connection is verified; the app secret and write scopes remain unavailable while Trial access is pending.
+App ID: `1633012`. Trial access was approved on 1 November 2026. The app ID, secret, and callback are saved in ignored `.env.local`. The limited token connection is verified. OAuth consent has been reported complete, but the local callback/token exchange has not yet been verified; write access is still unverified.
 
-## While Trial access is pending
+## Read-only token fallback
 
 In Pinterest's developer dashboard choose **Production Limited**, generate the limited token, and save it in `.env.local`:
 
