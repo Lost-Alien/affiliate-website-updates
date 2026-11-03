@@ -25,6 +25,8 @@ hostinger.exe
 completions/
 techselect-search-console-*.json
 service-account*.json
+client_secret*.json
+.google/
 
 # AI Agent files
 .agents/
