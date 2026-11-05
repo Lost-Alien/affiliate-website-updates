@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { JsonLd } from '@/components/json-ld'
 import { DealsPopup } from '@/components/conversion/deals-popup'
 import { TrafficTracker } from '@/components/conversion/traffic-tracker'
+import { PwaRegister } from '@/components/pwa-register'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -115,6 +116,7 @@ export default function RootLayout({
         {children}
         <DealsPopup />
         <TrafficTracker />
+        <PwaRegister />
         <Analytics />
       </body>
     </html>
