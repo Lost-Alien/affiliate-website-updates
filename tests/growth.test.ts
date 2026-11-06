@@ -18,6 +18,14 @@ test('inline links and single-product messages work without displaying raw URLs'
   assert.equal(getDealContent('80 https://www.amazon.in/dp/B0GP6VTQNB', 'B0GP6VTQNB').title, 'Amazon deal · B0GP6VTQNB')
 })
 
+test('live deal formatting keeps purchase instructions and price-only lines out of product titles', () => {
+  const text = 'PN. Gadgil Gold Ring at ₹₹14,175\n1. Collect cashback: https://www.amazon.in/h/rewards/dp/amzn1.rewards.rewardAd.example\nthen buy from here https://www.amazon.in/dp/B0BYLK9PZC\nat ₹₹1,079 : https://www.amazon.in/dp/B0BLNRSG7H\nPuma Shoes at ₹₹909\nBuy Max Qty: https://www.amazon.in/dp/B07NHS75HK'
+  assert.equal(getDealContent(text, 'B0BYLK9PZC').title, 'PN. Gadgil Gold Ring at ₹14,175')
+  assert.equal(getDealContent(text, 'B0BLNRSG7H').title, 'Amazon deal · B0BLNRSG7H')
+  assert.equal(getDealContent(text, 'B07NHS75HK').title, 'Puma Shoes at ₹909')
+  assert.equal(getDealContent('2402 https://www.amazon.in/dp/B0GGZ79RWJ', 'B0GGZ79RWJ').title, 'Amazon deal · B0GGZ79RWJ')
+})
+
 test('tech selection excludes general household and grocery items', () => {
   assert.equal(isTechDeal('Samsung Galaxy Tab'), true)
   assert.equal(isTechDeal('TP-Link Tapo smart plug'), true)
