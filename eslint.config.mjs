@@ -72,6 +72,17 @@ export default [
     },
   },
 
+  {
+    files: ['public/sw.js'],
+    languageOptions: {
+      globals: {
+        self: 'readonly',
+        caches: 'readonly',
+        Response: 'readonly',
+      },
+    },
+  },
+
   // ── TypeScript + JSX files ──────────────────────────────────────────────
   {
     files: ['**/*.ts', '**/*.tsx'],
