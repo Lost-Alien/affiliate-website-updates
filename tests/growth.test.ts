@@ -26,6 +26,13 @@ test('live deal formatting keeps purchase instructions and price-only lines out 
   assert.equal(getDealContent('2402 https://www.amazon.in/dp/B0GGZ79RWJ', 'B0GGZ79RWJ').title, 'Amazon deal · B0GGZ79RWJ')
 })
 
+test('a second RAM/storage configuration is not promoted to the deal headline', () => {
+  const text = 'iQOO Z11 5G (8GB RAM, 128GB) @31,499*\n\nhttps://www.amazon.in/dp/B0HCNCNWWS?tag=first-21\n\n(8GB RAM, 256GB) @36,499* : https://www.amazon.in/dp/B0HCN495KN?tag=second-21\n\nApply ₹4000 Coupon + ₹4500 Off With HDFC CC'
+  assert.deepEqual(getDealContent(text, 'B0HCNCNWWS'), { title: 'iQOO Z11 5G (8GB RAM, 128GB) @31,499*', description: '' })
+  assert.deepEqual(getDealContent(text, 'B0HCN495KN'), { title: 'Amazon deal · B0HCN495KN', description: 'Apply ₹4000 Coupon + ₹4500 Off With HDFC CC' })
+  assert.equal(getDealContent('iQOO Z11 5G (8GB RAM, 256GB) @36,499\nhttps://www.amazon.in/dp/B0HCN495KN', 'B0HCN495KN').title, 'iQOO Z11 5G (8GB RAM, 256GB) @36,499')
+})
+
 test('tech selection excludes general household and grocery items', () => {
   assert.equal(isTechDeal('Samsung Galaxy Tab'), true)
   assert.equal(isTechDeal('TP-Link Tapo smart plug'), true)

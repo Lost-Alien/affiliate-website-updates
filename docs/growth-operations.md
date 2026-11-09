@@ -37,6 +37,10 @@ Search Console, read on 1 November 2026:
 
 These are Google Search metrics only. Prioritise the headphone guide, Lloyd AC review, robot vacuum guide, ASUS G16 product page, and MacBook review. Buyer summaries have been added without adding new benchmark claims or changing existing affiliate tags.
 
+## X engagement
+
+The separate `x_commenter_techselect` project handles replies to people on X. Use it for useful tech discussion and buyer advice. Affiliate links, sales pitches, and calls to buy belong in a separate publishing workflow. Evaluate the commenter by reply quality and conversations started.
+
 ## Two-month operating plan
 
 - Week 1: deploy and validate event collection; review multi-product cards and click destinations.

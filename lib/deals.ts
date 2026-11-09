@@ -7,6 +7,7 @@ const amazonProductUrl = /https?:\/\/(?:www\.)?amazon\.in\/(?:[^\s<>/?#]+\/)*(?:
 const offerLine = /^(?:apply\b|use\s+(?:code|coupon)\b|coupon\b|bank\s+offer\b|with\s+\w+\s+card\b|(?:flat\s+)?[₹\d][₹\d,.\s]*%?\s+(?:off|cashback)\b)/i
 const instructionLine = /^(?:\d+[.)]\s+)?(?:check\s+(?:(?:latest|the)\s+)?price\b|(?:then\s+)?buy\s+(?:now|from|here|max|using)\b|collect\b|note\s*:|reg(?:ular)?\s+\d)/i
 const priceOnly = /^(?:(?:fast\s+)?at\s+|loot\s+|now\s+)?(?:@\s*)?(?:(?:₹|rs\.?|inr)\s*)?[\d,.]+[\s*:/!.-]*$/i
+const variantPrefix = /^\(\s*[^)]*(?:\d+\s*(?:gb|tb)\b|\b(?:ram|rom)\b|\bstorage\b|\bssd\b)[^)]*\)/i
 
 function cleanLine(line: string): string {
   return line.replace(/https?:\/\/\S+/g, '')
@@ -17,8 +18,20 @@ function cleanLine(line: string): string {
     .trim()
 }
 
+/**
+ * A parenthesized RAM/storage variant with no product name around it, such as
+ * "(8GB RAM, 256GB) @36,499", is a second-configuration line, not a headline.
+ * It must not become the title of the product URL that follows it.
+ */
+function isVariantFragment(line: string): boolean {
+  const prefix = line.match(variantPrefix)
+  if (!prefix) return false
+  const rest = line.slice(prefix[0].length).replace(/^[\s:@*-]+|[\s:]+$/g, '')
+  return !rest || priceOnly.test(rest)
+}
+
 function isHeadline(line: string): boolean {
-  return /\p{L}/u.test(line) && !priceOnly.test(line) && !offerLine.test(line) && !instructionLine.test(line)
+  return /\p{L}/u.test(line) && !priceOnly.test(line) && !offerLine.test(line) && !instructionLine.test(line) && !isVariantFragment(line)
 }
 
 /** Associate a headline and offer conditions with their own product URL. */
