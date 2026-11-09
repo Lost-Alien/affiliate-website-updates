@@ -13,14 +13,16 @@ import { ComparisonTable } from '@/components/article/comparison-table'
 import { Star, Check, ExternalLink } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best Robot Vacuum with Mop in India: Dreame vs ECOVACS | TechSelect',
-  description: 'Compare Dreame and ECOVACS robot vacuum-mops for Indian homes. Check furniture clearance, dock space, maintenance, and cleaning tradeoffs before buying.',
+  title: 'Best Robot Vacuum with Mop in India (2026): Dreame vs ECOVACS | TechSelect',
+  description:
+    'Compare Dreame and ECOVACS robot vacuums with mops in India. Review low furniture clearance, docking station maintenance, water refills, and floor thresholds.',
   alternates: {
     canonical: 'https://techselect.blog/article/best-robot-vacuums-with-mop-india',
   },
   openGraph: {
-    title: 'Best Robot Vacuum Cleaners with Mop in India (2026) | TechSelect',
-    description: 'Field-tested on Indian marble, vitrified tile, and carpet floors: Dreame L10s Ultra vs ECOVACS Deebot T50 Pro with 75-day hands-free docks.',
+    title: 'Best Robot Vacuum with Mop in India (2026): Dreame vs ECOVACS | TechSelect',
+    description:
+      'Compare Dreame and ECOVACS robot vacuums with mops in India. Review low furniture clearance, docking station maintenance, water refills, and floor thresholds.',
     url: 'https://techselect.blog/article/best-robot-vacuums-with-mop-india',
     type: 'article',
     publishedTime: '2026-07-26',
