@@ -15,14 +15,14 @@ import { FinalVerdict } from '@/components/article/final-verdict'
 import { StickyCTA } from '@/components/article/sticky-cta'
 
 export const metadata: Metadata = {
-  title: 'Best Noise Cancelling Headphones in India: Bose vs Sennheiser | TechSelect',
-  description: 'Bose QuietComfort or Sennheiser Momentum 4? Compare noise cancellation, comfort, battery life, and buying tradeoffs for travel and work in India.',
+  title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser | TechSelect',
+  description: 'Compare the Bose QuietComfort and Sennheiser Momentum 4 in India: metro and flight ANC isolation versus 60-hour battery life and audiophile sound quality.',
   alternates: {
     canonical: 'https://techselect.blog/article/best-premium-noise-cancelling-headphones-india',
   },
   openGraph: {
     title: 'Best Noise Cancelling Headphones in India (2026): Bose vs Sennheiser | TechSelect',
-    description: 'Bose QuietComfort vs Sennheiser Momentum 4 — in-depth ANC shootout and battery endurance test on Indian commutes.',
+    description: 'Compare the Bose QuietComfort and Sennheiser Momentum 4 in India: metro and flight ANC isolation versus 60-hour battery life and audiophile sound quality.',
     url: 'https://techselect.blog/article/best-premium-noise-cancelling-headphones-india',
     type: 'article',
     publishedTime: '2026-06-28',

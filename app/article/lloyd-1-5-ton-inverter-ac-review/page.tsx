@@ -13,9 +13,18 @@ import { Check, ExternalLink } from 'lucide-react'
 const AFFILIATE_URL = "https://www.amazon.in/Lloyd-Convertible-Installation-Indication-GLS18I3AGGSC/dp/B0GJDVGS6P?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'Lloyd 1.5 Ton Inverter AC Review: Cooling & Buying Advice | TechSelect',
-  description: 'Considering a Lloyd 1.5 Ton inverter AC? Read our cooling review, power-use notes, room considerations, and installation checklist before choosing.',
+  title: 'Lloyd 1.5 Ton 3 Star Inverter AC Review (GLS18I3AGGSC) | TechSelect',
+  description:
+    'Review of the Lloyd 1.5 Ton 3 Star Inverter AC (GLS18I3AGGSC): 52°C ambient cooling, 5-in-1 convertible modes for medium rooms, and installation trade-offs.',
   alternates: { canonical: 'https://techselect.blog/article/lloyd-1-5-ton-inverter-ac-review' },
+  openGraph: {
+    title: 'Lloyd 1.5 Ton 3 Star Inverter AC Review (GLS18I3AGGSC) | TechSelect',
+    description:
+      'Review of the Lloyd 1.5 Ton 3 Star Inverter AC (GLS18I3AGGSC): 52°C ambient cooling, 5-in-1 convertible modes for medium rooms, and installation trade-offs.',
+    url: 'https://techselect.blog/article/lloyd-1-5-ton-inverter-ac-review',
+    type: 'article',
+    images: [{ url: '/products/lloyd-1-5-ton-inverter-ac.png' }],
+  },
 }
 
 const articleSchema = {
