@@ -81,8 +81,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
   })
 
-  // Product routes
+  // Article metadata takes precedence for guides listed in both catalogues.
+  const articlePaths = new Set(ARTICLES_DATA.map((article) => article.href))
   SAMPLE_PRODUCTS.forEach((product) => {
+    if (articlePaths.has(product.href)) return
+
     routes.push({
       url: `${baseUrl}${product.href}`,
       lastModified: currentDate,
