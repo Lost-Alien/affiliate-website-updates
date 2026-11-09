@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Breadcrumb } from '@/components/breadcrumb'
@@ -14,6 +15,7 @@ import { Star, Check, ExternalLink } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Best Laptops for Programming & Machine Learning in India (2026) | TechSelect',
   description: 'Choose between the MacBook Pro M4 and ASUS ROG Strix G16 for general programming, multi-container Docker workloads, and local CUDA machine learning in India.',
+  alternates: { canonical: 'https://techselect.blog/article/best-laptops-for-programming-and-machine-learning-india' },
 }
 
 const articleSchema = {
@@ -155,7 +157,7 @@ export default function BestDevLaptopsGuidePage() {
               href: 'https://www.amazon.in/Apple-MacBook-10%E2%80%91core-10%E2%80%91core-Unified/dp/B0DLHGK5TG?tag=techstor0caaf-21',
             },
             {
-              name: 'ASUS ROG Strix G16 (32GB RAM)',
+              name: 'ASUS ROG Strix G16 G614JIR (32GB RAM)',
               bestFor: 'Local CUDA machine learning in PyTorch, heavy multi-container Docker stacks, and expandable memory.',
               tradeoff: 'Heavier workstation chassis and higher fan noise under full GPU training loads.',
               href: 'https://www.amazon.in/ASUS-Strix-Gaming-Laptop-G614JIR-N4063W/dp/B0CX5L66W8?tag=techstor0caaf-21',
@@ -164,6 +166,12 @@ export default function BestDevLaptopsGuidePage() {
           relatedHref="/category/computers/laptops"
           relatedLabel="Explore all laptop guides"
         />
+
+        <p className="mb-8 text-sm text-muted-foreground">
+          Read the <Link className="underline" href="/article/macbook-pro-m4-review">MacBook Pro M4 review</Link>
+          {' '}or compare the <Link className="underline" href="/products/asus-rog-strix-g16">ASUS ROG Strix G16 G615LR with RTX 5070 Ti</Link>,
+          {' '}a different configuration from the G614JIR featured in this guide.
+        </p>
 
         {/* Products Comparison List */}
         <div className="space-y-12 mb-12">

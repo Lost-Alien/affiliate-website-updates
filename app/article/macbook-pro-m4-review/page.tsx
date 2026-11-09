@@ -13,9 +13,20 @@ import { Check, ExternalLink } from 'lucide-react'
 const AFFILIATE_URL = "https://www.amazon.in/Apple-MacBook-10%E2%80%91core-10%E2%80%91core-Unified/dp/B0DLHGK5TG?tag=techstor0caaf-21"
 
 export const metadata: Metadata = {
-  title: 'MacBook Pro M4 Review for Developers: Is It Worth It? | TechSelect',
-  description: 'MacBook Pro M4 for coding: compilation, Docker, display, battery, and memory choices. Read the tradeoffs and compare alternatives before buying.',
+  title: 'MacBook Pro M4 Review for Developers (16GB RAM) | TechSelect',
+  description:
+    'Apple MacBook Pro M4 review for software engineers: 10-core CPU compilation, Docker workflows, Liquid Retina XDR display, and non-upgradeable RAM trade-offs.',
   alternates: { canonical: 'https://techselect.blog/article/macbook-pro-m4-review' },
+  openGraph: {
+    title: 'MacBook Pro M4 Review for Developers (16GB RAM) | TechSelect',
+    description:
+      'Apple MacBook Pro M4 review for software engineers: 10-core CPU compilation, Docker workflows, Liquid Retina XDR display, and non-upgradeable RAM trade-offs.',
+    url: 'https://techselect.blog/article/macbook-pro-m4-review',
+    type: 'article',
+    publishedTime: '2026-07-27',
+    modifiedTime: '2026-07-28',
+    images: [{ url: '/products/apple-macbook-pro-m4.png' }],
+  },
 }
 
 const articleSchema = {

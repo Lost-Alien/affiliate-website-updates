@@ -17,13 +17,14 @@ const AFFILIATE_URL =
 export const metadata: Metadata = {
   title: 'ASUS ROG Strix G16 G615LR Review (RTX 5070 Ti) | TechSelect',
   description:
-    'In-depth review of the ASUS ROG Strix G16 (G615LR-S5190WS) with Intel Core Ultra 9 275HX and RTX 5070 Ti 12GB. Benchmarks, thermals, and price test.',
+    'Review of the ASUS ROG Strix G16 (G615LR-S5190WS): Core Ultra 9 275HX, RTX 5070 Ti, 2.5K 240Hz display, thermals, and 2.65kg portability trade-offs.',
   alternates: {
     canonical: 'https://techselect.blog/products/asus-rog-strix-g16',
   },
   openGraph: {
-    title: 'ASUS ROG Strix G16 (G615LR) Review — RTX 5070 Ti Gaming Laptop',
-    description: 'Full review of ASUS ROG Strix G16 (G615LR) gaming laptop featuring Intel Core Ultra 9 275HX, RTX 5070 Ti 140W TGP, 32GB DDR5, and a blazing 2.5K 240Hz display.',
+    title: 'ASUS ROG Strix G16 G615LR Review (RTX 5070 Ti) | TechSelect',
+    description:
+      'Review of the ASUS ROG Strix G16 (G615LR-S5190WS): Core Ultra 9 275HX, RTX 5070 Ti, 2.5K 240Hz display, thermals, and 2.65kg portability trade-offs.',
     images: [{ url: '/products/asus-rog-strix-g16.png' }],
   },
 }
