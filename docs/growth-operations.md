@@ -66,6 +66,8 @@ The check prints a configuration summary without revealing credentials or connec
 
 Run `npm ci` in the relay checkout to install its dependencies. `./scripts/whatsapp-relay.ps1 -Start` launches the local worker and binds its unauthenticated pairing dashboard to `127.0.0.1` on the configured port. Use this mode with a test destination or when this machine is the only active publisher for the configured route. Pair Telegram and WhatsApp once. The relay reuses its SQLite session database on subsequent starts. The relay checkout's `operations/relay-notes.md` documents session storage, Flipkart redirect patterns and the read-only WhatsApp test-channel preview.
 
+The public `/relay-status` page shows the two connection states and aggregate pending and failed counts. Run `node --env-file=.env.local scripts/publish-relay-status.mjs` on the same machine as the active relay to report once per minute. Use `--once` for a single report. Reports expire after three minutes. Account pairing and operations remain on the private dashboard.
+
 ## Two-month operating plan
 
 - Week 1: deploy and validate event collection; review multi-product cards and click destinations.
