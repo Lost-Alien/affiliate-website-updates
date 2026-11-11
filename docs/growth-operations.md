@@ -41,6 +41,31 @@ These are Google Search metrics only. Prioritise the headphone guide, Lloyd AC r
 
 The separate `x_commenter_techselect` project handles replies to people on X. Use it for useful tech discussion and buyer advice. Affiliate links, sales pitches, and calls to buy belong in a separate publishing workflow. Evaluate the commenter by reply quality and conversations started.
 
+## WhatsApp deal publishing
+
+The two channel publishers are independent, continuously running workers. Their local configuration points to two distinct WhatsApp destinations. Neither of the existing bot's source chats is the new relay's destination. The public invite URLs on `/sales` are separate identifiers from the posting JIDs, so confirm the channel names in WhatsApp before changing a route.
+
+| Publisher | Job | Delivery behavior |
+| --- | --- | --- |
+| `TelegramWhatsAppRelay` | `@dealbeeofficial` and `@TrickXpert` → one WhatsApp channel. Rewrites links and forwards text, photos and videos within the configured media limit. | Telegram live updates plus 30-second catch-up. SQLite outbox, stable send IDs, and WhatsApp server acknowledgements. |
+| `WebWhatsapp automation` | Two configured WhatsApp source channels → a different WhatsApp channel. Rewrites affiliate links and forwards text. | WhatsApp Web through Chromium, with a disk-backed JSON queue and five delivery attempts. No source-history catch-up in the message listener. |
+
+Use the new relay for Telegram-origin deals and keep the existing worker for its WhatsApp sources. Both use the same configured Amazon tag. The relay preserves Telegram's hidden links and Flipkart product and variant IDs. It skips expired deals based on source age and skips posts whose short links return HTTP 404 or 410. Uncertain conversion failures go through retry. The existing bot can forward the original Flipkart message when conversion returns no text, which can preserve another publisher's affiliate link. Either worker can duplicate a publication after an ambiguous send.
+
+Both projects include systemd service files for EC2. Their configured RAM ceilings are 192 MiB for the browser-free relay and 512 MiB for the Chromium worker. These are service limits. A scheduled job suits a finite task such as retrying selected failures. Channel listeners need an always-on process and persistent credentials and queue storage. The Next.js site receives Telegram deals through its existing webhook and links to the WhatsApp channels from `/sales`.
+
+### Local relay setup
+
+Keep the private checkout at `Downloads/Dev_WA_Boot_hub/TelegramWhatsAppRelay` and its `env` file beside it at `Downloads/Dev_WA_Boot_hub/env`. From the TechSelect checkout, validate the environment with Node.js 22.13 or later:
+
+```powershell
+./scripts/whatsapp-relay.ps1
+```
+
+The check prints a configuration summary without revealing credentials or connecting to either service. `-RelayPath` and `-EnvPath` override the paths. If relay variables already exist in the shell, Node gives them precedence over values in the file.
+
+Run `npm ci` in the relay checkout to install its dependencies. `./scripts/whatsapp-relay.ps1 -Start` launches the local worker and binds its unauthenticated pairing dashboard to `127.0.0.1` on the configured port. Use this mode with a test destination or when this machine is the only active publisher for the configured route. Pair Telegram and WhatsApp once. The relay reuses its SQLite session database on subsequent starts. The relay checkout's `operations/relay-notes.md` documents session storage, Flipkart redirect patterns and the read-only WhatsApp test-channel preview.
+
 ## Two-month operating plan
 
 - Week 1: deploy and validate event collection; review multi-product cards and click destinations.
